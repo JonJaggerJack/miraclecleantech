@@ -18,9 +18,9 @@ interface Errors {
 }
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'Coordonnée à confirmer', color: 'from-blue-500 to-blue-600' },
-  { icon: Phone, label: 'Téléphone', value: 'Coordonnée à confirmer', color: 'from-green-500 to-green-600' },
-  { icon: MapPin, label: 'Adresse', value: 'Localisation à confirmer', color: 'from-purple-500 to-purple-600' },
+  { icon: Mail, label: 'Email', value: 'miraclecleantech@gmail.com', color: 'from-blue-500 to-blue-600' },
+  { icon: Phone, label: 'Téléphone', value: '+243850714774', color: 'from-green-500 to-green-600' },
+  { icon: MapPin, label: 'Localisation', value: 'Bukavu', color: 'from-purple-500 to-purple-600' },
 ];
 
 function validate(data: FormData): Errors {
@@ -96,7 +96,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Pour toute demande d'information, de partenariat ou relative aux produits, utilisez le formulaire de contact.
+            Pour toute demande d'information, de partenariat ou relative aux produits, utilisez le formulaire ou les coordonnées ci-dessous.
           </motion.p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function Contact() {
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Coordonnées</h2>
-              <p className="text-gray-500 text-sm">Les coordonnées directes seront publiées dès leur confirmation. En attendant, le formulaire reste le canal principal.</p>
+              <p className="text-gray-500 text-sm">Vous pouvez nous joindre via le formulaire ou utiliser directement les coordonnées ci-dessous.</p>
             </div>
 
             <div className="flex flex-col gap-4">
@@ -130,8 +130,8 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-blue-50 border border-gray-100 flex items-center justify-center h-52 mt-2">
               <div className="text-center">
                 <MapPin className="w-10 h-10 text-green-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-500 font-medium">Localisation à confirmer</p>
-                <p className="text-xs text-gray-400">Les coordonnées complètes seront communiquées prochainement.</p>
+                <p className="text-sm text-gray-500 font-medium">Bukavu</p>
+                <p className="text-xs text-gray-400">Localisation communiquée par l'organisation.</p>
               </div>
             </div>
           </div>
