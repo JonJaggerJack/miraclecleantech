@@ -41,8 +41,8 @@ export default function Navbar() {
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div>
-            <span className="font-bold text-lg text-gray-900 leading-tight block">MCT</span>
-            <span className="text-xs text-gray-400 leading-none">Miracle Clean Tech</span>
+            <span className="font-bold text-lg text-gray-900 leading-tight block">Miraclecleantech</span>
+            <span className="text-xs text-gray-400 leading-none">ASBL</span>
           </div>
         </Link>
 

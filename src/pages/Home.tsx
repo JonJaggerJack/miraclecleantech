@@ -6,10 +6,8 @@ import {
 } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
-import TestimonialCard from '../components/TestimonialCard';
 import Button from '../components/Button';
 import { products } from '../data/products';
-import { testimonials } from '../data/misc';
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
 function Hero() {
@@ -31,7 +29,7 @@ function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-100 text-green-700 text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 fill-green-500 text-green-500" />
-            Fondée en décembre 2025 · Entreprise 100% locale
+            Miraclecleantech ASBL · Créée en décembre 2025
           </motion.div>
 
           <motion.h1
@@ -40,11 +38,10 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6"
           >
-            L'hygiène qui{' '}
+            L'hygiène au service de{' '}
             <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
-              transforme
-            </span>{' '}
-            les vies
+              l'action sociale
+            </span>
           </motion.h1>
 
           <motion.p
@@ -53,8 +50,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg"
           >
-            Miracle Clean Tech fabrique des produits d'hygiène et de nettoyage innovants 
-            pour promouvoir la santé publique et améliorer le bien-être de nos communautés.
+            Miraclecleantech ASBL accompagne les personnes vulnérables et soutient son action par la production de solutions d'hygiène des mains et de nettoyage des sols.
           </motion.p>
 
           <motion.div
@@ -68,7 +64,7 @@ function Hero() {
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button to="/about" variant="outline" size="lg">
-              Notre histoire
+              L'organisation
             </Button>
           </motion.div>
 
@@ -80,9 +76,9 @@ function Hero() {
             className="flex flex-wrap gap-8"
           >
             {[
-              { value: '6+', label: 'Produits phares' },
-              { value: '100%', label: 'Made localement' },
-              { value: '5+', label: 'Orphelinats aidés' },
+              { value: '2', label: 'Axes de production' },
+              { value: '1', label: 'Action sociale' },
+              { value: '2025', label: 'Année de création' },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -104,7 +100,7 @@ function Hero() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/70">
             <img
               src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
-              alt="Produits MCT"
+              alt="Produits Miraclecleantech ASBL"
               className="w-full h-[520px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent" />
@@ -121,8 +117,8 @@ function Hero() {
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="font-bold text-gray-900 text-sm">Impact Social</p>
-                <p className="text-xs text-gray-400">Fondée par des femmes engagées</p>
+                <p className="font-bold text-gray-900 text-sm">Action sociale</p>
+                <p className="text-xs text-gray-400">Assistance aux personnes vulnérables</p>
               </div>
             </div>
           </motion.div>
@@ -134,7 +130,7 @@ function Hero() {
           >
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-green-500" />
-              <p className="text-sm font-semibold text-gray-800">99,9% efficacité</p>
+              <p className="text-sm font-semibold text-gray-800">Hygiène des mains & sols</p>
             </div>
           </motion.div>
         </motion.div>
@@ -146,19 +142,19 @@ function Hero() {
 // ── Mission Cards ─────────────────────────────────────────────────────────────
 const missions = [
   { icon: Shield, title: "Promouvoir l'hygiène", desc: "Sensibiliser et faciliter l'accès à des pratiques hygiéniques de qualité pour toutes les communautés.", color: "from-green-500 to-green-600" },
-  { icon: Leaf, title: "Assainir l'environnement", desc: "Créer des solutions qui respectent l'environnement tout en assurant une efficacité maximale.", color: "from-blue-500 to-blue-600" },
-  { icon: Heart, title: "Aider les orphelins", desc: "Améliorer le bien-être des enfants orphelins grâce à des programmes de donation et d'éducation.", color: "from-rose-500 to-pink-600" },
-  { icon: Users, title: "Développement local", desc: "Contribuer à l'économie locale en créant des emplois et en formant notre communauté.", color: "from-violet-500 to-purple-600" },
-  { icon: Zap, title: "Innovation continue", desc: "Utiliser les technologies modernes pour formuler des produits toujours plus efficaces et sûrs.", color: "from-amber-500 to-orange-600" },
-  { icon: Globe, title: "Santé publique", desc: "Réduire les maladies liées au manque d'hygiène et renforcer les bonnes pratiques sanitaires.", color: "from-teal-500 to-cyan-600" },
+  { icon: Globe, title: "Réduire les risques sanitaires", desc: "Contribuer à la réduction des maladies liées au manque d'hygiène par des gestes et produits utiles.", color: "from-teal-500 to-cyan-600" },
+  { icon: Heart, title: "Assister les personnes vulnérables", desc: "Placer l'accompagnement des personnes vulnérables au coeur de l'action de l'ASBL.", color: "from-rose-500 to-pink-600" },
+  { icon: Leaf, title: "Assainir l'environnement", desc: "Améliorer le cadre de vie grâce au nettoyage et à l'assainissement des espaces.", color: "from-blue-500 to-blue-600" },
+  { icon: Users, title: "Renforcer les bonnes pratiques", desc: "Encourager des habitudes simples et durables autour de l'hygiène et de la propreté.", color: "from-violet-500 to-purple-600" },
+  { icon: Zap, title: "Soutenir l'action sociale", desc: "Utiliser la production de produits utiles pour soutenir durablement les activités de l'organisation.", color: "from-amber-500 to-orange-600" },
 ];
 
 // ── Impact Stats ──────────────────────────────────────────────────────────────
 const stats = [
-  { value: '10 000+', label: 'Familles bénéficiaires', icon: Users },
-  { value: '5', label: 'Orphelinats partenaires', icon: Heart },
-  { value: '6', label: 'Produits formulés', icon: Zap },
-  { value: '100%', label: 'Fabriqué localement', icon: Globe },
+  { value: '2', label: 'Gammes de produits', icon: Zap },
+  { value: '1', label: 'Action sociale', icon: Heart },
+  { value: '2025', label: 'Création de l\'ASBL', icon: Globe },
+  { value: '2', label: 'Domaines d\'action', icon: Users },
 ];
 
 export default function Home() {
@@ -193,8 +189,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-gray-500 max-w-2xl mx-auto text-base"
           >
-            MCT est bien plus qu'une entreprise — c'est un mouvement pour la santé, 
-            la dignité et l'inclusion sociale.
+            Miraclecleantech ASBL agit pour l'hygiène, l'assainissement et l'accompagnement des personnes vulnérables.
           </motion.p>
         </div>
 
@@ -223,9 +218,9 @@ export default function Home() {
       <SectionWrapper className="bg-gray-50/50">
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos produits</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Qualité & Innovation</h2>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Produits essentiels</h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Découvrez notre gamme de produits d'hygiène formulés avec soin pour votre famille et votre environnement.
+            Deux familles de produits soutiennent l'action sociale de l'ASBL : l'hygiène des mains et le nettoyage des sols.
           </p>
         </div>
 
@@ -247,7 +242,7 @@ export default function Home() {
       <SectionWrapper className="bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-400 uppercase tracking-widest">Notre impact</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-white">Des chiffres qui parlent</h2>
+          <h2 className="mt-2 text-4xl font-extrabold text-white">Des repères clairs</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((s, i) => (
@@ -269,19 +264,6 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* Testimonials */}
-      <SectionWrapper className="bg-white">
-        <div className="text-center mb-14">
-          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Témoignages</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Ce que disent nos clients</h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((t, i) => (
-            <TestimonialCard key={t.id} testimonial={t} index={i} />
-          ))}
-        </div>
-      </SectionWrapper>
-
       {/* Final CTA */}
       <SectionWrapper>
         <motion.div
@@ -293,11 +275,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
           <div className="relative">
             <h2 className="text-4xl font-extrabold text-white mb-4">
-              Rejoignez le mouvement MCT
+              Soutenir Miraclecleantech ASBL
             </h2>
             <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
-              Commandez nos produits, partenariez avec nous ou contribuez à notre mission sociale. 
-              Ensemble, construisons un environnement plus sain.
+              Les produits d'hygiène des mains et de nettoyage des sols participent au financement d'une action sociale tournée vers les personnes vulnérables.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

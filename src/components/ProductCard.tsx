@@ -24,16 +24,6 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           alt={product.name}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
-        {product.badge && (
-          <span className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white shadow-md ${
-            product.badge === 'Bestseller' ? 'bg-amber-500' :
-            product.badge === 'Nouveau' ? 'bg-green-500' :
-            product.badge === 'Social' ? 'bg-blue-500' :
-            'bg-gray-700'
-          }`}>
-            {product.badge}
-          </span>
-        )}
         <div className="absolute top-3 right-3 px-2 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-gray-600">
           {product.category}
         </div>
@@ -55,9 +45,9 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         </ul>
 
         <div className="mt-5 pt-4 border-t border-gray-50">
-          <button className="w-full py-2.5 rounded-xl bg-gradient-to-r from-green-50 to-blue-50 text-green-700 font-semibold text-sm hover:from-green-500 hover:to-blue-600 hover:text-white transition-all duration-300">
-            En savoir plus
-          </button>
+          <p className="text-sm font-semibold text-green-700">
+            Produit au service de l'action de l'ASBL
+          </p>
         </div>
       </div>
     </motion.div>

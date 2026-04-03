@@ -18,9 +18,9 @@ interface Errors {
 }
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'contact@miraclecleantech.com', color: 'from-blue-500 to-blue-600' },
-  { icon: Phone, label: 'Téléphone', value: '+233 000 000 000', color: 'from-green-500 to-green-600' },
-  { icon: MapPin, label: 'Localisation', value: 'Afrique de l\'Ouest', color: 'from-purple-500 to-purple-600' },
+  { icon: Mail, label: 'Email', value: 'Coordonnée à confirmer', color: 'from-blue-500 to-blue-600' },
+  { icon: Phone, label: 'Téléphone', value: 'Coordonnée à confirmer', color: 'from-green-500 to-green-600' },
+  { icon: MapPin, label: 'Adresse', value: 'Localisation à confirmer', color: 'from-purple-500 to-purple-600' },
 ];
 
 function validate(data: FormData): Errors {
@@ -85,9 +85,9 @@ export default function Contact() {
             transition={{ delay: 0.1 }}
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
-            Parlons de{' '}
+            Nous{' '}
             <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
-              votre projet
+              écrire
             </span>
           </motion.h1>
           <motion.p
@@ -96,7 +96,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Une question, une commande en gros, un partenariat ou un don ? Nous sommes à votre écoute.
+            Pour toute demande d'information, de partenariat ou relative aux produits, utilisez le formulaire de contact.
           </motion.p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function Contact() {
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Coordonnées</h2>
-              <p className="text-gray-500 text-sm">Notre équipe vous répond dans les plus brefs délais.</p>
+              <p className="text-gray-500 text-sm">Les coordonnées directes seront publiées dès leur confirmation. En attendant, le formulaire reste le canal principal.</p>
             </div>
 
             <div className="flex flex-col gap-4">
@@ -127,12 +127,11 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Map placeholder */}
             <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-blue-50 border border-gray-100 flex items-center justify-center h-52 mt-2">
               <div className="text-center">
                 <MapPin className="w-10 h-10 text-green-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-500 font-medium">Afrique de l'Ouest</p>
-                <p className="text-xs text-gray-400">Carte interactive bientôt disponible</p>
+                <p className="text-sm text-gray-500 font-medium">Localisation à confirmer</p>
+                <p className="text-xs text-gray-400">Les coordonnées complètes seront communiquées prochainement.</p>
               </div>
             </div>
           </div>
@@ -151,7 +150,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
                   <p className="text-gray-500 text-sm max-w-sm">
-                    Merci de nous avoir contactés. Notre équipe vous répondra dans les 24 à 48 heures.
+                    Merci de nous avoir contactés. Votre message a bien été pris en compte.
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: '', email: '', subject: '', message: '' }); }}
@@ -200,11 +199,11 @@ export default function Contact() {
                         className={inputClass('subject')}
                       >
                         <option value="">Choisir un sujet</option>
-                        <option>Commande en gros</option>
+                        <option>Demande d'information</option>
+                        <option>Produits d'hygiène des mains</option>
+                        <option>Produits de nettoyage des sols</option>
                         <option>Partenariat</option>
-                        <option>Programme social / Don</option>
-                        <option>Question produit</option>
-                        <option>Formation hygiène</option>
+                        <option>Soutien à la mission</option>
                         <option>Autre</option>
                       </select>
                       {errors.subject && <p className="text-xs text-red-500 mt-1">{errors.subject}</p>}

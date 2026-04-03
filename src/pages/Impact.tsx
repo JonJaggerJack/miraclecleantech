@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Leaf, Users, BookOpen, Droplets, Sun, TreePine } from 'lucide-react';
+import { Heart, Leaf, Users, BookOpen, Droplets, Shield } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 // Animated counter hook
@@ -55,42 +55,40 @@ function StatCard({ icon: Icon, value, suffix = '', label, color, index }: StatC
 }
 
 const stats = [
-  { icon: Users, value: 10000, suffix: '+', label: 'Familles bénéficiaires', color: 'from-blue-500 to-blue-600' },
-  { icon: Heart, value: 5, suffix: '', label: 'Orphelinats partenaires', color: 'from-rose-500 to-pink-600' },
-  { icon: BookOpen, value: 20, suffix: '+', label: 'Sessions d\'éducation', color: 'from-violet-500 to-purple-600' },
-  { icon: Droplets, value: 500, suffix: '+', label: 'Kits hygiène distribués', color: 'from-green-500 to-teal-600' },
-  { icon: Leaf, value: 3, suffix: '', label: 'Actions éco-responsables', color: 'from-emerald-500 to-green-600' },
-  { icon: Sun, value: 100, suffix: '%', label: 'Fabriqué localement', color: 'from-amber-500 to-orange-600' },
+  { icon: Users, value: 2, suffix: '', label: 'Pôles d\'intervention', color: 'from-blue-500 to-blue-600' },
+  { icon: Droplets, value: 2, suffix: '', label: 'Produits clés', color: 'from-green-500 to-teal-600' },
+  { icon: Heart, value: 1, suffix: '', label: 'Action sociale centrale', color: 'from-rose-500 to-pink-600' },
+  { icon: Shield, value: 2025, suffix: '', label: 'Année de création', color: 'from-violet-500 to-purple-600' },
 ];
 
 const projects = [
   {
     icon: Heart,
-    title: 'Programme Orphelins',
-    desc: 'Distribution mensuelle de kits d\'hygiène dans 5 orphelinats partenaires. Nos équipes visitent régulièrement ces établissements pour s\'assurer de l\'utilisation correcte des produits.',
+    title: 'Assistance aux personnes vulnérables',
+    desc: 'L\'organisation concentre son action sur l\'accompagnement des personnes vulnérables à travers une approche sociale, préventive et utile.',
     color: 'from-rose-500 to-pink-600',
-    tag: 'Social',
+    tag: 'Mission',
   },
   {
     icon: BookOpen,
-    title: 'Éducation à l\'Hygiène',
-    desc: 'Ateliers et formations dans les écoles primaires et secondaires. Nous croyons que l\'éducation est la clé d\'une société plus saine. Plus de 20 sessions animées depuis notre création.',
+    title: 'Promotion de l\'hygiène',
+    desc: 'Miraclecleantech ASBL met l\'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d\'hygiène.',
     color: 'from-blue-500 to-indigo-600',
     tag: 'Éducation',
   },
   {
     icon: Leaf,
-    title: 'Assainissement Environnemental',
-    desc: 'Organisation de journées de nettoyage communautaires en partenariat avec les autorités locales. Nous sensibilisons également à la gestion des déchets et à la salubrité.',
+    title: 'Assainissement du cadre de vie',
+    desc: 'L\'amélioration du cadre de vie passe par des actions simples autour du nettoyage des sols et d\'un environnement plus sain pour tous.',
     color: 'from-green-500 to-teal-600',
     tag: 'Environnement',
   },
   {
-    icon: TreePine,
-    title: 'Formulations Éco-responsables',
-    desc: 'Développement de produits biodégradables qui nettoient efficacement sans polluer les nappes phréatiques ni nuire à la biodiversité. Un engagement fort envers notre planète.',
+    icon: Users,
+    title: 'Production au service de la mission',
+    desc: 'La production de produits d\'hygiène des mains et de nettoyage des sols permet de financer durablement les activités sociales de l\'ASBL.',
     color: 'from-emerald-500 to-green-600',
-    tag: 'Eco-conception',
+    tag: 'Produits',
   },
 ];
 
@@ -110,9 +108,9 @@ export default function Impact() {
             transition={{ delay: 0.1 }}
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
-            Des actions concrètes,{' '}
+            Des actions concrètes pour{' '}
             <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
-              un impact réel
+              les communautés
             </span>
           </motion.h1>
           <motion.p
@@ -121,8 +119,7 @@ export default function Impact() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Chaque produit MCT vendu concourt à financer nos actions sociales et environnementales. 
-            Voici ce que nous accomplissons ensemble.
+            L'action de Miraclecleantech ASBL s'organise autour de l'assistance, de l'hygiène et de l'assainissement.
           </motion.p>
         </div>
       </section>
@@ -131,9 +128,9 @@ export default function Impact() {
       <SectionWrapper>
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Chiffres clés</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Notre impact en chiffres</h2>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos repères essentiels</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <StatCard key={s.label} {...s} index={i} />
           ))}
@@ -146,7 +143,7 @@ export default function Impact() {
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Projets</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos initiatives</h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Nous agissons sur plusieurs fronts pour créer un impact durable dans nos communautés.
+            L'organisation intervient sur des axes directement liés à sa mission d'assistance, d'hygiène et d'assainissement.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-8">
@@ -177,7 +174,7 @@ export default function Impact() {
         </div>
       </SectionWrapper>
 
-      {/* CTA Social */}
+      {/* CTA */}
       <SectionWrapper>
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -190,17 +187,16 @@ export default function Impact() {
           </div>
           <div className="relative">
             <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
-            <h2 className="text-4xl font-extrabold text-white mb-4">Soutenez notre cause</h2>
+            <h2 className="text-4xl font-extrabold text-white mb-4">Soutenir l'action de l'ASBL</h2>
             <p className="text-white/80 text-lg max-w-lg mx-auto mb-8">
-              En achetant nos produits ou en faisant un don, vous contribuez directement 
-              à améliorer les conditions sanitaires des enfants orphelins et des communautés vulnérables.
+              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miraclecleantech ASBL.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/contact" className="px-8 py-4 bg-white text-rose-600 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200">
-                Faire un don
+                Nous écrire
               </a>
               <a href="/products" className="px-8 py-4 bg-white/10 border border-white/30 text-white font-bold rounded-xl text-sm hover:bg-white/20 transition-all">
-                Acheter & aider
+                Découvrir les produits
               </a>
             </div>
           </div>

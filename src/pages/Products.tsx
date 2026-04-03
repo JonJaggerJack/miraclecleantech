@@ -5,7 +5,7 @@ import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
-const categories = ['Tous', 'Hygiène corporelle', 'Nettoyage', 'Hygiène des mains', 'Lessive', 'Éducation & Social'];
+const categories = ['Tous', 'Hygiène des mains', 'Nettoyage des sols'];
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('Tous');
@@ -45,7 +45,7 @@ export default function Products() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Des solutions d'hygiène formulées avec soin, pour votre famille et votre environnement.
+            Des produits d'hygiène des mains et de nettoyage des sols pensés pour soutenir l'action sociale de Miraclecleantech ASBL.
           </motion.p>
         </div>
       </section>
@@ -131,7 +131,6 @@ export default function Products() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-xs text-gray-400">{p.category}</span>
-                        {p.badge && <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">{p.badge}</span>}
                       </div>
                       <h3 className="font-bold text-gray-900 mb-1">{p.name}</h3>
                       <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">{p.description}</p>

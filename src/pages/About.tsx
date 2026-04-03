@@ -1,28 +1,35 @@
 import { motion } from 'framer-motion';
-import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield, Award, Calendar } from 'lucide-react';
+import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield, Calendar } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
 
 const values = [
-  { icon: Star, title: 'Qualité', desc: 'Chaque produit est conçu avec les meilleures formulations et testé rigoureusement.', color: 'from-amber-400 to-orange-500' },
-  { icon: Zap, title: 'Innovation', desc: 'Nous exploitons les technologies modernes pour créer des solutions toujours plus efficaces.', color: 'from-blue-400 to-indigo-500' },
-  { icon: Shield, title: 'Responsabilité', desc: 'Nous assumons notre rôle envers nos clients, notre communauté et notre planète.', color: 'from-green-400 to-teal-500' },
-  { icon: Heart, title: 'Engagement', desc: 'Notre engagement envers la santé publique est au cœur de chacune de nos décisions.', color: 'from-rose-400 to-pink-500' },
-  { icon: Users, title: 'Inclusion', desc: 'Nous concevons pour tous : familles, écoles, orphelinats, entreprises.', color: 'from-violet-400 to-purple-500' },
+  { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'from-amber-400 to-orange-500' },
+  { icon: Zap, title: 'Innovation', desc: "Une approche actuelle au service de l'utilité sociale.", color: 'from-blue-400 to-indigo-500' },
+  { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'from-green-400 to-teal-500' },
+  { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'from-rose-400 to-pink-500' },
+  { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'from-violet-400 to-purple-500' },
 ];
 
 const timeline = [
-  { date: 'Décembre 2025', title: 'Fondation de MCT', desc: 'Un groupe de femmes engagées crée Miracle Clean Tech avec la vision de transformer la santé publique.' },
-  { date: 'Janvier 2026', title: 'Premiers produits lancés', desc: 'Lancement de la gamme initiale : savon hygiénique, désinfectant et gel hydroalcoolique.' },
-  { date: 'Février 2026', title: 'Programme social lancé', desc: 'Démarrage des partenariats avec 5 orphelinats pour des dons réguliers de kits d\'hygiène.' },
-  { date: 'Mars 2026', title: 'Extension de la gamme', desc: 'Ajout de la lessive écologique et du kit scolaire. Premières formations en hygiène en milieu scolaire.' },
-  { date: 'Avril 2026', title: 'Site web & présence digitale', desc: 'Lancement du site web officiel et développement de la présence en ligne pour toucher plus de communautés.' },
+  { date: 'Décembre 2025', title: 'Création de Miraclecleantech ASBL', desc: "L'organisation est créée autour d'une mission d'assistance des personnes vulnérables." },
+  { date: 'Mission', title: "Structuration de l'action sociale", desc: "L'ASBL affirme ses priorités : hygiène, prévention, assainissement et accompagnement." },
+  { date: 'Production', title: 'Lancement des produits pour les mains', desc: "L'hygiène des mains devient un premier levier concret de financement des activités." },
+  { date: 'Sols', title: 'Développement des produits de nettoyage', desc: "La gamme de nettoyage des sols complète le modèle de financement solidaire de l'organisation." },
+];
+
+const missionItems = [
+  "Promouvoir l'hygiène dans toutes les communautés",
+  "Réduire les maladies liées au manque d'hygiène",
+  'Renforcer les bonnes pratiques sanitaires',
+  "Assainir l'environnement",
+  'Assister les personnes vulnérables',
+  'Financer durablement les activités sociales',
 ];
 
 export default function About() {
   return (
     <>
-      {/* Hero */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-white via-green-50/30 to-blue-50/40 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-100/30 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto text-center relative">
@@ -41,7 +48,7 @@ export default function About() {
           >
             Nous sommes{' '}
             <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
-              Miracle Clean Tech
+              Miraclecleantech ASBL
             </span>
           </motion.h1>
           <motion.p
@@ -50,13 +57,11 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto"
           >
-            Une entreprise née de la conviction que l'hygiène est un droit fondamental, 
-            fondée par des femmes qui ont décidé de changer les choses.
+            Une organisation créée pour assister les personnes vulnérables et promouvoir l'hygiène à travers une action utile et structurée.
           </motion.p>
         </div>
       </section>
 
-      {/* Story */}
       <SectionWrapper>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -66,7 +71,7 @@ export default function About() {
           >
             <img
               src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=700&q=80"
-              alt="Fondatrices MCT"
+              alt="Miraclecleantech ASBL"
               className="rounded-3xl shadow-2xl shadow-gray-200/60 w-full h-[450px] object-cover"
             />
           </motion.div>
@@ -77,23 +82,17 @@ export default function About() {
           >
             <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Qui nous sommes</span>
             <h2 className="mt-3 text-4xl font-extrabold text-gray-900 leading-tight mb-6">
-              Nées pour transformer l'hygiène locale
+              Une organisation sociale soutenue par une production utile
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 text-base leading-relaxed">
               <p>
-                Miracle Clean Tech (MCT) est une entreprise innovante spécialisée dans la fabrication 
-                de produits d'hygiène et de nettoyage. Fondée en décembre 2025 par un groupe de femmes 
-                passionnées et engagées, MCT est née d'une constatation simple : des milliers de familles 
-                n'ont pas accès à des produits d'hygiène de qualité abordables.
+                Miraclecleantech ASBL est une organisation qui travaille dans l'assistance des personnes vulnérables. Sa mission s'inscrit dans la promotion de l'hygiène, la prévention et l'assainissement du cadre de vie.
               </p>
               <p>
-                Nous avons décidé de changer cela. Avec les technologies modernes et un profond respect 
-                pour nos communautés, nous fabriquons des produits qui nettoient efficacement, respectent 
-                les peaux sensibles et s'intègrent dans tous les budgets.
+                Pour financer ses activités, l'ASBL développe des produits d'hygiène des mains et des produits de nettoyage des sols. Cette production soutient directement la continuité de l'action sociale.
               </p>
               <p>
-                MCT est une entreprise strictement <strong className="text-gray-700">apolitique</strong>. 
-                Notre seul agenda est la santé publique et l'inclusion sociale.
+                Miraclecleantech ASBL est une organisation <strong className="text-gray-700">apolitique</strong>, créée en décembre 2025, tournée vers la santé publique, l'hygiène et l'accompagnement des personnes vulnérables.
               </p>
             </div>
             <div className="mt-8 flex gap-4">
@@ -104,10 +103,8 @@ export default function About() {
         </div>
       </SectionWrapper>
 
-      {/* Mission / Vision */}
       <SectionWrapper className="bg-gray-50/50" id="mission">
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Mission */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,14 +116,7 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Notre Mission</h3>
             <ul className="flex flex-col gap-3">
-              {[
-                'Promouvoir l\'hygiène dans toutes les communautés',
-                'Réduire les maladies liées au manque d\'hygiène',
-                'Renforcer les bonnes pratiques sanitaires',
-                'Assainir l\'environnement',
-                'Améliorer le bien-être des enfants orphelins',
-                'Contribuer au développement local',
-              ].map((item) => (
+              {missionItems.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-600">
                   <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2 h-2 rounded-full bg-green-500" />
@@ -137,7 +127,6 @@ export default function About() {
             </ul>
           </motion.div>
 
-          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -150,8 +139,7 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Notre Vision</h3>
             <p className="text-gray-300 text-base leading-relaxed mb-6">
-              Créer un environnement sain et améliorer la santé publique grâce à des solutions 
-              d'hygiène innovantes, accessibles à toutes les couches de la société.
+              Créer un environnement sain et améliorer la santé publique grâce à des solutions d'hygiène et d'assainissement utiles, au service des personnes vulnérables et des communautés.
             </p>
             <div className="p-5 rounded-2xl bg-white/10 border border-white/10">
               <Leaf className="w-6 h-6 text-green-400 mb-3" />
@@ -159,47 +147,44 @@ export default function About() {
                 Un monde plus propre pour tous
               </p>
               <p className="text-gray-400 text-xs leading-relaxed">
-                Nous imaginons un futur où chaque enfant, chaque famille, chaque communauté 
-                a accès à une hygiène digne, quels que soient ses moyens.
+                Nous visons un cadre de vie plus sain, où l'hygiène et l'assainissement participent à la dignité des personnes et au bien-être collectif.
               </p>
             </div>
           </motion.div>
         </div>
       </SectionWrapper>
 
-      {/* Values */}
       <SectionWrapper>
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos valeurs</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Ce en quoi nous croyons</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          {values.map((v, i) => (
+          {values.map((value, index) => (
             <motion.div
-              key={v.title}
+              key={value.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
+              transition={{ delay: index * 0.08 }}
               whileHover={{ y: -5 }}
               className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 text-center"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
-                <v.icon className="w-6 h-6 text-white" />
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
+                <value.icon className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2 text-sm">{v.title}</h4>
-              <p className="text-xs text-gray-500 leading-relaxed">{v.desc}</p>
+              <h4 className="font-bold text-gray-900 mb-2 text-sm">{value.title}</h4>
+              <p className="text-xs text-gray-500 leading-relaxed">{value.desc}</p>
             </motion.div>
           ))}
         </div>
       </SectionWrapper>
 
-      {/* Founder */}
-      <SectionWrapper className="bg-gray-50/50" id="team">
+      <SectionWrapper className="bg-gray-50/50" id="organisation">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Les fondatrices</span>
-            <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Un groupe de femmes engagées</h2>
+            <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">L'organisation</span>
+            <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Repères essentiels</h2>
           </div>
 
           <motion.div
@@ -214,19 +199,12 @@ export default function About() {
               </div>
             </div>
             <div>
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                <Award className="w-5 h-5 text-amber-500" />
-                <span className="text-sm font-semibold text-amber-600">Fondatrices</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Groupe fondateur MCT</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Miraclecleantech ASBL</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                Miracle Clean Tech a été fondée par un groupe de femmes déterminées, unies par 
-                une même vision : mettre leurs compétences et leur passion au service de la santé 
-                publique. Leur force collective, leur créativité et leur engagement sans faille 
-                sont le vrai moteur de MCT.
+                L'organisation intervient dans l'assistance des personnes vulnérables. Son modèle est simple : soutenir une action sociale concrète grâce à la production de produits d'hygiène des mains et de nettoyage des sols.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                {['Leadership féminin', 'Entrepreneuriat social', 'Innovation locale'].map((tag) => (
+                {['ASBL', 'Apolitique', 'Décembre 2025'].map((tag) => (
                   <span key={tag} className="px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-medium">
                     {tag}
                   </span>
@@ -237,23 +215,22 @@ export default function About() {
         </div>
       </SectionWrapper>
 
-      {/* Timeline */}
       <SectionWrapper>
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Notre parcours</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Timeline MCT</h2>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Parcours de l'organisation</h2>
         </div>
         <div className="max-w-2xl mx-auto">
           <div className="relative">
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-green-400 to-blue-500" />
             <div className="flex flex-col gap-8">
-              {timeline.map((item, i) => (
+              {timeline.map((item, index) => (
                 <motion.div
                   key={item.date}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: index * 0.1 }}
                   className="flex gap-6"
                 >
                   <div className="relative flex-shrink-0 w-12 flex justify-center">

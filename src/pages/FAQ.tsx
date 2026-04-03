@@ -6,7 +6,7 @@ import FAQAccordion from '../components/FAQAccordion';
 import Button from '../components/Button';
 import { faqs } from '../data/misc';
 
-const categories = ['Tous', 'Général', 'Produits', 'Sécurité', 'Commandes', 'Livraison', 'Social', 'Services'];
+const categories = ['Tous', 'Général', 'Mission', 'Produits', 'Contact'];
 
 export default function FAQ() {
   const [activeCategory, setActiveCategory] = useState('Tous');
@@ -41,7 +41,7 @@ export default function FAQ() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Retrouvez les réponses aux questions les plus posées sur MCT, nos produits et notre mission.
+            Retrouvez les réponses aux questions les plus posées sur l'organisation, ses produits et son action sociale.
           </motion.p>
         </div>
       </section>

@@ -5,7 +5,7 @@ import SectionWrapper from '../components/SectionWrapper';
 import BlogCard from '../components/BlogCard';
 import { blogPosts } from '../data/blog';
 
-const categories = ['Tous', 'Santé', 'Conseils', 'Social', 'Environnement'];
+const categories = ['Tous', 'Mission', 'Produits', 'Hygiène', 'Assainissement'];
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('Tous');
@@ -25,7 +25,7 @@ export default function Blog() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm font-semibold text-green-600 uppercase tracking-widest">
-            Notre blog
+            Publications
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -33,9 +33,9 @@ export default function Blog() {
             transition={{ delay: 0.1 }}
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
-            Actualités &{' '}
+            Informations &{' '}
             <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
-              Conseils
+              repères
             </span>
           </motion.h1>
           <motion.p
@@ -44,7 +44,7 @@ export default function Blog() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Articles, conseils et actualités sur l'hygiène, la santé et nos initiatives sociales.
+            Articles et contenus autour de l'action sociale, de l'hygiène des mains, du nettoyage des sols et de l'assainissement.
           </motion.p>
         </div>
       </section>

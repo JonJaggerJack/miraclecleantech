@@ -18,7 +18,7 @@ export default function Loader() {
           transition={{ delay: 0.3 }}
           className="text-center"
         >
-          <p className="font-bold text-gray-900">Miracle Clean Tech</p>
+          <p className="font-bold text-gray-900">Miraclecleantech ASBL</p>
           <p className="text-sm text-gray-400">Chargement...</p>
         </motion.div>
       </div>
