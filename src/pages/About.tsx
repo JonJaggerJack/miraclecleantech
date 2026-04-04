@@ -81,13 +81,13 @@ export default function About() {
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 text-base leading-relaxed">
               <p>
-                Miraclecleantech ASBL est une organisation qui travaille dans l'assistance des personnes vulnérables. Sa mission s'inscrit dans la promotion de l'hygiène, la prévention et l'assainissement du cadre de vie.
+                Miracle Clean Tech est une ASBL engagée dans l'assistance aux personnes vulnérables, en offrant un accompagnement social et communautaire adapté à leurs besoins.
               </p>
               <p>
-                Pour financer ses activités, l'ASBL développe des produits d'hygiène des mains et des produits de nettoyage des sols. Cette production soutient directement la continuité de l'action sociale.
+                Elle œuvre également pour le développement durable des communautés à travers des actions de sensibilisation, de protection de l'environnement et de promotion des initiatives locales.
               </p>
               <p>
-                Miraclecleantech ASBL est une organisation <strong className="text-gray-700">apolitique</strong>, créée en décembre 2025, tournée vers la santé publique, l'hygiène et l'accompagnement des personnes vulnérables.
+                L'organisation propose des formations visant à renforcer les capacités, favoriser l'autonomisation et soutenir l'engagement communautaire.
               </p>
             </div>
             <div className="mt-8 flex gap-4">
