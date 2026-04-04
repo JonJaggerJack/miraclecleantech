@@ -25,7 +25,7 @@ export default function BlogDetail() {
       {/* Hero image */}
       <div className="relative h-96 lg:h-[480px] overflow-hidden">
         <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-gray-900/60" />
         <div className="absolute bottom-0 left-0 right-0 p-8 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="px-3 py-1 rounded-full bg-green-500 text-white text-xs font-semibold mb-4 inline-block">

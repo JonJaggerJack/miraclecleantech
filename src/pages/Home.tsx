@@ -8,15 +8,14 @@ import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
 import Button from '../components/Button';
 import { products } from '../data/products';
+import heroImg from '../imgs/2.jpeg';
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-50">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-green-50/30 to-blue-50/40" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-green-100/40 to-transparent rounded-full blur-3xl -translate-y-1/4 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-blue-100/30 to-transparent rounded-full blur-3xl translate-y-1/4 -translate-x-1/4" />
+      <div className="absolute inset-0" />
 
       <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left */}
@@ -39,7 +38,7 @@ function Hero() {
             className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6"
           >
             L'hygiène au service de{' '}
-            <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-blue-700">
               l'action sociale
             </span>
           </motion.h1>
@@ -81,7 +80,7 @@ function Hero() {
               { value: '2025', label: 'Année de création' },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                <p className="text-3xl font-bold text-blue-700">
                   {stat.value}
                 </p>
                 <p className="text-sm text-gray-400">{stat.label}</p>
@@ -99,11 +98,11 @@ function Hero() {
         >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/70">
             <img
-              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
+              src={heroImg}
               alt="Produits Miraclecleantech ASBL"
               className="w-full h-[520px] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent" />
+            <div className="absolute inset-0 bg-gray-900/15" />
           </div>
 
           {/* Floating badge */}
@@ -113,7 +112,7 @@ function Hero() {
             className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-blue-700 flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -141,12 +140,12 @@ function Hero() {
 
 // ── Mission Cards ─────────────────────────────────────────────────────────────
 const missions = [
-  { icon: Shield, title: "Promouvoir l'hygiène", desc: "Sensibiliser et faciliter l'accès à des pratiques hygiéniques de qualité pour toutes les communautés.", color: "from-green-500 to-green-600" },
-  { icon: Globe, title: "Réduire les risques sanitaires", desc: "Contribuer à la réduction des maladies liées au manque d'hygiène par des gestes et produits utiles.", color: "from-teal-500 to-cyan-600" },
-  { icon: Heart, title: "Assister les personnes vulnérables", desc: "Placer l'accompagnement des personnes vulnérables au coeur de l'action de l'ASBL.", color: "from-rose-500 to-pink-600" },
-  { icon: Leaf, title: "Assainir l'environnement", desc: "Améliorer le cadre de vie grâce au nettoyage et à l'assainissement des espaces.", color: "from-blue-500 to-blue-600" },
-  { icon: Users, title: "Renforcer les bonnes pratiques", desc: "Encourager des habitudes simples et durables autour de l'hygiène et de la propreté.", color: "from-violet-500 to-purple-600" },
-  { icon: Zap, title: "Soutenir l'action sociale", desc: "Utiliser la production de produits utiles pour soutenir durablement les activités de l'organisation.", color: "from-amber-500 to-orange-600" },
+  { icon: Shield, title: "Promouvoir l'hygiène", desc: "Sensibiliser et faciliter l'accès à des pratiques hygiéniques de qualité pour toutes les communautés.", color: "bg-green-600" },
+  { icon: Globe, title: "Réduire les risques sanitaires", desc: "Contribuer à la réduction des maladies liées au manque d'hygiène par des gestes et produits utiles.", color: "bg-teal-600" },
+  { icon: Heart, title: "Assister les personnes vulnérables", desc: "Placer l'accompagnement des personnes vulnérables au coeur de l'action de l'ASBL.", color: "bg-rose-500" },
+  { icon: Leaf, title: "Assainir l'environnement", desc: "Améliorer le cadre de vie grâce au nettoyage et à l'assainissement des espaces.", color: "bg-blue-600" },
+  { icon: Users, title: "Renforcer les bonnes pratiques", desc: "Encourager des habitudes simples et durables autour de l'hygiène et de la propreté.", color: "bg-violet-600" },
+  { icon: Zap, title: "Soutenir l'action sociale", desc: "Utiliser la production de produits utiles pour soutenir durablement les activités de l'organisation.", color: "bg-amber-500" },
 ];
 
 // ── Impact Stats ──────────────────────────────────────────────────────────────
@@ -204,7 +203,7 @@ export default function Home() {
               whileHover={{ y: -4 }}
               className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-lg hover:shadow-gray-100/70 transition-all duration-300"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${m.color} flex items-center justify-center mb-4 shadow-md`}>
+              <div className={`w-12 h-12 rounded-xl ${m.color} flex items-center justify-center mb-4 shadow-md`}>
                 <m.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-base font-bold text-gray-900 mb-2">{m.title}</h3>
@@ -239,7 +238,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* Impact Stats */}
-      <SectionWrapper className="bg-gradient-to-br from-gray-900 to-gray-800">
+      <SectionWrapper className="bg-gray-900">
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-400 uppercase tracking-widest">Notre impact</span>
           <h2 className="mt-2 text-4xl font-extrabold text-white">Des repères clairs</h2>
@@ -254,7 +253,7 @@ export default function Home() {
               transition={{ delay: i * 0.1 }}
               className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
             >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-blue-700 flex items-center justify-center">
                 <s.icon className="w-6 h-6 text-white" />
               </div>
               <p className="text-4xl font-extrabold text-white mb-1">{s.value}</p>
@@ -270,9 +269,8 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl bg-gradient-to-br from-green-500 to-blue-600 p-12 text-center overflow-hidden"
+          className="relative rounded-3xl bg-blue-700 p-12 text-center overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
           <div className="relative">
             <h2 className="text-4xl font-extrabold text-white mb-4">
               Soutenir Miraclecleantech ASBL
@@ -283,7 +281,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/products"
-                className="px-8 py-4 bg-white text-green-700 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200"
+                className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200"
               >
                 Voir les produits
               </Link>

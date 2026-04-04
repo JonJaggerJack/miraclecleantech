@@ -43,7 +43,7 @@ function StatCard({ icon: Icon, value, suffix = '', label, color, index }: StatC
       onViewportEnter={() => start()}
       className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 text-center"
     >
-      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
+      <div className={`w-14 h-14 rounded-xl ${color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
         <Icon className="w-7 h-7 text-white" />
       </div>
       <p className="text-4xl font-extrabold text-gray-900 mb-1">
@@ -55,10 +55,10 @@ function StatCard({ icon: Icon, value, suffix = '', label, color, index }: StatC
 }
 
 const stats = [
-  { icon: Users, value: 2, suffix: '', label: 'Pôles d\'intervention', color: 'from-blue-500 to-blue-600' },
-  { icon: Droplets, value: 2, suffix: '', label: 'Produits clés', color: 'from-green-500 to-teal-600' },
-  { icon: Heart, value: 1, suffix: '', label: 'Action sociale centrale', color: 'from-rose-500 to-pink-600' },
-  { icon: Shield, value: 2025, suffix: '', label: 'Année de création', color: 'from-violet-500 to-purple-600' },
+  { icon: Users, value: 2, suffix: '', label: 'Pôles d\'intervention', color: 'bg-blue-700' },
+  { icon: Droplets, value: 2, suffix: '', label: 'Produits clés', color: 'bg-green-600' },
+  { icon: Heart, value: 1, suffix: '', label: 'Action sociale centrale', color: 'bg-rose-500' },
+  { icon: Shield, value: 2025, suffix: '', label: 'Année de création', color: 'bg-violet-600' },
 ];
 
 const projects = [
@@ -96,7 +96,7 @@ export default function Impact() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-green-50/30 to-blue-50/40 relative overflow-hidden">
+      <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-100/30 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm font-semibold text-green-600 uppercase tracking-widest">
@@ -109,7 +109,7 @@ export default function Impact() {
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
             Des actions concrètes pour{' '}
-            <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-blue-700">
               les communautés
             </span>
           </motion.h1>
@@ -158,7 +158,7 @@ export default function Impact() {
               className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-start gap-5">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                <div className={`w-14 h-14 rounded-xl ${p.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
                   <p.icon className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -180,11 +180,8 @@ export default function Impact() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="rounded-3xl bg-gradient-to-br from-rose-500 to-pink-600 p-12 text-center relative overflow-hidden"
+          className="rounded-3xl bg-blue-700 p-12 text-center relative overflow-hidden"
         >
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
-          </div>
           <div className="relative">
             <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
             <h2 className="text-4xl font-extrabold text-white mb-4">Soutenir l'action de l'ASBL</h2>

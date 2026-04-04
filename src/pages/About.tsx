@@ -3,14 +3,14 @@ import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield } from 'lucide-react
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
 import founderImg from '../imgs/1.jpeg';
-import whoWeAreImg from '../imgs/2.jpeg';
+import whoWeAreImg from '../imgs/3.jpeg';
 
 const values = [
-  { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'from-amber-400 to-orange-500' },
-  { icon: Zap, title: 'Innovation', desc: "Une approche actuelle au service de l'utilité sociale.", color: 'from-blue-400 to-indigo-500' },
-  { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'from-green-400 to-teal-500' },
-  { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'from-rose-400 to-pink-500' },
-  { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'from-violet-400 to-purple-500' },
+  { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'bg-amber-500' },
+  { icon: Zap, title: 'Innovation', desc: "Une approche actuelle au service de l'utilité sociale.", color: 'bg-blue-700' },
+  { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'bg-green-600' },
+  { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'bg-rose-500' },
+  { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'bg-violet-600' },
 ];
 
 const missionItems = [
@@ -25,7 +25,7 @@ const missionItems = [
 export default function About() {
   return (
     <>
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-white via-green-50/30 to-blue-50/40 relative overflow-hidden">
+      <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-100/30 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.span
@@ -35,17 +35,12 @@ export default function About() {
           >
             Notre histoire
           </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
-          >
-            Nous sommes{' '}
-            <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
-              Miraclecleantech ASBL
+            <span className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight">
+              Nous sommes{' '}
+              <span className="text-blue-700">
+                Miraclecleantech ASBL
+              </span>
             </span>
-          </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -106,7 +101,7 @@ export default function About() {
             viewport={{ once: true }}
             className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm"
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-6 shadow-lg">
+            <div className="w-14 h-14 rounded-2xl bg-green-600 flex items-center justify-center mb-6 shadow-lg">
               <Target className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Notre Mission</h3>
@@ -127,9 +122,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-10"
+            className="bg-gray-900 rounded-3xl p-10"
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-6 shadow-lg">
+            <div className="w-14 h-14 rounded-2xl bg-blue-700 flex items-center justify-center mb-6 shadow-lg">
               <Eye className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Notre Vision</h3>
@@ -165,7 +160,7 @@ export default function About() {
               whileHover={{ y: -5 }}
               className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 text-center"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
+              <div className={`w-12 h-12 rounded-xl ${value.color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
                 <value.icon className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2 text-sm">{value.title}</h4>
@@ -189,7 +184,7 @@ export default function About() {
             className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 items-center text-center md:text-left"
           >
             <div className="flex-shrink-0">
-              <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center shadow-md">
+              <div className="w-28 h-28 rounded-2xl bg-blue-50 flex items-center justify-center shadow-md">
                 <Users className="w-14 h-14 text-green-600" />
               </div>
             </div>

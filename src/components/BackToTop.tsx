@@ -21,7 +21,7 @@ export default function BackToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500 to-blue-600 text-white shadow-lg shadow-green-300/40 flex items-center justify-center hover:shadow-xl transition-shadow"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-2xl bg-blue-700 text-white shadow-lg shadow-blue-300/40 flex items-center justify-center hover:bg-blue-800 transition-colors"
           aria-label="Retour en haut"
         >
           <ArrowUp className="w-5 h-5" />

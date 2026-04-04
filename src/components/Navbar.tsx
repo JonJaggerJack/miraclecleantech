@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+            <div className="w-9 h-9 rounded-xl bg-blue-700 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -55,7 +55,7 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   isActive
-                    ? 'bg-gradient-to-r from-green-50 to-blue-50 text-green-700 font-semibold'
+                    ? 'bg-blue-50 text-blue-700 font-semibold'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`
               }
@@ -69,7 +69,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/contact"
-            className="px-5 py-2.5 bg-gradient-to-r from-green-500 to-blue-600 text-white text-sm font-semibold rounded-xl hover:shadow-lg hover:shadow-green-200 hover:scale-105 transition-all duration-200"
+            className="px-5 py-2.5 bg-blue-700 text-white text-sm font-semibold rounded-xl hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-200 hover:scale-105 transition-all duration-200"
           >
             Nous contacter
           </Link>
@@ -105,7 +105,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                       isActive
-                        ? 'bg-gradient-to-r from-green-50 to-blue-50 text-green-700 font-semibold'
+                        ? 'bg-blue-50 text-blue-700 font-semibold'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                     }`
                   }
@@ -116,7 +116,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 px-4 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white text-sm font-semibold rounded-xl text-center"
+                className="mt-2 px-4 py-3 bg-blue-700 text-white text-sm font-semibold rounded-xl text-center"
               >
                 Nous contacter
               </Link>

@@ -33,7 +33,7 @@ export default function Blog() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-green-50/30 to-blue-50/40 relative overflow-hidden">
+      <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.span
@@ -50,7 +50,7 @@ export default function Blog() {
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
             Informations &{' '}
-            <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-blue-700">
               repères
             </span>
           </motion.h1>
@@ -88,7 +88,7 @@ export default function Blog() {
               transition={{ delay: i * 0.1 }}
               className="flex gap-4 p-6 rounded-2xl border border-gray-100 bg-white shadow-sm"
             >
-              <div className="shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
+              <div className="shrink-0 w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
                 <Icon className="w-5 h-5 text-green-600" />
               </div>
               <div>
