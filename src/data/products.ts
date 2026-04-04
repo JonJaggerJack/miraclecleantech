@@ -14,7 +14,7 @@ export const products: Product[] = [
     category: "Hygiène des mains",
     description: "Produit d'hygiène pensé pour le lavage régulier des mains et la promotion des bonnes pratiques sanitaires.",
     benefits: ["Usage quotidien", "Format pratique", "Contribue à l'action sociale", "Adapté aux espaces collectifs"],
-    image: "https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const products: Product[] = [
     category: "Hygiène des mains",
     description: "Solution d'hygiène des mains conçue pour les situations où l'eau et le savon ne sont pas immédiatement disponibles.",
     benefits: ["Application rapide", "Format mobile", "Usage individuel ou collectif", "Soutient les activités de l'ASBL"],
-    image: "https://images.unsplash.com/photo-1584634731339-252c581abfc5?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const products: Product[] = [
     category: "Nettoyage des sols",
     description: "Produit de nettoyage destiné à l'entretien régulier des sols dans les maisons, bureaux et espaces communautaires.",
     benefits: ["Entretien quotidien", "Utilisation simple", "Convient aux espaces partagés", "Contribue à l'action sociale"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80",
   },
   {
     id: 4,
