@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoImg from '../imgs/Logo miracle.jpeg';
 
 const navLinks = [
   { label: 'Accueil', to: '/' },
@@ -36,13 +37,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-blue-700 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <span className="font-bold text-lg text-gray-900 leading-tight block">Miraclecleantech</span>
-            <span className="text-xs text-gray-400 leading-none">ASBL</span>
-          </div>
+            <img
+              src={logoImg}
+              alt="Miraclecleantech ASBL"
+              className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+            />
         </Link>
 
         {/* Desktop Nav */}

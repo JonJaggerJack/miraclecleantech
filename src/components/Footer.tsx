@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import logoImg from '../imgs/Logo miracle.jpeg';
 
 const footerLinks = {
   company: [
@@ -27,13 +27,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-blue-700 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <span className="font-bold text-lg text-white leading-tight block">Miraclecleantech ASBL</span>
-                <span className="text-xs text-gray-400">Assistance & hygiène</span>
-              </div>
+              <img
+                src={logoImg}
+                alt="Miraclecleantech ASBL"
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
               Organisation apolitique créée en décembre 2025, Miraclecleantech ASBL accompagne les personnes vulnérables et soutient son action par la production de produits d'hygiène des mains et de nettoyage des sols.

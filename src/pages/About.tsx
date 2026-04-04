@@ -26,8 +26,19 @@ export default function About() {
   return (
     <>
       <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-green-100/30 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto text-center relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-8"
+          >
+            <img
+              src={whoWeAreImg}
+              alt="Miraclecleantech ASBL"
+              className="w-full max-w-2xl h-72 object-cover rounded-3xl shadow-xl"
+            />
+          </motion.div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -35,12 +46,17 @@ export default function About() {
           >
             Notre histoire
           </motion.span>
-            <span className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight">
-              Nous sommes{' '}
-              <span className="text-blue-700">
-                Miraclecleantech ASBL
-              </span>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
+          >
+            Nous sommes{' '}
+            <span className="text-blue-700">
+              Miraclecleantech ASBL
             </span>
+          </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,18 +69,7 @@ export default function About() {
       </section>
 
       <SectionWrapper>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={whoWeAreImg}
-              alt="Miraclecleantech ASBL"
-              className="rounded-3xl shadow-2xl shadow-gray-200/60 w-full h-[450px] object-cover"
-            />
-          </motion.div>
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
