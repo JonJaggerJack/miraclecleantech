@@ -13,7 +13,6 @@ const footerLinks = {
     { label: 'Nettoyage des sols', to: '/products' },
   ],
   support: [
-    { label: 'FAQ', to: '/faq' },
     { label: 'Contact', to: '/contact' },
     { label: 'Blog', to: '/blog' },
   ],

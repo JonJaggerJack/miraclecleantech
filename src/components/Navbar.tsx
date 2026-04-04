@@ -9,7 +9,6 @@ const navLinks = [
   { label: 'Produits', to: '/products' },
   { label: 'Impact', to: '/impact' },
   { label: 'Blog', to: '/blog' },
-  { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' },
 ];
 

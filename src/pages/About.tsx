@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield, Calendar } from 'lucide-react';
+import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
+import founderImg from '../imgs/1.jpeg';
+import whoWeAreImg from '../imgs/2.jpeg';
 
 const values = [
   { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'from-amber-400 to-orange-500' },
@@ -9,13 +11,6 @@ const values = [
   { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'from-green-400 to-teal-500' },
   { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'from-rose-400 to-pink-500' },
   { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'from-violet-400 to-purple-500' },
-];
-
-const timeline = [
-  { date: 'Décembre 2025', title: 'Création de Miraclecleantech ASBL', desc: "L'organisation est créée autour d'une mission d'assistance des personnes vulnérables." },
-  { date: 'Mission', title: "Structuration de l'action sociale", desc: "L'ASBL affirme ses priorités : hygiène, prévention, assainissement et accompagnement." },
-  { date: 'Production', title: 'Lancement des produits pour les mains', desc: "L'hygiène des mains devient un premier levier concret de financement des activités." },
-  { date: 'Sols', title: 'Développement des produits de nettoyage', desc: "La gamme de nettoyage des sols complète le modèle de financement solidaire de l'organisation." },
 ];
 
 const missionItems = [
@@ -70,7 +65,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=700&q=80"
+              src={whoWeAreImg}
               alt="Miraclecleantech ASBL"
               className="rounded-3xl shadow-2xl shadow-gray-200/60 w-full h-[450px] object-cover"
             />
@@ -216,37 +211,32 @@ export default function About() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="text-center mb-14">
-          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Notre parcours</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Parcours de l'organisation</h2>
+        <div className="text-center mb-12">
+          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">À l'origine</span>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">La fondatrice</h2>
         </div>
-        <div className="max-w-2xl mx-auto">
-          <div className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-green-400 to-blue-500" />
-            <div className="flex flex-col gap-8">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={item.date}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex gap-6"
-                >
-                  <div className="relative flex-shrink-0 w-12 flex justify-center">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center shadow-md z-10">
-                      <Calendar className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex-1 mb-2">
-                    <span className="text-xs font-semibold text-green-600">{item.date}</span>
-                    <h4 className="font-bold text-gray-900 mt-1 mb-1">{item.title}</h4>
-                    <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row gap-10 items-center bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden p-8"
+          >
+            <div className="shrink-0">
+              <img
+                src={founderImg}
+                alt="Agathe Ishara, fondatrice de Miraclecleantech ASBL"
+                className="w-48 h-48 object-cover rounded-2xl shadow-md"
+              />
             </div>
-          </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Agathe Ishara</h3>
+              <p className="text-sm font-semibold text-green-600 mb-4">Fondatrice de Miraclecleantech ASBL</p>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Agathe Ishara est à l'origine de Miraclecleantech ASBL, une organisation créée en décembre 2025 à Bukavu pour assister les personnes vulnérables et promouvoir l'hygiène dans les communautés.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </SectionWrapper>
     </>
