@@ -113,7 +113,6 @@ export default function Formations() {
             className="mt-8 flex flex-wrap gap-4"
           >
             <Button to="/contact">S'inscrire à une formation</Button>
-            <Button to="/about" variant="outline">En savoir plus</Button>
           </motion.div>
             </div>
             {/* Right – illustration */}
