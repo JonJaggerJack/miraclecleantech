@@ -3,6 +3,8 @@ import { Monitor, Table2, BarChart3, BrainCircuit, CheckCircle, ArrowRight } fro
 import { Link } from 'react-router-dom';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
+import IllustrationTech from '../components/IllustrationTech';
+import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 const formations = [
   {
@@ -75,8 +77,11 @@ export default function Formations() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl" />
-        <div className="max-w-4xl mx-auto text-center relative">
+        <BlobDecor className="absolute -top-16 -left-24 w-[420px] h-[420px] text-blue-100/35 pointer-events-none" />
+        <DotGrid className="absolute bottom-8 right-8 text-green-300/25 w-44 h-44 pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -97,7 +102,7 @@ export default function Formations() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-6 text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto"
+            className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
           >
             Miraclecleantech ASBL accompagne les communautés vers l'autonomisation numérique à travers des formations pratiques et accessibles.
           </motion.p>
@@ -105,11 +110,22 @@ export default function Formations() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-8 flex flex-wrap justify-center gap-4"
+            className="mt-8 flex flex-wrap gap-4"
           >
             <Button to="/contact">S'inscrire à une formation</Button>
             <Button to="/about" variant="outline">En savoir plus</Button>
           </motion.div>
+            </div>
+            {/* Right – illustration */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="hidden lg:flex justify-center"
+            >
+              <IllustrationTech className="w-full max-w-md" />
+            </motion.div>
+          </div>
         </div>
       </section>
 

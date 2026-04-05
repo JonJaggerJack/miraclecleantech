@@ -9,13 +9,16 @@ import ProductCard from '../components/ProductCard';
 import Button from '../components/Button';
 import { products } from '../data/products';
 import heroImg from '../imgs/2.jpeg';
+import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
 function Hero() {
   return (
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-50">
-      {/* Background */}
-      <div className="absolute inset-0" />
+      {/* Decorative background */}
+      <BlobDecor className="absolute -top-20 -right-32 w-[520px] h-[520px] text-blue-100/50 pointer-events-none" />
+      <DotGrid className="absolute bottom-24 left-0 text-green-300/30 w-52 h-52 pointer-events-none" />
+      <RingDecor className="absolute top-1/3 -left-28 w-72 h-72 text-blue-200/25 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left */}

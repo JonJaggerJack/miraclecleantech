@@ -5,6 +5,7 @@ import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
 import founderImg from '../imgs/1.jpeg';
 import whoWeAreImg from '../imgs/3.jpeg';
+import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 
 const values = [
   { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'bg-amber-500' },
@@ -66,6 +67,9 @@ export default function About() {
   return (
     <>
       <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
+        <BlobDecor className="absolute -top-20 -right-24 w-[420px] h-[420px] text-blue-100/40 pointer-events-none" />
+        <DotGrid className="absolute bottom-4 left-4 text-green-300/25 w-44 h-44 pointer-events-none" />
+        <RingDecor className="absolute -bottom-10 -right-10 w-60 h-60 text-green-200/20 pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.span
             initial={{ opacity: 0 }}

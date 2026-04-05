@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { BookOpen, Leaf, HandMetal, FlaskConical, Users } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
+import IllustrationBlog from '../components/IllustrationBlog';
+import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 const themes = [
   {
@@ -34,8 +36,11 @@ export default function Blog() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
-        <div className="max-w-4xl mx-auto text-center relative">
+        <BlobDecor className="absolute -right-24 -top-16 w-[440px] h-[440px] text-blue-100/40 pointer-events-none" />
+        <DotGrid className="absolute bottom-6 left-6 text-green-300/30 w-44 h-44 pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -58,10 +63,21 @@ export default function Blog() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
+            className="mt-4 text-lg text-gray-500 max-w-xl"
           >
             Le blog de Miraclecleantech ASBL sera un espace de partage autour de nos domaines d'action : hygiène, assainissement, vie de l'organisation et accompagnement des personnes vulnérables.
           </motion.p>
+            </div>
+            {/* Right – illustration */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="hidden lg:flex justify-center"
+            >
+              <IllustrationBlog className="w-full max-w-md" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
