@@ -70,26 +70,6 @@ function Hero() {
             </Button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-8"
-          >
-            {[
-              { value: '2', label: 'Axes de production' },
-              { value: '1', label: 'Action sociale' },
-              { value: '2025', label: 'Année de création' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl font-bold text-blue-700">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-gray-400">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div>
         </div>
 
         {/* Right – Hero image card */}
