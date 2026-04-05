@@ -151,13 +151,6 @@ const missions = [
   { icon: Zap, title: "Soutenir l'action sociale", desc: "Utiliser la production de produits utiles pour soutenir durablement les activités de l'organisation.", color: "bg-amber-500" },
 ];
 
-// ── Impact Stats ──────────────────────────────────────────────────────────────
-const stats = [
-  { value: '2', label: 'Gammes de produits', icon: Zap },
-  { value: '1', label: 'Action sociale', icon: Heart },
-  { value: '2025', label: 'Création de l\'ASBL', icon: Globe },
-  { value: '2', label: 'Domaines d\'action', icon: Users },
-];
 
 export default function Home() {
   return (
@@ -237,32 +230,6 @@ export default function Home() {
             Voir tous les produits
             <ChevronRight className="w-5 h-5" />
           </Button>
-        </div>
-      </SectionWrapper>
-
-      {/* Impact Stats */}
-      <SectionWrapper className="bg-gray-900">
-        <div className="text-center mb-14">
-          <span className="text-sm font-semibold text-green-400 uppercase tracking-widest">Notre impact</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-white">Des repères clairs</h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
-            >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-blue-700 flex items-center justify-center">
-                <s.icon className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-4xl font-extrabold text-white mb-1">{s.value}</p>
-              <p className="text-gray-400 text-sm">{s.label}</p>
-            </motion.div>
-          ))}
         </div>
       </SectionWrapper>
 
