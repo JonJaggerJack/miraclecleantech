@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
+import IllustrationContact from '../components/IllustrationContact';
+import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 interface FormData {
   name: string;
@@ -74,30 +76,41 @@ export default function Contact() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
-        <div className="max-w-4xl mx-auto text-center relative">
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm font-semibold text-green-600 uppercase tracking-widest">
-            Contactez-nous
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
-          >
-            Nous{' '}
-            <span className="text-blue-700">
-              écrire
-            </span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
-          >
-            Pour toute demande d'information, de partenariat ou relative aux produits, utilisez le formulaire ou les coordonnées ci-dessous.
-          </motion.p>
+        <BlobDecor className="absolute -left-24 -top-16 w-[440px] h-[440px] text-blue-100/40 pointer-events-none" />
+        <DotGrid className="absolute bottom-6 right-6 text-green-300/30 w-44 h-44 pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm font-semibold text-green-600 uppercase tracking-widest">
+                Contactez-nous
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
+              >
+                Nous{' '}
+                <span className="text-blue-700">écrire</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="mt-4 text-lg text-gray-500 max-w-lg"
+              >
+                Pour toute demande d'information, de partenariat ou relative aux produits, utilisez le formulaire ou les coordonnées ci-dessous.
+              </motion.p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="hidden lg:flex justify-center"
+            >
+              <IllustrationContact className="w-full max-w-md" />
+            </motion.div>
+          </div>
         </div>
       </section>
 

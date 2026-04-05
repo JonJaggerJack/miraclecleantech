@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import founderImg from '../imgs/1.jpeg';
 import whoWeAreImg from '../imgs/3.jpeg';
 import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
+import IllustrationAbout from '../components/IllustrationAbout';
 
 const values = [
   { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'bg-amber-500' },
@@ -70,7 +71,9 @@ export default function About() {
         <BlobDecor className="absolute -top-20 -right-24 w-[420px] h-[420px] text-blue-100/40 pointer-events-none" />
         <DotGrid className="absolute bottom-4 left-4 text-green-300/25 w-44 h-44 pointer-events-none" />
         <RingDecor className="absolute -bottom-10 -right-10 w-60 h-60 text-green-200/20 pointer-events-none" />
-        <div className="max-w-4xl mx-auto text-center relative">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -93,10 +96,20 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-6 text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto"
+            className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
           >
             Une organisation créée pour assister les personnes vulnérables et promouvoir l'hygiène à travers une action utile et structurée.
           </motion.p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="hidden lg:flex justify-center"
+            >
+              <IllustrationAbout className="w-full max-w-md" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -142,7 +155,9 @@ export default function About() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="bg-gray-50/50" id="mission">
+      <SectionWrapper className="bg-gray-50/50 relative overflow-hidden" id="mission">
+        <RingDecor className="absolute -left-16 top-10 w-56 h-56 text-blue-100/40 pointer-events-none" />
+        <DotGrid className="absolute right-4 bottom-4 w-40 h-40 text-green-200/30 pointer-events-none" />
         <div className="grid lg:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -254,7 +269,8 @@ export default function About() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="bg-gray-50/50">
+      <SectionWrapper className="bg-gray-50/50 relative overflow-hidden">
+        <BlobDecor className="absolute -right-20 -top-10 w-80 h-80 text-blue-100/30 pointer-events-none" />
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Projets</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos initiatives</h2>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
 import IllustrationTech from '../components/IllustrationTech';
-import { BlobDecor, DotGrid } from '../components/SvgDecor';
+import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 
 const formations = [
   {
@@ -130,7 +130,9 @@ export default function Formations() {
       </section>
 
       {/* Formations grid */}
-      <SectionWrapper>
+      <SectionWrapper className="relative overflow-hidden">
+        <RingDecor className="absolute -right-16 top-8 w-56 h-56 text-blue-100/40 pointer-events-none" />
+        <DotGrid className="absolute left-0 bottom-0 w-40 h-40 text-green-200/35 pointer-events-none" />
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Programme</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Les 4 modules</h2>
@@ -178,7 +180,8 @@ export default function Formations() {
       </SectionWrapper>
 
       {/* Pourquoi ces formations */}
-      <SectionWrapper className="bg-gray-50/50">
+      <SectionWrapper className="bg-gray-50/50 relative overflow-hidden">
+        <BlobDecor className="absolute -left-20 -bottom-16 w-72 h-72 text-green-100/50 pointer-events-none" />
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Notre approche</span>

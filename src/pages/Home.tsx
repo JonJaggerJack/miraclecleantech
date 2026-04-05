@@ -158,7 +158,9 @@ export default function Home() {
       <Hero />
 
       {/* Mission Section */}
-      <SectionWrapper className="bg-white">
+      <SectionWrapper className="bg-white relative overflow-hidden">
+        <RingDecor className="absolute -right-20 top-10 w-64 h-64 text-blue-100/40 pointer-events-none" />
+        <DotGrid className="absolute left-0 bottom-0 w-40 h-40 text-green-200/40 pointer-events-none" />
         <div className="text-center mb-14">
           <motion.span
             initial={{ opacity: 0 }}
@@ -210,7 +212,8 @@ export default function Home() {
       </SectionWrapper>
 
       {/* Featured Products */}
-      <SectionWrapper className="bg-gray-50/50">
+      <SectionWrapper className="bg-gray-50/50 relative overflow-hidden">
+        <BlobDecor className="absolute -left-24 -bottom-20 w-80 h-80 text-green-100/50 pointer-events-none" />
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos produits</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Produits essentiels</h2>
@@ -241,6 +244,8 @@ export default function Home() {
           viewport={{ once: true }}
           className="relative rounded-3xl bg-blue-700 p-12 text-center overflow-hidden"
         >
+          <BlobDecor className="absolute -top-16 -right-20 w-72 h-72 text-white/10 pointer-events-none" />
+          <RingDecor className="absolute -bottom-12 -left-16 w-60 h-60 text-white/10 pointer-events-none" />
           <div className="relative">
             <h2 className="text-4xl font-extrabold text-white mb-4">
               Soutenir Miraclecleantech ASBL
