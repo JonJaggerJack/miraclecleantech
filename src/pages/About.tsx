@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield } from 'lucide-react';
+import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield, BookOpen, Monitor } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
 import founderImg from '../imgs/1.jpeg';
@@ -11,6 +12,45 @@ const values = [
   { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'bg-green-600' },
   { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'bg-rose-500' },
   { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'bg-violet-600' },
+];
+
+const projects = [
+  {
+    icon: Heart,
+    title: 'Assistance aux personnes vulnérables',
+    desc: "L'organisation concentre son action sur l'accompagnement des personnes vulnérables à travers une approche sociale, préventive et utile.",
+    color: 'bg-rose-500',
+    tag: 'Mission',
+  },
+  {
+    icon: BookOpen,
+    title: "Promotion de l'hygiène",
+    desc: "Miraclecleantech ASBL met l'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d'hygiène.",
+    color: 'bg-blue-700',
+    tag: 'Éducation',
+  },
+  {
+    icon: Leaf,
+    title: 'Assainissement du cadre de vie',
+    desc: "L'amélioration du cadre de vie passe par des actions simples autour du nettoyage des sols et d'un environnement plus sain pour tous.",
+    color: 'bg-green-600',
+    tag: 'Environnement',
+  },
+  {
+    icon: Users,
+    title: 'Production au service de la mission',
+    desc: "La production de produits d'hygiène des mains et de nettoyage des sols permet de financer durablement les activités sociales de l'ASBL.",
+    color: 'bg-emerald-600',
+    tag: 'Produits',
+  },
+  {
+    icon: Monitor,
+    title: 'Formations numériques',
+    desc: 'Informatique de base, outils bureautiques, collecte de données et initiation à l’intelligence artificielle pour renforcer les capacités des communautés.',
+    color: 'bg-violet-600',
+    tag: 'Tech',
+    link: '/formations',
+  },
 ];
 
 const missionItems = [
@@ -27,18 +67,6 @@ export default function About() {
     <>
       <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center mb-8"
-          >
-            <img
-              src={whoWeAreImg}
-              alt="Miraclecleantech ASBL"
-              className="w-full max-w-2xl h-72 object-cover rounded-3xl shadow-xl"
-            />
-          </motion.div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -69,7 +97,19 @@ export default function About() {
       </section>
 
       <SectionWrapper>
-        <div className="max-w-3xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src={whoWeAreImg}
+              alt="Miraclecleantech ASBL"
+              className="w-full h-[480px] object-cover object-top"
+            />
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -210,6 +250,48 @@ export default function About() {
         </div>
       </SectionWrapper>
 
+      <SectionWrapper className="bg-gray-50/50">
+        <div className="text-center mb-14">
+          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Projets</span>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos initiatives</h2>
+          <p className="mt-4 text-gray-500 max-w-xl mx-auto">
+            L'organisation intervient sur des axes directement liés à sa mission d'assistance, d'hygiène et d'assainissement.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-8">
+          {projects.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ y: -4 }}
+              className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-start gap-5">
+                <div className={`w-14 h-14 rounded-xl ${p.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                  <p.icon className="w-7 h-7 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-bold text-gray-900 text-lg">{p.title}</h3>
+                    <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 text-xs">{p.tag}</span>
+                  </div>
+                  <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
+                  {'link' in p && (
+                    <Link to={p.link as string} className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors">
+                      Voir les formations
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </SectionWrapper>
+
       <SectionWrapper>
         <div className="text-center mb-12">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">À l'origine</span>
@@ -238,6 +320,30 @@ export default function About() {
             </div>
           </motion.div>
         </div>
+      </SectionWrapper>
+      <SectionWrapper>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="rounded-3xl bg-blue-700 p-12 text-center relative overflow-hidden"
+        >
+          <div className="relative">
+            <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
+            <h2 className="text-4xl font-extrabold text-white mb-4">Soutenir l'action de l'ASBL</h2>
+            <p className="text-white/80 text-lg max-w-lg mx-auto mb-8">
+              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miraclecleantech ASBL.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/contact" className="px-8 py-4 bg-white text-rose-600 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200">
+                Nous écrire
+              </Link>
+              <Link to="/products" className="px-8 py-4 bg-white/10 border border-white/30 text-white font-bold rounded-xl text-sm hover:bg-white/20 transition-all">
+                Découvrir les produits
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </SectionWrapper>
     </>
   );

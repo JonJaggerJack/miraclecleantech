@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
 
 export default function Loader() {
   return (
@@ -7,20 +6,10 @@ export default function Loader() {
       <div className="flex flex-col items-center gap-4">
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-          className="w-14 h-14 rounded-2xl bg-blue-700 flex items-center justify-center shadow-xl"
-        >
-          <Sparkles className="w-7 h-7 text-white" />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-center"
-        >
-          <p className="font-bold text-gray-900">Miraclecleantech ASBL</p>
-          <p className="text-sm text-gray-400">Chargement...</p>
-        </motion.div>
+          transition={{ duration: 0.9, repeat: Infinity, ease: 'linear' }}
+          className="w-12 h-12 rounded-full border-4 border-gray-200 border-t-blue-700"
+        />
+        <p className="text-sm text-gray-400">Chargement...</p>
       </div>
     </div>
   );

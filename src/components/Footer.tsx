@@ -6,7 +6,6 @@ const footerLinks = {
     { label: 'À propos', to: '/about' },
     { label: 'Notre mission', to: '/about#mission' },
     { label: 'L\'organisation', to: '/about#organisation' },
-    { label: 'Notre impact', to: '/impact' },
   ],
   products: [
     { label: 'Hygiène des mains', to: '/products' },
@@ -15,6 +14,7 @@ const footerLinks = {
   support: [
     { label: 'Contact', to: '/contact' },
     { label: 'Blog', to: '/blog' },
+    { label: 'Formations', to: '/formations' },
   ],
 };
 
@@ -26,12 +26,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-gray-800">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-3 mb-4">
               <img
                 src={logoImg}
                 alt="Miraclecleantech ASBL"
                 className="h-10 w-auto object-contain"
               />
+              <span className="text-white font-bold text-base leading-tight">Miracle<br />Clean Tech</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
               Organisation apolitique créée en décembre 2025, Miraclecleantech ASBL accompagne les personnes vulnérables et soutient son action par la production de produits d'hygiène des mains et de nettoyage des sols.

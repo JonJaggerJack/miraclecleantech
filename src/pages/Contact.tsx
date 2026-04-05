@@ -202,6 +202,7 @@ export default function Contact() {
                         <option>Demande d'information</option>
                         <option>Produits d'hygiène des mains</option>
                         <option>Produits de nettoyage des sols</option>
+                        <option>Formation professionnelle</option>
                         <option>Partenariat</option>
                         <option>Soutien à la mission</option>
                         <option>Autre</option>

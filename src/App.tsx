@@ -9,8 +9,8 @@ import Loader from './components/Loader';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Products = lazy(() => import('./pages/Products'));
-const Impact = lazy(() => import('./pages/Impact'));
 const Blog = lazy(() => import('./pages/Blog'));
+const Formations = lazy(() => import('./pages/Formations'));
 const BlogDetail = lazy(() => import('./pages/BlogDetail'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -35,8 +35,8 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/impact" element={<Impact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/formations" element={<Formations />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
