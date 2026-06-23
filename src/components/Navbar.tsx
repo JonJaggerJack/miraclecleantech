@@ -47,31 +47,29 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === '/'}
-              className={({ isActive }) =>
-                `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
-                  isActive
-                    ? 'bg-green-50 text-green-700 font-semibold'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-
-        {/* CTA Button */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Desktop Nav + CTA (alignés à droite) */}
+        <div className="hidden md:flex items-center gap-2">
+          <nav className="flex items-center gap-1">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === '/'}
+                className={({ isActive }) =>
+                  `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? 'bg-green-50 text-green-700 font-semibold'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
           <Link
             to="/contact"
-            className="px-5 py-2.5 bg-green-700 text-white text-sm font-semibold rounded-xl hover:bg-green-800 hover:shadow-lg hover:shadow-green-200 hover:scale-105 transition-all duration-200"
+            className="ml-2 px-5 py-2.5 bg-green-700 text-white text-sm font-semibold rounded-xl hover:bg-green-800 hover:shadow-lg hover:shadow-green-200 hover:scale-105 transition-all duration-200"
           >
             Nous contacter
           </Link>
