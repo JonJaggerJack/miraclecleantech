@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
-import Loader from './components/Loader';
+import Home from './pages/Home';
 
-// Lazy-loaded pages
-const Home = lazy(() => import('./pages/Home'));
+// Lazy-loaded pages (Home est chargée directement pour éviter tout écran de chargement à l'ouverture)
 const About = lazy(() => import('./pages/About'));
 const Actions = lazy(() => import('./pages/Actions'));
 const Blog = lazy(() => import('./pages/Blog'));
@@ -30,7 +29,7 @@ function AppContent() {
       <Navbar />
       <main>
         <ScrollToTop />
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
