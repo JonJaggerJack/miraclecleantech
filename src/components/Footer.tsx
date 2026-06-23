@@ -30,7 +30,7 @@ export default function Footer() {
               <BrandIcon className="h-12 w-12 shrink-0 object-contain" />
               <span className="text-white font-bold text-base leading-tight">
                 Miracles Actions<br />for Women
-                <span className="block text-[11px] font-medium text-green-400 mt-1">
+                <span className="block text-[11px] font-medium text-white mt-1">
                   Pour le Droit et l'Égalité des Femmes
                 </span>
               </span>
