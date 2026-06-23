@@ -7,9 +7,9 @@ import { products } from '../data/products';
 import IllustrationProducts from '../components/IllustrationProducts';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
-const categories = ['Tous', 'Hygiène des mains', 'Nettoyage des sols'];
+const categories = ['Tous', 'Autonomisation', 'Droits & plaidoyer', 'Numérique', 'Accompagnement'];
 
-export default function Products() {
+export default function Actions() {
   const [activeCategory, setActiveCategory] = useState('Tous');
   const [search, setSearch] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -31,7 +31,7 @@ export default function Products() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm font-semibold text-green-600 uppercase tracking-widest">
-                Gamme complète
+                Sur le terrain
               </motion.span>
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,7 @@ export default function Products() {
                 className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
               >
                 Nos{' '}
-                <span className="text-green-700">produits</span>
+                <span className="text-green-700">actions</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function Products() {
                 transition={{ delay: 0.2 }}
                 className="mt-4 text-lg text-gray-500 max-w-lg"
               >
-                Des produits d'hygiène des mains et de nettoyage des sols pensés pour soutenir l'action sociale de Miracles Actions for Women.
+                Ce que nous menons concrètement à Bukavu pour faire avancer le droit et l'égalité des femmes : ateliers, sensibilisation, numérique et accompagnement.
               </motion.p>
             </div>
             <motion.div
@@ -71,7 +71,7 @@ export default function Products() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
               type="text"
-              placeholder="Rechercher un produit..."
+              placeholder="Rechercher une action..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent"
@@ -113,13 +113,13 @@ export default function Products() {
         </div>
 
         {/* Count */}
-        <p className="text-sm text-gray-400 mb-6">{filtered.length} produit{filtered.length !== 1 ? 's' : ''} trouvé{filtered.length !== 1 ? 's' : ''}</p>
+        <p className="text-sm text-gray-400 mb-6">{filtered.length} action{filtered.length !== 1 ? 's' : ''}</p>
 
         {/* Products Grid */}
         {filtered.length === 0 ? (
           <div className="text-center py-20 text-gray-400">
             <Search className="w-12 h-12 mx-auto mb-4 opacity-30" />
-            <p className="text-lg font-medium">Aucun produit trouvé</p>
+            <p className="text-lg font-medium">Aucune action trouvée</p>
             <p className="text-sm">Essayez une autre recherche ou catégorie</p>
           </div>
         ) : (

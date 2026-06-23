@@ -99,7 +99,7 @@ export default function Contact() {
                 transition={{ delay: 0.2 }}
                 className="mt-4 text-lg text-gray-500 max-w-lg"
               >
-                Pour toute demande d'information, de partenariat ou relative aux produits, utilisez le formulaire ou les coordonnées ci-dessous.
+                Une question, l'envie de participer à un atelier, de devenir bénévole ou de monter un partenariat ? Écrivez-nous, on vous répond.
               </motion.p>
             </div>
             <motion.div
@@ -213,11 +213,11 @@ export default function Contact() {
                       >
                         <option value="">Choisir un sujet</option>
                         <option>Demande d'information</option>
-                        <option>Produits d'hygiène des mains</option>
-                        <option>Produits de nettoyage des sols</option>
-                        <option>Formation professionnelle</option>
+                        <option>Participer à un atelier</option>
+                        <option>Devenir bénévole</option>
+                        <option>Formation au numérique</option>
                         <option>Partenariat</option>
-                        <option>Soutien à la mission</option>
+                        <option>Plaidoyer & droits des femmes</option>
                         <option>Autre</option>
                       </select>
                       {errors.subject && <p className="text-xs text-red-500 mt-1">{errors.subject}</p>}

@@ -8,7 +8,7 @@ import Loader from './components/Loader';
 // Lazy-loaded pages
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
-const Products = lazy(() => import('./pages/Products'));
+const Actions = lazy(() => import('./pages/Actions'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Formations = lazy(() => import('./pages/Formations'));
 const BlogDetail = lazy(() => import('./pages/BlogDetail'));
@@ -34,7 +34,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/actions" element={<Actions />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/formations" element={<Formations />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />

@@ -7,8 +7,8 @@ import { BrandIcon } from './Brand';
 const navLinks = [
   { label: 'Accueil', to: '/' },
   { label: 'À propos', to: '/about' },
-  { label: 'Produits', to: '/products' },
-  { label: 'Formations', to: '/formations' },
+  { label: 'Nos actions', to: '/actions' },
+  { label: 'Ateliers', to: '/formations' },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact', to: '/contact' },
 ];

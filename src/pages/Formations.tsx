@@ -66,10 +66,10 @@ const formations = [
 ];
 
 const whyItems = [
-  "Renforcer les capacités des membres de la communauté",
-  "Favoriser l'autonomisation numérique",
+  "Donner aux femmes les clés du numérique",
+  "Utiliser les réseaux sociaux en sécurité",
   "Ouvrir de nouvelles perspectives professionnelles",
-  "Soutenir les activités sociales de l'ASBL",
+  "Gagner en autonomie et en confiance",
 ];
 
 export default function Formations() {
@@ -87,7 +87,7 @@ export default function Formations() {
             animate={{ opacity: 1 }}
             className="text-sm font-semibold text-green-600 uppercase tracking-widest"
           >
-            Branche technologique
+            Numérique & autonomisation
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -95,8 +95,8 @@ export default function Formations() {
             transition={{ delay: 0.1 }}
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
-            Formations{' '}
-            <span className="text-green-700">professionnelles</span>
+            Le numérique,{' '}
+            <span className="text-green-700">sans barrières</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function Formations() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
           >
-            Miracles Actions for Women accompagne les communautés vers l'autonomisation numérique à travers des formations pratiques et accessibles.
+            Des ateliers pratiques et accessibles pour que chaque femme apprenne à se servir de l'ordinateur, d'internet et des réseaux sociaux — avec confiance et en sécurité.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +136,7 @@ export default function Formations() {
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Programme</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Les 4 modules</h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Un parcours progressif conçu pour développer des compétences numériques concrètes et durables.
+            Un parcours progressif, du tout premier clic jusqu'à un usage autonome et responsable des outils numériques.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-8">
@@ -188,7 +188,7 @@ export default function Formations() {
               Pourquoi ces formations ?
             </h2>
             <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-              Ces formations s'inscrivent directement dans la mission de Miracles Actions for Women : renforcer les communautés par des actions concrètes et durables.
+              Parce que le numérique est devenu incontournable — et qu'il doit rester un outil de progrès, jamais de danger.
             </p>
           </div>
           <motion.div
@@ -244,7 +244,7 @@ export default function Formations() {
               to="/about"
               className="px-8 py-4 bg-white/10 border border-white/30 text-white font-bold rounded-xl text-sm hover:bg-white/20 transition-all"
             >
-              À propos de l'ASBL
+              À propos de MAW
             </Link>
           </div>
         </motion.div>

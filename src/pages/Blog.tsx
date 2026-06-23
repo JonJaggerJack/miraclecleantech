@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Leaf, HandMetal, FlaskConical, Users } from 'lucide-react';
+import { BookOpen, Scale, Smartphone, HeartHandshake, Users } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import IllustrationBlog from '../components/IllustrationBlog';
 import BlogCard from '../components/BlogCard';
@@ -9,27 +9,27 @@ import { BlobDecor, DotGrid } from '../components/SvgDecor';
 const themes = [
   {
     icon: Users,
-    title: 'Action sociale',
+    title: 'Autonomisation',
     description:
-      "L'ASBL partagera des contenus sur son engagement auprès des personnes vulnérables : approche, terrain, principes.",
+      "Des récits d'ateliers et de rencontres, et ce que l'autonomie change concrètement dans la vie des femmes.",
   },
   {
-    icon: HandMetal,
-    title: 'Hygiène des mains',
+    icon: Scale,
+    title: 'Droits & égalité',
     description:
-      "Des repères sur l\u2019importance de l\u2019hygiène des mains, les bons gestes quotidiens et leur rôle dans la prévention.",
+      "Connaître ses droits, c’est déjà commencer à les défendre : nos repères et nos actions de plaidoyer pour l’égalité.",
   },
   {
-    icon: Leaf,
-    title: 'Assainissement',
+    icon: Smartphone,
+    title: 'Numérique responsable',
     description:
-      "Comprendre comment l'assainissement de l'environnement et le nettoyage des sols contribuent au bien-être collectif.",
+      "Des conseils simples pour utiliser internet et les réseaux sociaux de façon utile, réfléchie et sûre.",
   },
   {
-    icon: FlaskConical,
-    title: 'Produits & mission',
+    icon: HeartHandshake,
+    title: "Vie de l'association",
     description:
-      "Comment les produits de l'ASBL s'inscrivent dans une logique d'utilité sociale et de financement de la mission.",
+      "Les coulisses de MAW : nos équipes, nos partenaires et les moments forts sur le terrain à Bukavu.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function Blog() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl"
           >
-            Le blog de Miracles Actions for Women sera un espace de partage autour de nos domaines d'action : hygiène, assainissement, vie de l'organisation et accompagnement des personnes vulnérables.
+            Le blog de Miracles Actions for Women : nos ateliers, nos combats pour les droits des femmes, nos conseils sur le numérique et la vie de l'association à Bukavu.
           </motion.p>
             </div>
             {/* Right – illustration */}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight, Shield, Leaf, Zap, Heart, Users, Globe,
+  ArrowRight, Shield, Zap, Heart, Users, Globe,
   Star, ChevronRight, CheckCircle2,
 } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
@@ -31,7 +31,7 @@ function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-100 text-green-700 text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 fill-green-500 text-green-500" />
-            Miracles Actions for Women · Créée en décembre 2025
+            Miracles Actions for Women · Bukavu, RD Congo
           </motion.div>
 
           <motion.h1
@@ -40,9 +40,9 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6"
           >
-            L'hygiène au service de{' '}
+            Quand une femme avance,{' '}
             <span className="text-green-700">
-              l'action sociale
+              tout avance avec elle
             </span>
           </motion.h1>
 
@@ -52,7 +52,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg"
           >
-            Miracles Actions for Women accompagne les personnes vulnérables et soutient son action par la production de solutions d'hygiène des mains et de nettoyage des sols.
+            À Bukavu, Miracles Actions for Women se bat pour le droit et l'égalité des femmes. Ateliers d'autonomisation, sensibilisation, numérique responsable et accompagnement : des actions simples, sur le terrain, qui changent des vies.
           </motion.p>
 
           <motion.div
@@ -61,12 +61,12 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4 mb-12"
           >
-            <Button to="/products" size="lg">
-              Découvrir nos produits
+            <Button to="/actions" size="lg">
+              Découvrir nos actions
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button to="/about" variant="outline" size="lg">
-              L'organisation
+              Qui nous sommes
             </Button>
           </motion.div>
 
@@ -82,7 +82,7 @@ function Hero() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/70">
             <img
               src={heroImg}
-              alt="Produits Miracles Actions for Women"
+              alt="Femmes accompagnées par Miracles Actions for Women à Bukavu"
               className="w-full h-[520px] object-cover"
             />
             <div className="absolute inset-0 bg-gray-900/15" />
@@ -99,8 +99,8 @@ function Hero() {
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="font-bold text-gray-900 text-sm">Action sociale</p>
-                <p className="text-xs text-gray-400">Assistance aux personnes vulnérables</p>
+                <p className="font-bold text-gray-900 text-sm">Autonomisation</p>
+                <p className="text-xs text-gray-400">Des femmes qui reprennent confiance</p>
               </div>
             </div>
           </motion.div>
@@ -112,7 +112,7 @@ function Hero() {
           >
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-green-500" />
-              <p className="text-sm font-semibold text-gray-800">Hygiène des mains & sols</p>
+              <p className="text-sm font-semibold text-gray-800">Droit & égalité des femmes</p>
             </div>
           </motion.div>
         </motion.div>
@@ -123,12 +123,12 @@ function Hero() {
 
 // ── Mission Cards ─────────────────────────────────────────────────────────────
 const missions = [
-  { icon: Shield, title: "Promouvoir l'hygiène", desc: "Sensibiliser et faciliter l'accès à des pratiques hygiéniques de qualité pour toutes les communautés.", color: "bg-green-600" },
-  { icon: Globe, title: "Réduire les risques sanitaires", desc: "Contribuer à la réduction des maladies liées au manque d'hygiène par des gestes et produits utiles.", color: "bg-teal-600" },
-  { icon: Heart, title: "Assister les personnes vulnérables", desc: "Placer l'accompagnement des personnes vulnérables au coeur de l'action de l'ASBL.", color: "bg-rose-500" },
-  { icon: Leaf, title: "Assainir l'environnement", desc: "Améliorer le cadre de vie grâce au nettoyage et à l'assainissement des espaces.", color: "bg-green-600" },
-  { icon: Users, title: "Renforcer les bonnes pratiques", desc: "Encourager des habitudes simples et durables autour de l'hygiène et de la propreté.", color: "bg-violet-600" },
-  { icon: Zap, title: "Soutenir l'action sociale", desc: "Utiliser la production de produits utiles pour soutenir durablement les activités de l'organisation.", color: "bg-amber-500" },
+  { icon: Users, title: "Autonomiser les femmes", desc: "Leur donner les moyens de décider, d'apprendre et de prendre leur place — dans la famille comme dans la cité.", color: "bg-green-600" },
+  { icon: Shield, title: "Défendre leurs droits", desc: "Informer, sensibiliser et plaider pour l'égalité et la protection des femmes, sans relâche.", color: "bg-emerald-600" },
+  { icon: Zap, title: "Former au numérique", desc: "Apprendre à se servir des outils et des réseaux sociaux de façon utile, réfléchie et sûre.", color: "bg-violet-600" },
+  { icon: Heart, title: "Accompagner les plus fragiles", desc: "Écouter et orienter les femmes et les familles en difficulté, avec respect et sans jamais juger.", color: "bg-rose-500" },
+  { icon: Globe, title: "Faire grandir la communauté", desc: "Quand une femme avance, c'est tout son entourage qui progresse avec elle.", color: "bg-teal-600" },
+  { icon: Star, title: "Agir près de chez nous", desc: "Des actions concrètes, sur le terrain, à Bukavu et dans le Sud-Kivu.", color: "bg-amber-500" },
 ];
 
 
@@ -148,7 +148,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm font-semibold text-green-600 uppercase tracking-widest"
           >
-            Notre mission
+            Notre raison d'être
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +157,7 @@ export default function Home() {
             transition={{ delay: 0.1 }}
             className="mt-2 text-4xl font-extrabold text-gray-900"
           >
-            Ce qui nous anime chaque jour
+            Ce pour quoi nous nous levons
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -166,7 +166,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-gray-500 max-w-2xl mx-auto text-base"
           >
-            Miracles Actions for Women agit pour l'hygiène, l'assainissement et l'accompagnement des personnes vulnérables.
+            L'autonomisation de la femme est un droit, pas une faveur. C'est cette conviction qui guide chacune de nos actions.
           </motion.p>
         </div>
 
@@ -191,14 +191,27 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
+      {/* Quote */}
+      <section className="bg-gray-900 px-6 py-20 relative overflow-hidden">
+        <RingDecor className="absolute -right-16 -top-10 w-72 h-72 text-white/5 pointer-events-none" />
+        <figure className="max-w-3xl mx-auto text-center relative">
+          <blockquote className="text-2xl lg:text-3xl font-semibold text-white leading-snug">
+            « Une femme autonome, c'est une femme qui a accès à l'éducation, aux opportunités et à la décision. Et quand elle avance, c'est toute une communauté qui avance avec elle. »
+          </blockquote>
+          <figcaption className="mt-6 text-green-400 text-sm font-medium">
+            — Échangé lors de notre atelier à Bukavu
+          </figcaption>
+        </figure>
+      </section>
+
       {/* Featured Products */}
       <SectionWrapper className="bg-gray-50/50 relative overflow-hidden">
         <BlobDecor className="absolute -left-24 -bottom-20 w-80 h-80 text-green-100/50 pointer-events-none" />
         <div className="text-center mb-14">
-          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos produits</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Produits essentiels</h2>
+          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos actions</span>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Ce que nous faisons, concrètement</h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Deux familles de produits soutiennent l'action sociale de l'ASBL : l'hygiène des mains et le nettoyage des sols.
+            Pas de grands discours : des ateliers, des rencontres et un accompagnement de proximité, là où les femmes en ont besoin.
           </p>
         </div>
 
@@ -209,8 +222,8 @@ export default function Home() {
         </div>
 
         <div className="text-center">
-          <Button to="/products" variant="outline" size="lg">
-            Voir tous les produits
+          <Button to="/actions" variant="outline" size="lg">
+            Voir toutes nos actions
             <ChevronRight className="w-5 h-5" />
           </Button>
         </div>
@@ -228,17 +241,17 @@ export default function Home() {
           <RingDecor className="absolute -bottom-12 -left-16 w-60 h-60 text-white/10 pointer-events-none" />
           <div className="relative">
             <h2 className="text-4xl font-extrabold text-white mb-4">
-              Soutenir Miracles Actions for Women
+              Rejoignez le mouvement
             </h2>
             <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
-              Les produits d'hygiène des mains et de nettoyage des sols participent au financement d'une action sociale tournée vers les personnes vulnérables.
+              Participer à un atelier, devenir bénévole, nouer un partenariat ou simplement en parler autour de vous : chaque geste compte pour faire avancer le droit des femmes.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/products"
+                to="/actions"
                 className="px-8 py-4 bg-white text-green-700 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200"
               >
-                Voir les produits
+                Voir nos actions
               </Link>
               <Link
                 to="/contact"

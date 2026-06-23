@@ -46,7 +46,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
 
         <div className="mt-5 pt-4 border-t border-gray-50">
           <p className="text-sm font-semibold text-green-700">
-            Produit au service de l'action de l'ASBL
+            Un programme porté par MAW, à Bukavu
           </p>
         </div>
       </div>

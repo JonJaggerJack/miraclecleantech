@@ -8,13 +8,14 @@ const footerLinks = {
     { label: 'L\'organisation', to: '/about#organisation' },
   ],
   products: [
-    { label: 'Hygiène des mains', to: '/products' },
-    { label: 'Nettoyage des sols', to: '/products' },
+    { label: 'Autonomisation', to: '/actions' },
+    { label: 'Droits & plaidoyer', to: '/actions' },
+    { label: 'Numérique responsable', to: '/actions' },
   ],
   support: [
     { label: 'Contact', to: '/contact' },
     { label: 'Blog', to: '/blog' },
-    { label: 'Formations', to: '/formations' },
+    { label: 'Ateliers', to: '/formations' },
   ],
 };
 
@@ -55,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm">Produits</h4>
+            <h4 className="text-white font-semibold mb-4 text-sm">Nos actions</h4>
             <ul className="flex flex-col gap-2">
               {footerLinks.products.map((link) => (
                 <li key={link.to + link.label}>
@@ -84,7 +85,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500 text-center sm:text-left">
-            © 2026 Miracles Actions for Women · Au service de l'hygiène, de l'assistance et du cadre de vie.
+            © 2026 Miracles Actions for Women · Bukavu · Pour le droit et l'égalité des femmes.
           </p>
         </div>
       </div>

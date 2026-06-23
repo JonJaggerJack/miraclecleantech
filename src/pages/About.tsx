@@ -9,59 +9,52 @@ import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 import IllustrationAbout from '../components/IllustrationAbout';
 
 const values = [
-  { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'bg-amber-500' },
-  { icon: Zap, title: 'Innovation', desc: "Une approche actuelle au service de l'utilité sociale.", color: 'bg-green-700' },
-  { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'bg-green-600' },
-  { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'bg-rose-500' },
-  { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'bg-violet-600' },
+  { icon: Heart, title: 'Dignité', desc: 'La dignité de chaque femme passe avant tout le reste.', color: 'bg-rose-500' },
+  { icon: Shield, title: 'Égalité', desc: 'Les mêmes droits et les mêmes chances, pour toutes.', color: 'bg-emerald-600' },
+  { icon: Users, title: 'Proximité', desc: "On agit là où l'on vit, au plus près des gens.", color: 'bg-green-700' },
+  { icon: Star, title: 'Écoute', desc: "On commence toujours par écouter avant d'agir.", color: 'bg-amber-500' },
+  { icon: Zap, title: 'Persévérance', desc: 'Le changement prend du temps ; nous tenons bon.', color: 'bg-violet-600' },
 ];
 
 const projects = [
   {
-    icon: Heart,
-    title: 'Assistance aux personnes vulnérables',
-    desc: "L'organisation concentre son action sur l'accompagnement des personnes vulnérables à travers une approche sociale, préventive et utile.",
-    color: 'bg-rose-500',
-    tag: 'Mission',
+    icon: Users,
+    title: "Ateliers d'autonomisation",
+    desc: "Des espaces où les femmes reprennent confiance, apprennent et décident — comme notre atelier de Bukavu sur l'autonomisation et le numérique.",
+    color: 'bg-green-700',
+    tag: 'Autonomisation',
   },
   {
     icon: BookOpen,
-    title: "Promotion de l'hygiène",
-    desc: "Miracles Actions for Women met l'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d'hygiène.",
-    color: 'bg-green-700',
-    tag: 'Éducation',
-  },
-  {
-    icon: Leaf,
-    title: 'Assainissement du cadre de vie',
-    desc: "L'amélioration du cadre de vie passe par des actions simples autour du nettoyage des sols et d'un environnement plus sain pour tous.",
-    color: 'bg-green-600',
-    tag: 'Environnement',
-  },
-  {
-    icon: Users,
-    title: 'Production au service de la mission',
-    desc: "La production de produits d'hygiène des mains et de nettoyage des sols permet de financer durablement les activités sociales de l'ASBL.",
+    title: 'Sensibilisation & plaidoyer',
+    desc: "Causeries de quartier et plaidoyer auprès des acteurs locaux pour faire connaître et respecter les droits des femmes.",
     color: 'bg-emerald-600',
-    tag: 'Produits',
+    tag: 'Droits',
+  },
+  {
+    icon: Heart,
+    title: 'Accompagnement de proximité',
+    desc: "Nous écoutons, orientons et accompagnons les femmes et les familles fragilisées vers les bons relais, sans jamais juger.",
+    color: 'bg-rose-500',
+    tag: 'Terrain',
   },
   {
     icon: Monitor,
-    title: 'Formations numériques',
-    desc: 'Informatique de base, outils bureautiques, collecte de données et initiation à l’intelligence artificielle pour renforcer les capacités des communautés.',
+    title: 'Numérique responsable',
+    desc: "Initier les femmes aux outils numériques et à un usage des réseaux sociaux sûr, réfléchi et utile.",
     color: 'bg-violet-600',
-    tag: 'Tech',
+    tag: 'Numérique',
     link: '/formations',
   },
 ];
 
 const missionItems = [
-  "Promouvoir l'hygiène dans toutes les communautés",
-  "Réduire les maladies liées au manque d'hygiène",
-  'Renforcer les bonnes pratiques sanitaires',
-  "Assainir l'environnement",
-  'Assister les personnes vulnérables',
-  'Financer durablement les activités sociales',
+  "Défendre le droit et l'égalité des femmes",
+  "Autonomiser les femmes : estime de soi, décision, opportunités",
+  'Sensibiliser et faire du plaidoyer dans les communautés',
+  "Former à un usage responsable du numérique",
+  'Accompagner les femmes et les familles vulnérables',
+  'Agir concrètement à Bukavu et dans le Sud-Kivu',
 ];
 
 export default function About() {
@@ -98,7 +91,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
           >
-            Une organisation créée pour assister les personnes vulnérables et promouvoir l'hygiène à travers une action utile et structurée.
+            Une association née à Bukavu en 2025, décidée à faire avancer le droit et l'égalité des femmes — une rencontre, un atelier, une histoire à la fois.
           </motion.p>
             </div>
             <motion.div
@@ -134,22 +127,22 @@ export default function About() {
           >
             <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Qui nous sommes</span>
             <h2 className="mt-3 text-4xl font-extrabold text-gray-900 leading-tight mb-6">
-              Une organisation sociale soutenue par une production utile
+              Une association de femmes, pour les femmes
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 text-base leading-relaxed">
               <p>
-                Miracles Actions for Women est une ASBL engagée dans l'assistance aux personnes vulnérables, en offrant un accompagnement social et communautaire adapté à leurs besoins.
+                Miracles Actions for Women (MAW) est une association apolitique basée à Bukavu, dans le Sud-Kivu. Nous défendons le droit et l'égalité des femmes, et nous croyons qu'aucune communauté n'avance vraiment si la moitié de ses membres reste en arrière.
               </p>
               <p>
-                Elle œuvre également pour le développement durable des communautés à travers des actions de sensibilisation, de protection de l'environnement et de promotion des initiatives locales.
+                Notre travail est simple et concret : organiser des ateliers, sensibiliser sur les droits, former au numérique et accompagner celles qui en ont le plus besoin. Chaque action part de l'écoute et se vit sur le terrain.
               </p>
               <p>
-                L'organisation propose des formations visant à renforcer les capacités, favoriser l'autonomisation et soutenir l'engagement communautaire.
+                Nous sommes une jeune association, mais déterminée — convaincue qu'une femme qui avance entraîne toute une communauté avec elle.
               </p>
             </div>
             <div className="mt-8 flex gap-4">
-              <Button to="/products">Nos produits</Button>
-              <Button to="/impact" variant="outline">Notre impact</Button>
+              <Button to="/actions">Nos actions</Button>
+              <Button to="/contact" variant="outline">Nous rencontrer</Button>
             </div>
           </motion.div>
         </div>
@@ -193,15 +186,15 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Notre Vision</h3>
             <p className="text-gray-300 text-base leading-relaxed mb-6">
-              Créer un environnement sain et améliorer la santé publique grâce à des solutions d'hygiène et d'assainissement utiles, au service des personnes vulnérables et des communautés.
+              Une société où les femmes prennent leur place pleinement : libres de décider, d'apprendre, d'entreprendre et de faire entendre leur voix, à égalité avec les hommes.
             </p>
             <div className="p-5 rounded-2xl bg-white/10 border border-white/10">
               <Leaf className="w-6 h-6 text-green-400 mb-3" />
               <p className="text-white font-semibold text-sm mb-1">
-                Un monde plus propre pour tous
+                L'égalité n'est pas une faveur
               </p>
               <p className="text-gray-400 text-xs leading-relaxed">
-                Nous visons un cadre de vie plus sain, où l'hygiène et l'assainissement participent à la dignité des personnes et au bien-être collectif.
+                C'est un droit. Nous travaillons pour qu'il devienne une réalité quotidienne, à Bukavu et au-delà.
               </p>
             </div>
           </motion.div>
@@ -255,7 +248,7 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Miracles Actions for Women</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                L'organisation intervient dans l'assistance des personnes vulnérables. Son modèle est simple : soutenir une action sociale concrète grâce à la production de produits d'hygiène des mains et de nettoyage des sols.
+                Association apolitique basée à Bukavu (Sud-Kivu, RD Congo), MAW agit pour le droit et l'égalité des femmes à travers des ateliers, de la sensibilisation, des formations au numérique et un accompagnement de proximité.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 {['ASBL', 'Apolitique', 'Décembre 2025'].map((tag) => (
@@ -275,7 +268,7 @@ export default function About() {
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Projets</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos initiatives</h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            L'organisation intervient sur des axes directement liés à sa mission d'assistance, d'hygiène et d'assainissement.
+            Quatre façons d'agir, complémentaires, toutes au service du droit et de l'autonomie des femmes.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-8">
@@ -335,7 +328,7 @@ export default function About() {
               <h3 className="text-2xl font-bold text-gray-900 mb-1">Agathe Ishara</h3>
               <p className="text-sm font-semibold text-green-600 mb-4">Fondatrice de Miracles Actions for Women</p>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Agathe Ishara est à l'origine de Miracles Actions for Women, une organisation créée en décembre 2025 à Bukavu pour assister les personnes vulnérables et promouvoir l'hygiène dans les communautés.
+                Agathe Ishara a fondé Miracles Actions for Women en décembre 2025 à Bukavu. Partie d'un constat simple — trop de femmes restent privées de droits et d'opportunités —, elle a réuni autour d'elle une équipe décidée à changer les choses, une action à la fois.
               </p>
             </div>
           </motion.div>
@@ -350,16 +343,16 @@ export default function About() {
         >
           <div className="relative">
             <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
-            <h2 className="text-4xl font-extrabold text-white mb-4">Soutenir l'action de l'ASBL</h2>
+            <h2 className="text-4xl font-extrabold text-white mb-4">Avançons ensemble</h2>
             <p className="text-white/80 text-lg max-w-lg mx-auto mb-8">
-              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miracles Actions for Women.
+              Vous partagez nos convictions ? Écrivez-nous pour participer à un atelier, devenir bénévole ou nouer un partenariat.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-white text-rose-600 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200">
+              <Link to="/contact" className="px-8 py-4 bg-white text-green-700 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200">
                 Nous écrire
               </Link>
-              <Link to="/products" className="px-8 py-4 bg-white/10 border border-white/30 text-white font-bold rounded-xl text-sm hover:bg-white/20 transition-all">
-                Découvrir les produits
+              <Link to="/actions" className="px-8 py-4 bg-white/10 border border-white/30 text-white font-bold rounded-xl text-sm hover:bg-white/20 transition-all">
+                Découvrir nos actions
               </Link>
             </div>
           </div>
