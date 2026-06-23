@@ -4,6 +4,8 @@ import { Grid, List, Search } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
+import { useSanityData } from '../lib/useSanity';
+import { ACTIONS_QUERY } from '../lib/queries';
 import IllustrationProducts from '../components/IllustrationProducts';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
@@ -14,7 +16,9 @@ export default function Actions() {
   const [search, setSearch] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const filtered = products.filter((p) => {
+  const allActions = useSanityData(ACTIONS_QUERY, products);
+
+  const filtered = allActions.filter((p) => {
     const matchCat = activeCategory === 'Tous' || p.category === activeCategory;
     const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||
       p.description.toLowerCase().includes(search.toLowerCase());

@@ -4,6 +4,8 @@ import SectionWrapper from '../components/SectionWrapper';
 import IllustrationBlog from '../components/IllustrationBlog';
 import BlogCard from '../components/BlogCard';
 import { blogPosts } from '../data/blog';
+import { useSanityData } from '../lib/useSanity';
+import { BLOG_LIST_QUERY } from '../lib/queries';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 const themes = [
@@ -34,6 +36,7 @@ const themes = [
 ];
 
 export default function Blog() {
+  const posts = useSanityData(BLOG_LIST_QUERY, blogPosts);
   return (
     <>
       {/* Hero */}
@@ -94,7 +97,7 @@ export default function Blog() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, i) => (
+          {posts.map((post, i) => (
             <BlogCard key={post.id} post={post} index={i} />
           ))}
         </div>

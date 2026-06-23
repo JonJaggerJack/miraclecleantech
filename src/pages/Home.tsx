@@ -8,6 +8,8 @@ import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
 import Button from '../components/Button';
 import { products } from '../data/products';
+import { useSanityData } from '../lib/useSanity';
+import { ACTIONS_QUERY } from '../lib/queries';
 import heroImg from '../imgs/2.jpeg';
 import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 
@@ -94,6 +96,7 @@ const missions = [
 
 
 export default function Home() {
+  const featured = useSanityData(ACTIONS_QUERY, products);
   return (
     <>
       <Hero />
@@ -177,7 +180,7 @@ export default function Home() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {products.slice(0, 3).map((p, i) => (
+          {featured.slice(0, 3).map((p, i) => (
             <ProductCard key={p.id} product={p} index={i} />
           ))}
         </div>

@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import IllustrationContact from '../components/IllustrationContact';
+import { useSanityData } from '../lib/useSanity';
+import { SITE_SETTINGS_QUERY } from '../lib/queries';
+import { siteSettings } from '../data/site';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 interface FormData {
@@ -19,12 +22,6 @@ interface Errors {
   message?: string;
 }
 
-const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'miraclecleantech@gmail.com', color: 'bg-green-700' },
-  { icon: Phone, label: 'Téléphone', value: '+243850714774', color: 'bg-green-600' },
-  { icon: MapPin, label: 'Localisation', value: 'Bukavu', color: 'bg-violet-600' },
-];
-
 function validate(data: FormData): Errors {
   const errors: Errors = {};
   if (!data.name.trim()) errors.name = 'Le nom est requis';
@@ -40,6 +37,13 @@ function validate(data: FormData): Errors {
 }
 
 export default function Contact() {
+  const settings = useSanityData(SITE_SETTINGS_QUERY, siteSettings);
+  const contactInfo = [
+    { icon: Mail, label: 'Email', value: settings.email, color: 'bg-green-700' },
+    { icon: Phone, label: 'Téléphone', value: settings.phone, color: 'bg-green-600' },
+    { icon: MapPin, label: 'Localisation', value: settings.location, color: 'bg-violet-600' },
+  ];
+
   const [form, setForm] = useState<FormData>({ name: '', email: '', subject: '', message: '' });
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
@@ -143,7 +147,7 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 flex items-center justify-center h-52 mt-2">
               <div className="text-center">
                 <MapPin className="w-10 h-10 text-green-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-500 font-medium">Bukavu</p>
+                <p className="text-sm text-gray-500 font-medium">{settings.location}</p>
                 <p className="text-xs text-gray-400">Localisation communiquée par l'organisation.</p>
               </div>
             </div>

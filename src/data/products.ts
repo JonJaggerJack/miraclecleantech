@@ -1,7 +1,7 @@
 // Programmes / actions de Miracles Actions for Women.
 // (Le type garde le nom "Product" en interne — c'est la carte générique réutilisée.)
 export interface Product {
-  id: number;
+  id: string | number;
   name: string;
   category: string;
   description: string;

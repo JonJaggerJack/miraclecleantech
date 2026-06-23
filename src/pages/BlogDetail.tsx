@@ -2,12 +2,20 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, Tag, User } from 'lucide-react';
 import { blogPosts } from '../data/blog';
+import type { BlogPost } from '../data/blog';
+import { useSanityData } from '../lib/useSanity';
+import { BLOG_LIST_QUERY, BLOG_DETAIL_QUERY } from '../lib/queries';
 import BlogCard from '../components/BlogCard';
 
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const post = blogPosts.find((p) => p.slug === slug);
-  const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const allPosts = useSanityData(BLOG_LIST_QUERY, blogPosts);
+  const post = useSanityData<BlogPost | null>(
+    BLOG_DETAIL_QUERY,
+    allPosts.find((p) => p.slug === slug) ?? null,
+    { slug: slug ?? '' },
+  );
+  const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   if (!post) {
     return (
