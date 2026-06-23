@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BrandFull } from './Brand';
+import { BrandIcon } from './Brand';
 
 const footerLinks = {
   company: [
@@ -26,8 +26,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-gray-800">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-flex mb-4">
-              <BrandFull />
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <BrandIcon className="h-12 w-12 shrink-0 object-contain" />
+              <span className="text-white font-bold text-base leading-tight">
+                Miracles Actions<br />for Women
+                <span className="block text-[11px] font-medium text-green-400 mt-1">
+                  Pour le Droit et l'Égalité des Femmes
+                </span>
+              </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
               Organisation apolitique créée en décembre 2025, Miracles Actions for Women (MAW) œuvre pour le droit et l'égalité des femmes et accompagne les personnes vulnérables.
