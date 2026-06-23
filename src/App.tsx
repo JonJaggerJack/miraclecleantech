@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -50,15 +50,6 @@ function AppContent() {
 }
 
 export default function App() {
-  const [initialLoad, setInitialLoad] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setInitialLoad(false), 1200);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (initialLoad) return <Loader />;
-
   return (
     <BrowserRouter>
       <AppContent />
