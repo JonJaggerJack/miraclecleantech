@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { BookOpen, Leaf, HandMetal, FlaskConical, Users } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import IllustrationBlog from '../components/IllustrationBlog';
+import BlogCard from '../components/BlogCard';
+import { blogPosts } from '../data/blog';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 const themes = [
@@ -81,15 +83,29 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* Articles */}
       <SectionWrapper>
-        {/* Intro */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
+        <div className="max-w-2xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full mb-6">
             <BookOpen className="w-4 h-4 text-green-600" />
-            <span className="text-sm font-semibold text-green-700">Prochainement</span>
+            <span className="text-sm font-semibold text-green-700">Nos publications</span>
           </div>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Les publications n'ont pas encore débuté. Ce blog a vocation à devenir un espace de réflexion et d'information sur les thématiques qui guident notre action quotidienne.
+          <h2 className="text-3xl font-extrabold text-gray-900">Derniers articles</h2>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogPosts.map((post, i) => (
+            <BlogCard key={post.id} post={post} index={i} />
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* Thèmes */}
+      <SectionWrapper className="bg-gray-50/50">
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Nos thématiques</h2>
+          <p className="text-gray-500 leading-relaxed">
+            Les sujets qui guident notre action quotidienne et nos prochaines publications.
           </p>
         </div>
 
