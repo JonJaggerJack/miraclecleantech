@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight, Shield, Zap, Heart, Users, Globe,
-  Star, ChevronRight, CheckCircle2,
+  Star, ChevronRight,
 } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
@@ -87,34 +87,6 @@ function Hero() {
             />
             <div className="absolute inset-0 bg-gray-900/15" />
           </div>
-
-          {/* Floating badge */}
-          <motion.div
-            animate={{ y: [-6, 6, -6] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-green-700 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <p className="font-bold text-gray-900 text-sm">Autonomisation</p>
-                <p className="text-xs text-gray-400">Des femmes qui reprennent confiance</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [6, -6, 6] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-            className="absolute -top-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100"
-          >
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-green-500" />
-              <p className="text-sm font-semibold text-gray-800">Droit & égalité des femmes</p>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
