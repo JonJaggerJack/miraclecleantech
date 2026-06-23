@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import LogoMaw from './LogoMaw';
+import { BrandIcon } from './Brand';
 
 const navLinks = [
   { label: 'Accueil', to: '/' },
@@ -37,7 +37,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
-          <LogoMaw className="h-11 w-11 shrink-0 group-hover:scale-105 transition-transform" />
+          <BrandIcon className="h-11 w-11 shrink-0 object-contain group-hover:scale-105 transition-transform" />
           <span className="hidden sm:flex flex-col leading-none">
             <span className="font-extrabold text-gray-900 text-sm tracking-tight">
               Miracles Actions for Women
