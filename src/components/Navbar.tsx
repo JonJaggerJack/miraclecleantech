@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import logoImg from '../imgs/Logo miracle.jpeg';
+import LogoMaw from './LogoMaw';
 
 const navLinks = [
   { label: 'Accueil', to: '/' },
@@ -36,12 +36,16 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-            <img
-              src={logoImg}
-              alt="Miraclecleantech ASBL"
-              className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
-            />
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <LogoMaw className="h-11 w-11 shrink-0 group-hover:scale-105 transition-transform" />
+          <span className="hidden sm:flex flex-col leading-none">
+            <span className="font-extrabold text-gray-900 text-sm tracking-tight">
+              Miracles Actions for Women
+            </span>
+            <span className="text-[11px] text-green-700 font-medium">
+              Pour le Droit et l'Égalité des Femmes
+            </span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -54,7 +58,7 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   isActive
-                    ? 'bg-blue-50 text-blue-700 font-semibold'
+                    ? 'bg-green-50 text-green-700 font-semibold'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`
               }
@@ -68,7 +72,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/contact"
-            className="px-5 py-2.5 bg-blue-700 text-white text-sm font-semibold rounded-xl hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-200 hover:scale-105 transition-all duration-200"
+            className="px-5 py-2.5 bg-green-700 text-white text-sm font-semibold rounded-xl hover:bg-green-800 hover:shadow-lg hover:shadow-green-200 hover:scale-105 transition-all duration-200"
           >
             Nous contacter
           </Link>
@@ -104,7 +108,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                       isActive
-                        ? 'bg-blue-50 text-blue-700 font-semibold'
+                        ? 'bg-green-50 text-green-700 font-semibold'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                     }`
                   }
@@ -115,7 +119,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 px-4 py-3 bg-blue-700 text-white text-sm font-semibold rounded-xl text-center"
+                className="mt-2 px-4 py-3 bg-green-700 text-white text-sm font-semibold rounded-xl text-center"
               >
                 Nous contacter
               </Link>

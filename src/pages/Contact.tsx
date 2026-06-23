@@ -20,7 +20,7 @@ interface Errors {
 }
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'miraclecleantech@gmail.com', color: 'bg-blue-700' },
+  { icon: Mail, label: 'Email', value: 'miraclecleantech@gmail.com', color: 'bg-green-700' },
   { icon: Phone, label: 'Téléphone', value: '+243850714774', color: 'bg-green-600' },
   { icon: MapPin, label: 'Localisation', value: 'Bukavu', color: 'bg-violet-600' },
 ];
@@ -76,7 +76,7 @@ export default function Contact() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
-        <BlobDecor className="absolute -left-24 -top-16 w-[440px] h-[440px] text-blue-100/40 pointer-events-none" />
+        <BlobDecor className="absolute -left-24 -top-16 w-[440px] h-[440px] text-green-100/40 pointer-events-none" />
         <DotGrid className="absolute bottom-6 right-6 text-green-300/30 w-44 h-44 pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -91,7 +91,7 @@ export default function Contact() {
                 className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
               >
                 Nous{' '}
-                <span className="text-blue-700">écrire</span>
+                <span className="text-green-700">écrire</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ export default function Contact() {
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: '', email: '', subject: '', message: '' }); }}
-                    className="mt-6 px-6 py-2.5 rounded-xl bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800 transition-colors"
+                    className="mt-6 px-6 py-2.5 rounded-xl bg-green-700 text-white text-sm font-semibold hover:bg-green-800 transition-colors"
                   >
                     Envoyer un autre message
                   </button>
@@ -239,7 +239,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-blue-700 text-white font-semibold text-sm hover:bg-blue-800 hover:shadow-lg transition-all duration-200 disabled:opacity-60 disabled:pointer-events-none"
+                      className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-green-700 text-white font-semibold text-sm hover:bg-green-800 hover:shadow-lg transition-all duration-200 disabled:opacity-60 disabled:pointer-events-none"
                     >
                       {loading ? (
                         <>

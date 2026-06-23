@@ -7,7 +7,7 @@ export default function Loader() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 0.9, repeat: Infinity, ease: 'linear' }}
-          className="w-12 h-12 rounded-full border-4 border-gray-200 border-t-blue-700"
+          className="w-12 h-12 rounded-full border-4 border-gray-200 border-t-green-700"
         />
         <p className="text-sm text-gray-400">Chargement...</p>
       </div>

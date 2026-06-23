@@ -10,7 +10,7 @@ import IllustrationAbout from '../components/IllustrationAbout';
 
 const values = [
   { icon: Star, title: 'Qualité', desc: 'Des produits utiles, clairs et soignés.', color: 'bg-amber-500' },
-  { icon: Zap, title: 'Innovation', desc: "Une approche actuelle au service de l'utilité sociale.", color: 'bg-blue-700' },
+  { icon: Zap, title: 'Innovation', desc: "Une approche actuelle au service de l'utilité sociale.", color: 'bg-green-700' },
   { icon: Shield, title: 'Responsabilité', desc: 'Un engagement mené avec sérieux et cohérence.', color: 'bg-green-600' },
   { icon: Heart, title: 'Engagement', desc: "L'assistance des personnes vulnérables reste au centre.", color: 'bg-rose-500' },
   { icon: Users, title: 'Inclusion', desc: 'Une action tournée vers les communautés et les bénéficiaires.', color: 'bg-violet-600' },
@@ -27,8 +27,8 @@ const projects = [
   {
     icon: BookOpen,
     title: "Promotion de l'hygiène",
-    desc: "Miraclecleantech ASBL met l'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d'hygiène.",
-    color: 'bg-blue-700',
+    desc: "Miracles Actions for Women met l'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d'hygiène.",
+    color: 'bg-green-700',
     tag: 'Éducation',
   },
   {
@@ -68,7 +68,7 @@ export default function About() {
   return (
     <>
       <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
-        <BlobDecor className="absolute -top-20 -right-24 w-[420px] h-[420px] text-blue-100/40 pointer-events-none" />
+        <BlobDecor className="absolute -top-20 -right-24 w-[420px] h-[420px] text-green-100/40 pointer-events-none" />
         <DotGrid className="absolute bottom-4 left-4 text-green-300/25 w-44 h-44 pointer-events-none" />
         <RingDecor className="absolute -bottom-10 -right-10 w-60 h-60 text-green-200/20 pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
@@ -88,8 +88,8 @@ export default function About() {
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
             Nous sommes{' '}
-            <span className="text-blue-700">
-              Miraclecleantech ASBL
+            <span className="text-green-700">
+              Miracles Actions for Women
             </span>
           </motion.h1>
           <motion.p
@@ -123,7 +123,7 @@ export default function About() {
           >
             <img
               src={whoWeAreImg}
-              alt="Miraclecleantech ASBL"
+              alt="Miracles Actions for Women"
               className="w-full h-[480px] object-cover object-top"
             />
           </motion.div>
@@ -138,7 +138,7 @@ export default function About() {
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 text-base leading-relaxed">
               <p>
-                Miracle Clean Tech est une ASBL engagée dans l'assistance aux personnes vulnérables, en offrant un accompagnement social et communautaire adapté à leurs besoins.
+                Miracles Actions for Women est une ASBL engagée dans l'assistance aux personnes vulnérables, en offrant un accompagnement social et communautaire adapté à leurs besoins.
               </p>
               <p>
                 Elle œuvre également pour le développement durable des communautés à travers des actions de sensibilisation, de protection de l'environnement et de promotion des initiatives locales.
@@ -156,7 +156,7 @@ export default function About() {
       </SectionWrapper>
 
       <SectionWrapper className="bg-gray-50/50 relative overflow-hidden" id="mission">
-        <RingDecor className="absolute -left-16 top-10 w-56 h-56 text-blue-100/40 pointer-events-none" />
+        <RingDecor className="absolute -left-16 top-10 w-56 h-56 text-green-100/40 pointer-events-none" />
         <DotGrid className="absolute right-4 bottom-4 w-40 h-40 text-green-200/30 pointer-events-none" />
         <div className="grid lg:grid-cols-2 gap-8">
           <motion.div
@@ -188,7 +188,7 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="bg-gray-900 rounded-3xl p-10"
           >
-            <div className="w-14 h-14 rounded-2xl bg-blue-700 flex items-center justify-center mb-6 shadow-lg">
+            <div className="w-14 h-14 rounded-2xl bg-green-700 flex items-center justify-center mb-6 shadow-lg">
               <Eye className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Notre Vision</h3>
@@ -248,12 +248,12 @@ export default function About() {
             className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 items-center text-center md:text-left"
           >
             <div className="flex-shrink-0">
-              <div className="w-28 h-28 rounded-2xl bg-blue-50 flex items-center justify-center shadow-md">
+              <div className="w-28 h-28 rounded-2xl bg-green-50 flex items-center justify-center shadow-md">
                 <Users className="w-14 h-14 text-green-600" />
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Miraclecleantech ASBL</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Miracles Actions for Women</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
                 L'organisation intervient dans l'assistance des personnes vulnérables. Son modèle est simple : soutenir une action sociale concrète grâce à la production de produits d'hygiène des mains et de nettoyage des sols.
               </p>
@@ -270,7 +270,7 @@ export default function About() {
       </SectionWrapper>
 
       <SectionWrapper className="bg-gray-50/50 relative overflow-hidden">
-        <BlobDecor className="absolute -right-20 -top-10 w-80 h-80 text-blue-100/30 pointer-events-none" />
+        <BlobDecor className="absolute -right-20 -top-10 w-80 h-80 text-green-100/30 pointer-events-none" />
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Projets</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos initiatives</h2>
@@ -300,7 +300,7 @@ export default function About() {
                   </div>
                   <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
                   {'link' in p && (
-                    <Link to={p.link as string} className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors">
+                    <Link to={p.link as string} className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-green-700 hover:text-green-800 transition-colors">
                       Voir les formations
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                     </Link>
@@ -327,15 +327,15 @@ export default function About() {
             <div className="shrink-0">
               <img
                 src={founderImg}
-                alt="Agathe Ishara, fondatrice de Miraclecleantech ASBL"
+                alt="Agathe Ishara, fondatrice de Miracles Actions for Women"
                 className="w-48 h-48 object-cover rounded-2xl shadow-md"
               />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-1">Agathe Ishara</h3>
-              <p className="text-sm font-semibold text-green-600 mb-4">Fondatrice de Miraclecleantech ASBL</p>
+              <p className="text-sm font-semibold text-green-600 mb-4">Fondatrice de Miracles Actions for Women</p>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Agathe Ishara est à l'origine de Miraclecleantech ASBL, une organisation créée en décembre 2025 à Bukavu pour assister les personnes vulnérables et promouvoir l'hygiène dans les communautés.
+                Agathe Ishara est à l'origine de Miracles Actions for Women, une organisation créée en décembre 2025 à Bukavu pour assister les personnes vulnérables et promouvoir l'hygiène dans les communautés.
               </p>
             </div>
           </motion.div>
@@ -346,13 +346,13 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="rounded-3xl bg-blue-700 p-12 text-center relative overflow-hidden"
+          className="rounded-3xl bg-green-700 p-12 text-center relative overflow-hidden"
         >
           <div className="relative">
             <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
             <h2 className="text-4xl font-extrabold text-white mb-4">Soutenir l'action de l'ASBL</h2>
             <p className="text-white/80 text-lg max-w-lg mx-auto mb-8">
-              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miraclecleantech ASBL.
+              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miracles Actions for Women.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/contact" className="px-8 py-4 bg-white text-rose-600 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200">

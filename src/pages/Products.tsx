@@ -25,7 +25,7 @@ export default function Products() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
-        <BlobDecor className="absolute -right-24 -top-16 w-[440px] h-[440px] text-blue-100/40 pointer-events-none" />
+        <BlobDecor className="absolute -right-24 -top-16 w-[440px] h-[440px] text-green-100/40 pointer-events-none" />
         <DotGrid className="absolute bottom-6 left-6 text-green-300/30 w-44 h-44 pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -40,7 +40,7 @@ export default function Products() {
                 className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
               >
                 Nos{' '}
-                <span className="text-blue-700">produits</span>
+                <span className="text-green-700">produits</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function Products() {
                 transition={{ delay: 0.2 }}
                 className="mt-4 text-lg text-gray-500 max-w-lg"
               >
-                Des produits d'hygiène des mains et de nettoyage des sols pensés pour soutenir l'action sociale de Miraclecleantech ASBL.
+                Des produits d'hygiène des mains et de nettoyage des sols pensés pour soutenir l'action sociale de Miracles Actions for Women.
               </motion.p>
             </div>
             <motion.div
@@ -86,7 +86,7 @@ export default function Products() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                   activeCategory === cat
-                    ? 'bg-blue-700 text-white shadow-md'
+                    ? 'bg-green-700 text-white shadow-md'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >

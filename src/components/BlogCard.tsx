@@ -24,7 +24,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
           alt={post.title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
-        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-semibold text-blue-700">
+        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-semibold text-green-700">
           {post.category}
         </span>
       </div>

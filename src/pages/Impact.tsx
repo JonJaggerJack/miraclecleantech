@@ -55,7 +55,7 @@ function StatCard({ icon: Icon, value, suffix = '', label, color, index }: StatC
 }
 
 const stats = [
-  { icon: Users, value: 2, suffix: '', label: 'Pôles d\'intervention', color: 'bg-blue-700' },
+  { icon: Users, value: 2, suffix: '', label: 'Pôles d\'intervention', color: 'bg-green-700' },
   { icon: Droplets, value: 2, suffix: '', label: 'Produits clés', color: 'bg-green-600' },
   { icon: Heart, value: 1, suffix: '', label: 'Action sociale centrale', color: 'bg-rose-500' },
   { icon: Shield, value: 2025, suffix: '', label: 'Année de création', color: 'bg-violet-600' },
@@ -72,8 +72,8 @@ const projects = [
   {
     icon: BookOpen,
     title: 'Promotion de l\'hygiène',
-    desc: 'Miraclecleantech ASBL met l\'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d\'hygiène.',
-    color: 'from-blue-500 to-indigo-600',
+    desc: 'Miracles Actions for Women met l\'accent sur la sensibilisation et les bonnes pratiques sanitaires afin de réduire les risques liés au manque d\'hygiène.',
+    color: 'from-green-500 to-indigo-600',
     tag: 'Éducation',
   },
   {
@@ -109,7 +109,7 @@ export default function Impact() {
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
             Des actions concrètes pour{' '}
-            <span className="text-blue-700">
+            <span className="text-green-700">
               les communautés
             </span>
           </motion.h1>
@@ -119,7 +119,7 @@ export default function Impact() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl mx-auto"
           >
-            L'action de Miraclecleantech ASBL s'organise autour de l'assistance, de l'hygiène et de l'assainissement.
+            L'action de Miracles Actions for Women s'organise autour de l'assistance, de l'hygiène et de l'assainissement.
           </motion.p>
         </div>
       </section>
@@ -180,13 +180,13 @@ export default function Impact() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="rounded-3xl bg-blue-700 p-12 text-center relative overflow-hidden"
+          className="rounded-3xl bg-green-700 p-12 text-center relative overflow-hidden"
         >
           <div className="relative">
             <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
             <h2 className="text-4xl font-extrabold text-white mb-4">Soutenir l'action de l'ASBL</h2>
             <p className="text-white/80 text-lg max-w-lg mx-auto mb-8">
-              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miraclecleantech ASBL.
+              Les produits d'hygiène des mains et de nettoyage des sols participent au financement des activités de Miracles Actions for Women.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/contact" className="px-8 py-4 bg-white text-rose-600 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200">

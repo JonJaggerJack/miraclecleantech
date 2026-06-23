@@ -11,7 +11,7 @@ export default function NotFound() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-8xl font-extrabold text-blue-700 mb-4">404</div>
+          <div className="text-8xl font-extrabold text-green-700 mb-4">404</div>
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Page introuvable</h1>
           <p className="text-gray-500 mb-8">
             Cette page n'existe pas ou a été déplacée. Retournez à l'accueil pour continuer.
@@ -19,7 +19,7 @@ export default function NotFound() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-700 text-white font-semibold rounded-xl hover:bg-blue-800 transition-colors text-sm"
+              className="flex items-center gap-2 px-6 py-3 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors text-sm"
             >
               <Home className="w-4 h-4" />
               Accueil

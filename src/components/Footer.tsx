@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logoImg from '../imgs/Logo miracle.jpeg';
+import LogoMaw from './LogoMaw';
 
 const footerLinks = {
   company: [
@@ -27,15 +27,16 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img
-                src={logoImg}
-                alt="Miraclecleantech ASBL"
-                className="h-10 w-auto object-contain"
-              />
-              <span className="text-white font-bold text-base leading-tight">Miracle<br />Clean Tech</span>
+              <LogoMaw className="h-12 w-12 shrink-0" />
+              <span className="text-white font-bold text-base leading-tight">
+                Miracles Actions<br />for Women
+                <span className="block text-[11px] font-medium text-green-400 mt-1">
+                  Pour le Droit et l'Égalité des Femmes
+                </span>
+              </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              Organisation apolitique créée en décembre 2025, Miraclecleantech ASBL accompagne les personnes vulnérables et soutient son action par la production de produits d'hygiène des mains et de nettoyage des sols.
+              Organisation apolitique créée en décembre 2025, Miracles Actions for Women (MAW) œuvre pour le droit et l'égalité des femmes et accompagne les personnes vulnérables.
             </p>
           </div>
 
@@ -83,7 +84,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500 text-center sm:text-left">
-            © 2026 Miraclecleantech ASBL · Au service de l'hygiène, de l'assistance et du cadre de vie.
+            © 2026 Miracles Actions for Women · Au service de l'hygiène, de l'assistance et du cadre de vie.
           </p>
         </div>
       </div>

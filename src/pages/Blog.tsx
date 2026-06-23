@@ -36,7 +36,7 @@ export default function Blog() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gray-50 relative overflow-hidden">
-        <BlobDecor className="absolute -right-24 -top-16 w-[440px] h-[440px] text-blue-100/40 pointer-events-none" />
+        <BlobDecor className="absolute -right-24 -top-16 w-[440px] h-[440px] text-green-100/40 pointer-events-none" />
         <DotGrid className="absolute bottom-6 left-6 text-green-300/30 w-44 h-44 pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -55,7 +55,7 @@ export default function Blog() {
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
             Informations &{' '}
-            <span className="text-blue-700">
+            <span className="text-green-700">
               repères
             </span>
           </motion.h1>
@@ -65,7 +65,7 @@ export default function Blog() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-500 max-w-xl"
           >
-            Le blog de Miraclecleantech ASBL sera un espace de partage autour de nos domaines d'action : hygiène, assainissement, vie de l'organisation et accompagnement des personnes vulnérables.
+            Le blog de Miracles Actions for Women sera un espace de partage autour de nos domaines d'action : hygiène, assainissement, vie de l'organisation et accompagnement des personnes vulnérables.
           </motion.p>
             </div>
             {/* Right – illustration */}
@@ -104,7 +104,7 @@ export default function Blog() {
               transition={{ delay: i * 0.1 }}
               className="flex gap-4 p-6 rounded-2xl border border-gray-100 bg-white shadow-sm"
             >
-              <div className="shrink-0 w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+              <div className="shrink-0 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
                 <Icon className="w-5 h-5 text-green-600" />
               </div>
               <div>

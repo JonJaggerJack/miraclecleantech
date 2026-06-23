@@ -11,7 +11,7 @@ const formations = [
     icon: Monitor,
     title: 'Informatique de base',
     tag: 'Fondamentaux',
-    color: 'bg-blue-700',
+    color: 'bg-green-700',
     duration: 'Module 1',
     desc: "Prise en main de l'ordinateur, navigation sur internet, gestion des fichiers et dossiers, notions de sécurité numérique.",
     points: [
@@ -77,7 +77,7 @@ export default function Formations() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-20 px-6 bg-gray-50 relative overflow-hidden">
-        <BlobDecor className="absolute -top-16 -left-24 w-[420px] h-[420px] text-blue-100/35 pointer-events-none" />
+        <BlobDecor className="absolute -top-16 -left-24 w-[420px] h-[420px] text-green-100/35 pointer-events-none" />
         <DotGrid className="absolute bottom-8 right-8 text-green-300/25 w-44 h-44 pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -96,7 +96,7 @@ export default function Formations() {
             className="mt-3 text-5xl font-extrabold text-gray-900 leading-tight"
           >
             Formations{' '}
-            <span className="text-blue-700">professionnelles</span>
+            <span className="text-green-700">professionnelles</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function Formations() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
           >
-            Miraclecleantech ASBL accompagne les communautés vers l'autonomisation numérique à travers des formations pratiques et accessibles.
+            Miracles Actions for Women accompagne les communautés vers l'autonomisation numérique à travers des formations pratiques et accessibles.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -130,7 +130,7 @@ export default function Formations() {
 
       {/* Formations grid */}
       <SectionWrapper className="relative overflow-hidden">
-        <RingDecor className="absolute -right-16 top-8 w-56 h-56 text-blue-100/40 pointer-events-none" />
+        <RingDecor className="absolute -right-16 top-8 w-56 h-56 text-green-100/40 pointer-events-none" />
         <DotGrid className="absolute left-0 bottom-0 w-40 h-40 text-green-200/35 pointer-events-none" />
         <div className="text-center mb-14">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Programme</span>
@@ -188,7 +188,7 @@ export default function Formations() {
               Pourquoi ces formations ?
             </h2>
             <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-              Ces formations s'inscrivent directement dans la mission de Miraclecleantech ASBL : renforcer les communautés par des actions concrètes et durables.
+              Ces formations s'inscrivent directement dans la mission de Miracles Actions for Women : renforcer les communautés par des actions concrètes et durables.
             </p>
           </div>
           <motion.div
@@ -207,8 +207,8 @@ export default function Formations() {
                   transition={{ delay: i * 0.08 }}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                    <ArrowRight className="w-4 h-4 text-blue-700" />
+                  <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
+                    <ArrowRight className="w-4 h-4 text-green-700" />
                   </div>
                   <p className="text-gray-700 font-medium">{item}</p>
                 </motion.li>
@@ -224,7 +224,7 @@ export default function Formations() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="rounded-3xl bg-blue-700 p-12 text-center relative overflow-hidden"
+          className="rounded-3xl bg-green-700 p-12 text-center relative overflow-hidden"
         >
           <BrainCircuit className="w-12 h-12 text-white/80 mx-auto mb-4" />
           <h2 className="text-4xl font-extrabold text-white mb-4">
@@ -236,7 +236,7 @@ export default function Formations() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200"
+              className="px-8 py-4 bg-white text-green-700 font-bold rounded-xl text-sm hover:shadow-xl hover:scale-105 transition-all duration-200"
             >
               Nous contacter
             </Link>
