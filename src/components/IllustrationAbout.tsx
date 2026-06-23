@@ -14,11 +14,11 @@ export default function IllustrationAbout({ className = '' }: { className?: stri
       <ellipse cx="190" cy="282" rx="130" ry="14" fill="#D1FAE5" />
 
       {/* Person 1 – left (blue shirt) */}
-      <circle cx="115" cy="110" r="22" fill="#DBEAFE" />
-      <circle cx="115" cy="97" r="13" fill="#93C5FD" />
-      <path d="M96 132 Q115 120 134 132 L134 185 Q115 192 96 185 Z" fill="#1D4ED8" />
-      <rect x="96" y="170" width="10" height="30" rx="5" fill="#BFDBFE" />
-      <rect x="120" y="170" width="10" height="30" rx="5" fill="#BFDBFE" />
+      <circle cx="115" cy="110" r="22" fill="#DCFCE7" />
+      <circle cx="115" cy="97" r="13" fill="#86EFAC" />
+      <path d="M96 132 Q115 120 134 132 L134 185 Q115 192 96 185 Z" fill="#15803D" />
+      <rect x="96" y="170" width="10" height="30" rx="5" fill="#BBF7D0" />
+      <rect x="120" y="170" width="10" height="30" rx="5" fill="#BBF7D0" />
 
       {/* Person 2 – centre (green shirt) */}
       <circle cx="190" cy="100" r="24" fill="#D1FAE5" />
@@ -47,8 +47,8 @@ export default function IllustrationAbout({ className = '' }: { className?: stri
       <path d="M214 155 Q218 147 246 155" stroke="#C4B5FD" strokeWidth="3" strokeLinecap="round" fill="none" />
 
       {/* Floating badge – "ASBL" */}
-      <rect x="40" y="60" width="64" height="28" rx="14" fill="#1D4ED8" />
-      <text x="72" y="79" textAnchor="middle" fontFamily="system-ui, sans-serif" fontSize="11" fontWeight="700" fill="white">ASBL</text>
+      <rect x="40" y="60" width="64" height="28" rx="14" fill="#15803D" />
+      <text x="72" y="79" textAnchor="middle" fontFamily="system-ui, sans-serif" fontSize="11" fontWeight="700" fill="white">MAW</text>
 
       {/* Floating badge – leaf */}
       <circle cx="336" cy="80" r="20" fill="#D1FAE5" />
@@ -63,7 +63,7 @@ export default function IllustrationAbout({ className = '' }: { className?: stri
       />
 
       {/* Dots decoration */}
-      <circle cx="42" cy="200" r="5" fill="#60A5FA" opacity="0.45" />
+      <circle cx="42" cy="200" r="5" fill="#4ADE80" opacity="0.45" />
       <circle cx="55" cy="225" r="3.5" fill="#34D399" opacity="0.45" />
       <circle cx="340" cy="220" r="5" fill="#34D399" opacity="0.45" />
       <circle cx="328" cy="245" r="3.5" fill="#A78BFA" opacity="0.45" />

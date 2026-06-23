@@ -8,19 +8,19 @@ export default function IllustrationContact({ className = '' }: { className?: st
       aria-hidden="true"
     >
       {/* Background ellipse */}
-      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#EEF2FF" />
+      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
 
       {/* Main envelope body */}
       <rect x="58" y="108" width="232" height="162" rx="18" fill="white" />
-      <rect x="58" y="108" width="232" height="162" rx="18" stroke="#BFDBFE" strokeWidth="2" />
+      <rect x="58" y="108" width="232" height="162" rx="18" stroke="#BBF7D0" strokeWidth="2" />
 
       {/* Envelope flap (open, folded back) */}
-      <path d="M58 126 L174 196 L290 126" stroke="#BFDBFE" strokeWidth="2" fill="none" />
-      <path d="M58 108 L174 178 L290 108 Z" fill="#EFF6FF" />
-      <path d="M58 108 L174 178 L290 108" stroke="#BFDBFE" strokeWidth="1.5" fill="none" />
+      <path d="M58 126 L174 196 L290 126" stroke="#BBF7D0" strokeWidth="2" fill="none" />
+      <path d="M58 108 L174 178 L290 108 Z" fill="#F0FDF4" />
+      <path d="M58 108 L174 178 L290 108" stroke="#BBF7D0" strokeWidth="1.5" fill="none" />
 
       {/* Arrow going out of envelope (sending) */}
-      <circle cx="270" cy="96" r="22" fill="#1D4ED8" />
+      <circle cx="270" cy="96" r="22" fill="#15803D" />
       <path
         d="M260 96 L280 96 M274 89 L281 96 L274 103"
         stroke="white"
@@ -30,8 +30,8 @@ export default function IllustrationContact({ className = '' }: { className?: st
       />
 
       {/* Floating message bubble 1 */}
-      <rect x="62" y="52" width="108" height="44" rx="14" fill="#1D4ED8" />
-      <path d="M82 96 L74 108 L96 96 Z" fill="#1D4ED8" />
+      <rect x="62" y="52" width="108" height="44" rx="14" fill="#15803D" />
+      <path d="M82 96 L74 108 L96 96 Z" fill="#15803D" />
       <rect x="74" y="64" width="84" height="7" rx="3.5" fill="white" opacity="0.7" />
       <rect x="74" y="76" width="60" height="7" rx="3.5" fill="white" opacity="0.5" />
 
@@ -49,8 +49,8 @@ export default function IllustrationContact({ className = '' }: { className?: st
       />
 
       {/* Location pin – bottom right */}
-      <circle cx="296" cy="232" r="26" fill="#DBEAFE" />
-      <path d="M296 218 A10 10 0 0 1 306 228 A10 14 0 0 1 296 246 A10 14 0 0 1 286 228 A10 10 0 0 1 296 218 Z" fill="#1D4ED8" />
+      <circle cx="296" cy="232" r="26" fill="#DCFCE7" />
+      <path d="M296 218 A10 10 0 0 1 306 228 A10 14 0 0 1 296 246 A10 14 0 0 1 286 228 A10 10 0 0 1 296 218 Z" fill="#15803D" />
       <circle cx="296" cy="228" r="4" fill="white" />
 
       {/* Sparkle */}
@@ -61,7 +61,7 @@ export default function IllustrationContact({ className = '' }: { className?: st
       />
 
       {/* Dots */}
-      <circle cx="48" cy="90" r="5" fill="#60A5FA" opacity="0.45" />
+      <circle cx="48" cy="90" r="5" fill="#4ADE80" opacity="0.45" />
       <circle cx="336" cy="265" r="5" fill="#34D399" opacity="0.45" />
       <circle cx="350" cy="248" r="3.5" fill="#A78BFA" opacity="0.45" />
     </svg>

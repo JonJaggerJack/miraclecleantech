@@ -8,17 +8,17 @@ export default function IllustrationProducts({ className = '' }: { className?: s
       aria-hidden="true"
     >
       {/* Background ellipse */}
-      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#EFF6FF" />
+      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
 
       {/* Shelf / surface */}
-      <rect x="55" y="240" width="270" height="14" rx="7" fill="#BFDBFE" />
+      <rect x="55" y="240" width="270" height="14" rx="7" fill="#BBF7D0" />
 
       {/* === Bottle 1 – pump dispenser (tall, blue) === */}
-      <rect x="95" y="105" width="52" height="138" rx="14" fill="#1D4ED8" />
-      <rect x="109" y="88" width="24" height="20" rx="6" fill="#1E40AF" />
+      <rect x="95" y="105" width="52" height="138" rx="14" fill="#15803D" />
+      <rect x="109" y="88" width="24" height="20" rx="6" fill="#166534" />
       {/* pump head */}
-      <rect x="116" y="72" width="10" height="18" rx="5" fill="#93C5FD" />
-      <rect x="108" y="70" width="26" height="10" rx="5" fill="#60A5FA" />
+      <rect x="116" y="72" width="10" height="18" rx="5" fill="#86EFAC" />
+      <rect x="108" y="70" width="26" height="10" rx="5" fill="#4ADE80" />
       {/* label stripe */}
       <rect x="100" y="150" width="42" height="48" rx="8" fill="white" opacity="0.18" />
       <rect x="106" y="158" width="30" height="5" rx="2.5" fill="white" opacity="0.5" />
@@ -53,9 +53,9 @@ export default function IllustrationProducts({ className = '' }: { className?: s
       <rect x="304" y="163" width="7" height="48" rx="3.5" fill="white" opacity="0.12" />
 
       {/* Bubbles floating */}
-      <circle cx="78" cy="175" r="8" fill="#BFDBFE" opacity="0.7" />
-      <circle cx="64" cy="148" r="5" fill="#BFDBFE" opacity="0.55" />
-      <circle cx="82" cy="128" r="3.5" fill="#93C5FD" opacity="0.55" />
+      <circle cx="78" cy="175" r="8" fill="#BBF7D0" opacity="0.7" />
+      <circle cx="64" cy="148" r="5" fill="#BBF7D0" opacity="0.55" />
+      <circle cx="82" cy="128" r="3.5" fill="#86EFAC" opacity="0.55" />
       <circle cx="348" cy="168" r="7" fill="#D1FAE5" opacity="0.7" />
       <circle cx="355" cy="145" r="4.5" fill="#BBF7D0" opacity="0.55" />
 
