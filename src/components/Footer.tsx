@@ -8,9 +8,10 @@ const footerLinks = {
     { label: 'L\'organisation', to: '/about#organisation' },
   ],
   products: [
-    { label: 'Autonomisation', to: '/actions' },
-    { label: 'Droits & plaidoyer', to: '/actions' },
-    { label: 'Numérique responsable', to: '/actions' },
+    { label: 'Autonomisation économique', to: '/actions' },
+    { label: 'Droits & protection', to: '/actions' },
+    { label: 'Leadership féminin', to: '/actions' },
+    { label: 'Environnement', to: '/actions' },
   ],
   support: [
     { label: 'Contact', to: '/contact' },

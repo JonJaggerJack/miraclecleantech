@@ -86,12 +86,12 @@ function Hero() {
 
 // ── Mission Cards ─────────────────────────────────────────────────────────────
 const missions = [
-  { icon: Users, title: "Autonomiser les femmes", desc: "Leur donner les moyens de décider, d'apprendre et de prendre leur place — dans la famille comme dans la cité.", color: "bg-green-600" },
-  { icon: Shield, title: "Défendre leurs droits", desc: "Informer, sensibiliser et plaider pour l'égalité et la protection des femmes, sans relâche.", color: "bg-emerald-600" },
-  { icon: Zap, title: "Former au numérique", desc: "Apprendre à se servir des outils et des réseaux sociaux de façon utile, réfléchie et sûre.", color: "bg-violet-600" },
-  { icon: Heart, title: "Accompagner les plus fragiles", desc: "Écouter et orienter les femmes et les familles en difficulté, avec respect et sans jamais juger.", color: "bg-rose-500" },
-  { icon: Globe, title: "Faire grandir la communauté", desc: "Quand une femme avance, c'est tout son entourage qui progresse avec elle.", color: "bg-teal-600" },
-  { icon: Star, title: "Agir près de chez nous", desc: "Des actions concrètes, sur le terrain, à Bukavu et dans le Sud-Kivu.", color: "bg-amber-500" },
+  { icon: Users, title: "Autonomisation économique", desc: "Des formations et des activités génératrices de revenus pour rendre les femmes et les personnes vulnérables autonomes.", color: "bg-green-600" },
+  { icon: Zap, title: "Éducation & capacités", desc: "Faciliter l'accès à l'éducation et renforcer les capacités des jeunes filles.", color: "bg-emerald-600" },
+  { icon: Shield, title: "Droits & protection", desc: "Défendre les droits des femmes et lutter contre toutes les formes de violences.", color: "bg-rose-500" },
+  { icon: Star, title: "Leadership féminin", desc: "Encourager les femmes à prendre la parole et à participer aux décisions.", color: "bg-amber-500" },
+  { icon: Heart, title: "Accompagnement", desc: "Un soutien social, moral et psychologique pour les personnes vulnérables.", color: "bg-violet-600" },
+  { icon: Globe, title: "Environnement", desc: "Hygiène publique, lutte contre la déforestation, tri, recyclage et réutilisation des déchets.", color: "bg-teal-600" },
 ];
 
 

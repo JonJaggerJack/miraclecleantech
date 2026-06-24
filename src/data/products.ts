@@ -1,4 +1,4 @@
-// Programmes / actions de Miracles Actions for Women.
+// Programmes / actions de Miracles Actions for Women — alignés sur les objectifs officiels.
 // (Le type garde le nom "Product" en interne — c'est la carte générique réutilisée.)
 export interface Product {
   id: string | number;
@@ -12,58 +12,100 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Ateliers d'autonomisation",
+    name: "Autonomisation économique",
     category: "Autonomisation",
     description:
-      "Des rencontres où les femmes échangent, apprennent et reprennent confiance. On y parle estime de soi, prise de décision et accès aux opportunités — comme lors de notre atelier de Bukavu sur l'autonomisation et le numérique.",
+      "Des formations et des activités génératrices de revenus pour rendre les femmes et les personnes vulnérables financièrement autonomes.",
     benefits: [
-      "Échanges en petits groupes",
-      "Intervenantes du terrain",
-      "Outils concrets pour agir",
-      "Suivi après l'atelier",
+      "Formations pratiques",
+      "Activités génératrices de revenus",
+      "Accompagnement vers l'emploi",
+      "Autonomie financière",
     ],
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80",
   },
   {
     id: 2,
-    name: "Sensibilisation aux droits",
-    category: "Droits & plaidoyer",
+    name: "Éducation des jeunes filles",
+    category: "Éducation",
     description:
-      "Connaître ses droits, c'est déjà commencer à les défendre. Nous menons des campagnes de proximité sur l'égalité, la protection et la place des femmes dans la décision communautaire.",
+      "Faciliter l'accès à l'éducation et renforcer les capacités des jeunes filles pour leur ouvrir de nouvelles perspectives.",
     benefits: [
-      "Causeries de quartier",
-      "Information sur les droits",
-      "Plaidoyer auprès des acteurs locaux",
-      "Relais dans les communautés",
+      "Accès à l'éducation",
+      "Renforcement des capacités",
+      "Soutien scolaire",
+      "Mentorat",
+    ],
+    image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&q=80",
+  },
+  {
+    id: 3,
+    name: "Lutte contre les violences faites aux femmes",
+    category: "Droits & protection",
+    description:
+      "Prévenir et combattre toutes les formes de violences faites aux femmes, et protéger celles qui en sont victimes.",
+    benefits: [
+      "Prévention & sensibilisation",
+      "Écoute et protection",
+      "Orientation des victimes",
+      "Plaidoyer",
     ],
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80",
   },
   {
-    id: 3,
-    name: "Numérique responsable",
-    category: "Numérique",
+    id: 4,
+    name: "Droits des femmes & égalité des genres",
+    category: "Droits & protection",
     description:
-      "Le numérique ouvre des portes, à condition de bien s'en servir. Nous formons les femmes aux outils essentiels et à un usage des réseaux sociaux à la fois sûr, réfléchi et utile.",
+      "Sensibiliser les communautés aux droits des femmes et à l'égalité des genres, et faire entendre leur voix.",
     benefits: [
-      "Bases de l'informatique",
-      "Réseaux sociaux en sécurité",
-      "Protection de la vie privée",
-      "Vers de nouvelles perspectives",
+      "Causeries communautaires",
+      "Information sur les droits",
+      "Plaidoyer local",
+      "Mobilisation",
     ],
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80",
   },
   {
-    id: 4,
-    name: "Accompagnement des plus vulnérables",
+    id: 5,
+    name: "Accompagnement des personnes vulnérables",
     category: "Accompagnement",
     description:
-      "Derrière chaque situation, il y a une personne. Nous écoutons, orientons et accompagnons les femmes et les familles fragilisées vers les bons relais et un peu plus d'autonomie.",
+      "Un accompagnement social, moral et psychologique pour les personnes vulnérables, dans le respect de leur dignité.",
     benefits: [
+      "Soutien social",
+      "Soutien moral & psychologique",
       "Écoute et orientation",
-      "Mise en relation",
       "Suivi de proximité",
-      "Dignité avant tout",
     ],
     image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
+  },
+  {
+    id: 6,
+    name: "Leadership féminin",
+    category: "Leadership",
+    description:
+      "Encourager le leadership des femmes et leur participation à la prise de décision au sein de la communauté.",
+    benefits: [
+      "Ateliers de leadership",
+      "Prise de parole",
+      "Participation citoyenne",
+      "Réseaux de femmes",
+    ],
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&q=80",
+  },
+  {
+    id: 7,
+    name: "Environnement & développement durable",
+    category: "Environnement",
+    description:
+      "Lutter contre l'insalubrité (hygiène publique, déforestation) et réduire les déchets par le tri, le recyclage et la réutilisation.",
+    benefits: [
+      "Sensibilisation à l'hygiène publique",
+      "Lutte contre la déforestation",
+      "Tri & recyclage",
+      "Réutilisation des produits finis",
+    ],
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80",
   },
 ];

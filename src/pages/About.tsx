@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Target, Eye, Star, Users, Leaf, Zap, Shield, BookOpen, Monitor } from 'lucide-react';
+import { Heart, Target, Eye, Star, Users, Leaf, Shield, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
@@ -9,52 +9,56 @@ import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 import IllustrationAbout from '../components/IllustrationAbout';
 
 const values = [
-  { icon: Heart, title: 'Dignité', desc: 'La dignité de chaque femme passe avant tout le reste.', color: 'bg-rose-500' },
-  { icon: Shield, title: 'Égalité', desc: 'Les mêmes droits et les mêmes chances, pour toutes.', color: 'bg-emerald-600' },
-  { icon: Users, title: 'Proximité', desc: "On agit là où l'on vit, au plus près des gens.", color: 'bg-green-700' },
-  { icon: Star, title: 'Écoute', desc: "On commence toujours par écouter avant d'agir.", color: 'bg-amber-500' },
-  { icon: Zap, title: 'Persévérance', desc: 'Le changement prend du temps ; nous tenons bon.', color: 'bg-violet-600' },
+  { icon: Shield, title: 'Droits humains', desc: 'Le respect des droits humains avant tout.', color: 'bg-emerald-600' },
+  { icon: Users, title: 'Égalité de genre', desc: 'Égalité et équité entre les femmes et les hommes.', color: 'bg-green-700' },
+  { icon: Heart, title: 'Solidarité', desc: 'Solidarité et respect mutuel.', color: 'bg-rose-500' },
+  { icon: Eye, title: 'Transparence', desc: 'Transparence et bonne gouvernance.', color: 'bg-green-600' },
+  { icon: Star, title: 'Inclusion', desc: 'Inclusion sociale et dignité.', color: 'bg-amber-500' },
+  { icon: Target, title: 'Responsabilité', desc: 'Responsabilité et discipline organisationnelle.', color: 'bg-violet-600' },
+  { icon: Leaf, title: 'Environnement', desc: 'Protection de l\'environnement et développement durable.', color: 'bg-teal-600' },
 ];
 
 const projects = [
   {
     icon: Users,
-    title: "Ateliers d'autonomisation",
-    desc: "Des espaces où les femmes reprennent confiance, apprennent et décident — comme notre atelier de Bukavu sur l'autonomisation et le numérique.",
+    title: 'Autonomisation économique',
+    desc: "Formations et activités génératrices de revenus pour rendre les femmes et les personnes vulnérables autonomes.",
     color: 'bg-green-700',
     tag: 'Autonomisation',
   },
   {
     icon: BookOpen,
-    title: 'Sensibilisation & plaidoyer',
-    desc: "Causeries de quartier et plaidoyer auprès des acteurs locaux pour faire connaître et respecter les droits des femmes.",
+    title: 'Éducation des jeunes filles',
+    desc: "Faciliter l'accès à l'éducation et renforcer les capacités des jeunes filles.",
     color: 'bg-emerald-600',
-    tag: 'Droits',
+    tag: 'Éducation',
+    link: '/formations',
   },
   {
     icon: Heart,
-    title: 'Accompagnement de proximité',
-    desc: "Nous écoutons, orientons et accompagnons les femmes et les familles fragilisées vers les bons relais, sans jamais juger.",
+    title: 'Lutte contre les violences',
+    desc: "Combattre toutes les formes de violences faites aux femmes et accompagner les victimes.",
     color: 'bg-rose-500',
-    tag: 'Terrain',
+    tag: 'Protection',
   },
   {
-    icon: Monitor,
-    title: 'Numérique responsable',
-    desc: "Initier les femmes aux outils numériques et à un usage des réseaux sociaux sûr, réfléchi et utile.",
-    color: 'bg-violet-600',
-    tag: 'Numérique',
-    link: '/formations',
+    icon: Leaf,
+    title: 'Environnement & développement durable',
+    desc: "Hygiène publique, lutte contre la déforestation, tri, recyclage et réutilisation des déchets.",
+    color: 'bg-teal-600',
+    tag: 'Environnement',
   },
 ];
 
 const missionItems = [
-  "Défendre le droit et l'égalité des femmes",
-  "Autonomiser les femmes : estime de soi, décision, opportunités",
-  'Sensibiliser et faire du plaidoyer dans les communautés',
-  "Former à un usage responsable du numérique",
-  'Accompagner les femmes et les familles vulnérables',
-  'Agir concrètement à Bukavu et dans le Sud-Kivu',
+  "Promouvoir l'autonomisation économique (formations, activités génératrices de revenus)",
+  "Faciliter l'accès à l'éducation et renforcer les capacités des jeunes filles",
+  'Lutter contre toutes les formes de violences faites aux femmes',
+  "Sensibiliser aux droits des femmes et à l'égalité des genres",
+  'Apporter un accompagnement social, moral et psychologique',
+  'Encourager le leadership féminin et la participation à la décision',
+  "Lutter contre l'insalubrité (hygiène publique, déforestation)",
+  'Réduire les déchets : tri, recyclage et réutilisation',
 ];
 
 export default function About() {
@@ -91,7 +95,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
           >
-            Une association née à Bukavu en 2025, décidée à faire avancer le droit et l'égalité des femmes — une rencontre, un atelier, une histoire à la fois.
+            Association sans but lucratif basée à Bukavu (RD Congo), engagée pour les droits des femmes, l'assistance aux personnes vulnérables, la protection de l'environnement, le leadership féminin et la cohésion sociale.
           </motion.p>
             </div>
             <motion.div
@@ -131,13 +135,13 @@ export default function About() {
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 text-base leading-relaxed">
               <p>
-                Miracles Actions for Women (MAW) est une association apolitique basée à Bukavu, dans le Sud-Kivu. Nous défendons le droit et l'égalité des femmes, et nous croyons qu'aucune communauté n'avance vraiment si la moitié de ses membres reste en arrière.
+                Miracles Actions for Women (MAW) est une association sans but lucratif basée à Bukavu, en République Démocratique du Congo. Elle s'engage pour la promotion et l'égalité des droits des femmes, l'assistance aux personnes vulnérables, la protection de l'environnement, le leadership féminin et la cohésion sociale.
               </p>
               <p>
-                Notre travail est simple et concret : organiser des ateliers, sensibiliser sur les droits, former au numérique et accompagner celles qui en ont le plus besoin. Chaque action part de l'écoute et se vit sur le terrain.
+                Notre mission : promouvoir, défendre et protéger les droits fondamentaux des femmes et des personnes vulnérables, en garantissant leur dignité, leur autonomisation et leur pleine participation à la société — tout en luttant contre toute forme de discrimination, de violence et d'exclusion sociale, dans un environnement sain et un développement durable.
               </p>
               <p>
-                Nous sommes une jeune association, mais déterminée — convaincue qu'une femme qui avance entraîne toute une communauté avec elle.
+                Une conviction nous guide : quand une femme avance, c'est toute une communauté qui progresse avec elle.
               </p>
             </div>
             <div className="mt-8 flex gap-4">
@@ -161,7 +165,7 @@ export default function About() {
             <div className="w-14 h-14 rounded-2xl bg-green-600 flex items-center justify-center mb-6 shadow-lg">
               <Target className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Notre Mission</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Nos objectifs</h3>
             <ul className="flex flex-col gap-3">
               {missionItems.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-600">
@@ -186,7 +190,7 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Notre Vision</h3>
             <p className="text-gray-300 text-base leading-relaxed mb-6">
-              Une société où les femmes prennent leur place pleinement : libres de décider, d'apprendre, d'entreprendre et de faire entendre leur voix, à égalité avec les hommes.
+              Être une organisation de référence en République Démocratique du Congo et au-delà, pour l'autonomisation socio-économique, la protection des droits et le leadership des femmes, des jeunes filles et des personnes vulnérables, dans un cadre d'égalité, de dignité et de développement durable.
             </p>
             <div className="p-5 rounded-2xl bg-white/10 border border-white/10">
               <Leaf className="w-6 h-6 text-green-400 mb-3" />
@@ -206,7 +210,7 @@ export default function About() {
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos valeurs</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Ce en quoi nous croyons</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {values.map((value, index) => (
             <motion.div
               key={value.title}
@@ -248,7 +252,7 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Miracles Actions for Women</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                Association apolitique basée à Bukavu (Sud-Kivu, RD Congo), MAW agit pour le droit et l'égalité des femmes à travers des ateliers, de la sensibilisation, des formations au numérique et un accompagnement de proximité.
+                Association sans but lucratif basée à Bukavu (RD Congo). MAW agit pour les droits et l'autonomisation des femmes, l'éducation des jeunes filles, l'accompagnement des personnes vulnérables et la protection de l'environnement.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 {['ASBL', 'Apolitique', 'Décembre 2025'].map((tag) => (
@@ -268,7 +272,7 @@ export default function About() {
           <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Projets</span>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Nos initiatives</h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Quatre façons d'agir, complémentaires, toutes au service du droit et de l'autonomie des femmes.
+            Quelques-uns de nos axes d'action, au service des femmes, des jeunes filles et des personnes vulnérables.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-8">

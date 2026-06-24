@@ -11,7 +11,14 @@ export default defineType({
       title: 'Catégorie',
       type: 'string',
       options: {
-        list: ['Autonomisation', 'Droits & plaidoyer', 'Numérique', 'Accompagnement'],
+        list: [
+          'Autonomisation',
+          'Éducation',
+          'Droits & protection',
+          'Leadership',
+          'Accompagnement',
+          'Environnement',
+        ],
       },
     }),
     defineField({ name: 'description', title: 'Description', type: 'text', rows: 4 }),

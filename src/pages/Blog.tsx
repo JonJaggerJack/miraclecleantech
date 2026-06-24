@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Scale, Smartphone, HeartHandshake, Users } from 'lucide-react';
+import { BookOpen, Scale, Leaf, HeartHandshake, Users } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import IllustrationBlog from '../components/IllustrationBlog';
 import BlogCard from '../components/BlogCard';
@@ -22,10 +22,10 @@ const themes = [
       "Connaître ses droits, c’est déjà commencer à les défendre : nos repères et nos actions de plaidoyer pour l’égalité.",
   },
   {
-    icon: Smartphone,
-    title: 'Numérique responsable',
+    icon: Leaf,
+    title: 'Environnement & développement durable',
     description:
-      "Des conseils simples pour utiliser internet et les réseaux sociaux de façon utile, réfléchie et sûre.",
+      "Hygiène publique, lutte contre la déforestation, tri, recyclage : nos actions pour un cadre de vie plus sain.",
   },
   {
     icon: HeartHandshake,

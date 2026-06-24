@@ -9,7 +9,7 @@ import { ACTIONS_QUERY } from '../lib/queries';
 import IllustrationProducts from '../components/IllustrationProducts';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
-const categories = ['Tous', 'Autonomisation', 'Droits & plaidoyer', 'Numérique', 'Accompagnement'];
+const categories = ['Tous', 'Autonomisation', 'Éducation', 'Droits & protection', 'Leadership', 'Accompagnement', 'Environnement'];
 
 export default function Actions() {
   const [activeCategory, setActiveCategory] = useState('Tous');
