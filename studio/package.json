@@ -8,7 +8,7 @@
     "start": "sanity dev",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "import": "sanity dataset import seed.ndjson production"
+    "import": "sanity dataset import seed.ndjson production --replace"
   },
   "dependencies": {
     "react": "^18.2.0",
