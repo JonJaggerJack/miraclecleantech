@@ -1,6 +1,7 @@
 // Connexion à Sanity via l'API HTTP (aucune dépendance lourde).
 // Si VITE_SANITY_PROJECT_ID n'est pas défini, tout retombe sur le contenu statique.
-const projectId = import.meta.env.VITE_SANITY_PROJECT_ID as string | undefined;
+const projectId =
+  (import.meta.env.VITE_SANITY_PROJECT_ID as string | undefined) || 'oLbc70mIJ';
 const dataset = (import.meta.env.VITE_SANITY_DATASET as string | undefined) || 'production';
 const apiVersion = '2023-10-01';
 
