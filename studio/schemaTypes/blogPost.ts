@@ -15,11 +15,28 @@ export default defineType({
     }),
     defineField({ name: 'excerpt', title: 'Accroche', type: 'text', rows: 3 }),
     defineField({
+      name: 'body',
+      title: 'Contenu (texte enrichi, avec photos)',
+      type: 'array',
+      description: 'Rédigez l\'article ici. Bouton « + » pour ajouter une photo n\'importe où.',
+      of: [
+        { type: 'block' },
+        {
+          type: 'image',
+          options: { hotspot: true },
+          fields: [
+            { name: 'alt', type: 'string', title: 'Texte alternatif (accessibilité)' },
+            { name: 'caption', type: 'string', title: 'Légende (optionnel)' },
+          ],
+        },
+      ],
+    }),
+    defineField({
       name: 'content',
-      title: 'Contenu',
+      title: 'Contenu (texte simple — ancien format, optionnel)',
       type: 'text',
-      rows: 20,
-      description: 'Séparez les paragraphes par une ligne vide.',
+      rows: 12,
+      description: 'Utilisé seulement si le « texte enrichi » ci-dessus est vide.',
     }),
     defineField({ name: 'author', title: 'Auteur', type: 'string' }),
     defineField({ name: 'date', title: 'Date (affichée)', type: 'string' }),

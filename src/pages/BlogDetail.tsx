@@ -6,6 +6,7 @@ import type { BlogPost } from '../data/blog';
 import { useSanityData } from '../lib/useSanity';
 import { BLOG_LIST_QUERY, BLOG_DETAIL_QUERY } from '../lib/queries';
 import BlogCard from '../components/BlogCard';
+import PortableText, { type PortableBlock } from '../components/PortableText';
 
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -79,11 +80,15 @@ export default function BlogDetail() {
           className="prose max-w-none"
         >
           <p className="text-lg text-gray-500 leading-relaxed font-medium mb-6">{post.excerpt}</p>
-          {post.content.split('\n\n').map((paragraph, i) => (
-            <p key={i} className="text-gray-600 leading-relaxed mb-4 whitespace-pre-line text-base">
-              {paragraph}
-            </p>
-          ))}
+          {post.body && post.body.length > 0 ? (
+            <PortableText value={post.body as PortableBlock[]} />
+          ) : (
+            (post.content ?? '').split('\n\n').map((paragraph, i) => (
+              <p key={i} className="text-gray-600 leading-relaxed mb-4 whitespace-pre-line text-base">
+                {paragraph}
+              </p>
+            ))
+          )}
         </motion.div>
 
         {/* Related */}

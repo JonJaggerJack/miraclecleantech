@@ -14,7 +14,11 @@ export const BLOG_DETAIL_QUERY = `*[_type == "blogPost" && slug.current == $slug
   "slug": slug.current,
   title, excerpt, content, author, date, category, readTime,
   "image": coalesce(image.asset->url, imageUrl),
-  tags
+  tags,
+  body[]{
+    ...,
+    _type == "image" => { "url": asset->url, "alt": alt, "caption": caption }
+  }
 }`;
 
 export const ACTIONS_QUERY = `*[_type == "action"] | order(coalesce(order, 0) asc){

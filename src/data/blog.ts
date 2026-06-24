@@ -10,6 +10,7 @@ export interface BlogPost {
   readTime: string;
   image: string;
   tags: string[];
+  body?: unknown[];
 }
 
 export const blogPosts: BlogPost[] = [
