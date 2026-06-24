@@ -1,3 +1,45 @@
+import type { ReactNode } from 'react';
+
+function Person({ x, y, s, color }: { x: number; y: number; s: number; color: string }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      {/* head */}
+      <circle cx="0" cy="-46" r="11" fill={color} />
+      {/* raised arms */}
+      <path
+        d="M -22 -30 L 0 -13 L 22 -30"
+        fill="none"
+        stroke={color}
+        strokeWidth="11"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* body */}
+      <path d="M -10 -15 L 10 -15 L 8 4 L 18 18 L -18 18 L -8 4 Z" fill={color} />
+    </g>
+  );
+}
+
+function Badge({
+  x,
+  y,
+  bg,
+  children,
+}: {
+  x: number;
+  y: number;
+  bg: string;
+  children: ReactNode;
+}) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <circle r="22" fill="white" />
+      <circle r="22" fill={bg} opacity="0.12" />
+      {children}
+    </g>
+  );
+}
+
 export default function IllustrationProducts({ className = '' }: { className?: string }) {
   return (
     <svg
@@ -7,68 +49,53 @@ export default function IllustrationProducts({ className = '' }: { className?: s
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Background ellipse */}
+      {/* Background */}
       <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
+      <circle cx="190" cy="150" r="78" fill="#DCFCE7" />
+      {/* dotted arc */}
+      <path d="M96 150 A94 94 0 0 1 284 150" stroke="#86EFAC" strokeWidth="2" strokeDasharray="3 9" fill="none" />
 
-      {/* Shelf / surface */}
-      <rect x="55" y="240" width="270" height="14" rx="7" fill="#BBF7D0" />
+      {/* ground shadow */}
+      <ellipse cx="190" cy="252" rx="120" ry="14" fill="#BBF7D0" opacity="0.6" />
 
-      {/* === Bottle 1 – pump dispenser (tall, blue) === */}
-      <rect x="95" y="105" width="52" height="138" rx="14" fill="#15803D" />
-      <rect x="109" y="88" width="24" height="20" rx="6" fill="#166534" />
-      {/* pump head */}
-      <rect x="116" y="72" width="10" height="18" rx="5" fill="#86EFAC" />
-      <rect x="108" y="70" width="26" height="10" rx="5" fill="#4ADE80" />
-      {/* label stripe */}
-      <rect x="100" y="150" width="42" height="48" rx="8" fill="white" opacity="0.18" />
-      <rect x="106" y="158" width="30" height="5" rx="2.5" fill="white" opacity="0.5" />
-      <rect x="106" y="168" width="22" height="5" rx="2.5" fill="white" opacity="0.4" />
-      <rect x="106" y="178" width="26" height="5" rx="2.5" fill="white" opacity="0.4" />
-      {/* shine */}
-      <rect x="132" y="112" width="8" height="60" rx="4" fill="white" opacity="0.12" />
+      {/* Three women, arms raised (solidarity / empowerment) */}
+      <Person x={126} y={236} s={0.92} color="#16A34A" />
+      <Person x={190} y={222} s={1.12} color="#15803D" />
+      <Person x={256} y={238} s={0.86} color="#22C55E" />
 
-      {/* === Bottle 2 – spray trigger (medium, green) === */}
-      <rect x="168" y="120" width="56" height="122" rx="14" fill="#16A34A" />
-      {/* spray nozzle */}
-      <path d="M196 105 L224 105 L224 122 L196 122 Z" rx="6" fill="#15803D" />
-      <path d="M224 112 L238 107 L238 117 Z" fill="#86EFAC" />
-      {/* trigger */}
-      <path d="M214 122 Q220 130 216 140 Q212 148 206 144" stroke="#86EFAC" strokeWidth="3" strokeLinecap="round" fill="none" />
-      {/* label */}
-      <rect x="174" y="160" width="44" height="50" rx="8" fill="white" opacity="0.18" />
-      <rect x="180" y="168" width="32" height="5" rx="2.5" fill="white" opacity="0.5" />
-      <rect x="180" y="178" width="24" height="5" rx="2.5" fill="white" opacity="0.4" />
-      <rect x="180" y="188" width="28" height="5" rx="2.5" fill="white" opacity="0.4" />
-      <rect x="206" y="128" width="8" height="55" rx="4" fill="white" opacity="0.12" />
+      {/* Floating badges – the action areas */}
+      {/* Heart – care / accompaniment */}
+      <Badge x={66} y={120} bg="#F43F5E">
+        <path
+          d="M0 5 C-4 -2 -13 -1 -13 6 C-13 12 0 18 0 18 C0 18 13 12 13 6 C13 -1 4 -2 0 5 Z"
+          fill="#F43F5E"
+        />
+      </Badge>
 
-      {/* === Bottle 3 – round flask (small, violet) === */}
-      <ellipse cx="288" cy="198" rx="30" ry="38" fill="#7C3AED" />
-      <rect x="274" y="155" width="28" height="20" rx="6" fill="#6D28D9" />
-      {/* cap */}
-      <rect x="272" y="148" width="32" height="12" rx="6" fill="#A78BFA" />
-      {/* label */}
-      <rect x="264" y="183" width="48" height="34" rx="8" fill="white" opacity="0.18" />
-      <rect x="270" y="191" width="36" height="5" rx="2.5" fill="white" opacity="0.5" />
-      <rect x="270" y="201" width="28" height="5" rx="2.5" fill="white" opacity="0.4" />
-      <rect x="304" y="163" width="7" height="48" rx="3.5" fill="white" opacity="0.12" />
+      {/* Leaf – environment */}
+      <Badge x={316} y={112} bg="#16A34A">
+        <path d="M-1 11 C-11 6 -11 -7 1 -12 C11 -6 10 7 -1 11 Z" fill="#16A34A" />
+        <path d="M0 9 L1 -8" stroke="white" strokeWidth="1.6" strokeLinecap="round" />
+      </Badge>
 
-      {/* Bubbles floating */}
-      <circle cx="78" cy="175" r="8" fill="#BBF7D0" opacity="0.7" />
-      <circle cx="64" cy="148" r="5" fill="#BBF7D0" opacity="0.55" />
-      <circle cx="82" cy="128" r="3.5" fill="#86EFAC" opacity="0.55" />
-      <circle cx="348" cy="168" r="7" fill="#D1FAE5" opacity="0.7" />
-      <circle cx="355" cy="145" r="4.5" fill="#BBF7D0" opacity="0.55" />
+      {/* Star – leadership */}
+      <Badge x={326} y={206} bg="#FBBF24">
+        <path
+          d="M0 -12 L3.5 -3.7 L12 -3 L5.5 3 L7.5 11.5 L0 7 L-7.5 11.5 L-5.5 3 L-12 -3 L-3.5 -3.7 Z"
+          fill="#FBBF24"
+        />
+      </Badge>
 
-      {/* Sparkle */}
-      <path
-        d="M58 95 L61 88 L64 95 L71 98 L64 101 L61 108 L58 101 L51 98 Z"
-        fill="#FCD34D"
-        opacity="0.85"
-      />
+      {/* Book – education */}
+      <Badge x={56} y={210} bg="#15803D">
+        <path d="M-11 -7 L0 -4 L0 10 L-11 7 Z" fill="#15803D" />
+        <path d="M11 -7 L0 -4 L0 10 L11 7 Z" fill="#22C55E" />
+      </Badge>
 
-      {/* Check badge */}
-      <circle cx="338" cy="100" r="22" fill="#16A34A" />
-      <path d="M328 100 l7 8 15-16" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      {/* Sparkles */}
+      <path d="M150 70 L152 64 L154 70 L160 72 L154 74 L152 80 L150 74 L144 72 Z" fill="#FCD34D" opacity="0.85" />
+      <circle cx="232" cy="80" r="4" fill="#86EFAC" />
+      <circle cx="110" cy="92" r="3" fill="#4ADE80" />
     </svg>
   );
 }
