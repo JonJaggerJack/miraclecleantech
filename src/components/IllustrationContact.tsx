@@ -1,3 +1,5 @@
+import { Person, Badge } from './illustrations/parts';
+
 export default function IllustrationContact({ className = '' }: { className?: string }) {
   return (
     <svg
@@ -7,63 +9,39 @@ export default function IllustrationContact({ className = '' }: { className?: st
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Background ellipse */}
       <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
+      <circle cx="205" cy="150" r="80" fill="#DCFCE7" />
 
-      {/* Main envelope body */}
-      <rect x="58" y="108" width="232" height="162" rx="18" fill="white" />
-      <rect x="58" y="108" width="232" height="162" rx="18" stroke="#BBF7D0" strokeWidth="2" />
+      <ellipse cx="190" cy="252" rx="118" ry="13" fill="#BBF7D0" opacity="0.6" />
 
-      {/* Envelope flap (open, folded back) */}
-      <path d="M58 126 L174 196 L290 126" stroke="#BBF7D0" strokeWidth="2" fill="none" />
-      <path d="M58 108 L174 178 L290 108 Z" fill="#F0FDF4" />
-      <path d="M58 108 L174 178 L290 108" stroke="#BBF7D0" strokeWidth="1.5" fill="none" />
+      {/* Envelope */}
+      <g>
+        <rect x="166" y="116" width="168" height="120" rx="14" fill="white" stroke="#BBF7D0" strokeWidth="2" />
+        <path d="M166 130 L250 188 L334 130" stroke="#86EFAC" strokeWidth="2" fill="none" />
+        <path d="M166 126 L250 182 L334 126 Z" fill="#86EFAC" opacity="0.5" />
+      </g>
 
-      {/* Arrow going out of envelope (sending) */}
-      <circle cx="270" cy="96" r="22" fill="#15803D" />
-      <path
-        d="M260 96 L280 96 M274 89 L281 96 L274 103"
-        stroke="white"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      {/* A woman waving / writing */}
+      <Person x={96} y={244} s={0.95} color="#16A34A" />
 
-      {/* Floating message bubble 1 */}
-      <rect x="62" y="52" width="108" height="44" rx="14" fill="#15803D" />
-      <path d="M82 96 L74 108 L96 96 Z" fill="#15803D" />
-      <rect x="74" y="64" width="84" height="7" rx="3.5" fill="white" opacity="0.7" />
-      <rect x="74" y="76" width="60" height="7" rx="3.5" fill="white" opacity="0.5" />
+      {/* Chat bubble */}
+      <Badge x={300} y={94} bg="#15803D">
+        <path d="M-11 -8 H11 A3 3 0 0 1 14 -5 V5 A3 3 0 0 1 11 8 H-3 L-9 13 V8 H-11 A3 3 0 0 1 -14 5 V-5 A3 3 0 0 1 -11 -8 Z" fill="#15803D" />
+      </Badge>
 
-      {/* Floating message bubble 2 (reply) */}
-      <rect x="220" y="32" width="100" height="44" rx="14" fill="#D1FAE5" />
-      <path d="M306 76 L316 88 L296 76 Z" fill="#D1FAE5" />
-      <rect x="232" y="44" width="76" height="7" rx="3.5" fill="#16A34A" opacity="0.6" />
-      <rect x="232" y="56" width="52" height="7" rx="3.5" fill="#16A34A" opacity="0.4" />
+      {/* Location pin badge */}
+      <Badge x={64} y={150} bg="#16A34A">
+        <path d="M0 -12 A8 8 0 0 1 8 -4 A8 11 0 0 1 0 13 A8 11 0 0 1 -8 -4 A8 8 0 0 1 0 -12 Z" fill="#16A34A" />
+        <circle cx="0" cy="-4" r="3" fill="white" />
+      </Badge>
 
-      {/* Phone icon – bottom left */}
-      <circle cx="82" cy="232" r="26" fill="#EDE9FE" />
-      <path
-        d="M73 224 Q72 232 76 238 Q82 246 90 245 Q94 244 94 240 Q91 237 88 238 Q86 235 83 231 Q84 228 82 226 Q80 224 73 224 Z"
-        fill="#7C3AED"
-      />
+      {/* Phone badge */}
+      <Badge x={328} y={206} bg="#FBBF24">
+        <path d="M-7 -9 Q-9 0 -4 6 Q2 12 8 9 Q11 7 9 4 Q5 2 3 5 Q0 2 -2 -2 Q1 -4 -1 -7 Q-3 -10 -7 -9 Z" fill="#FBBF24" />
+      </Badge>
 
-      {/* Location pin – bottom right */}
-      <circle cx="296" cy="232" r="26" fill="#DCFCE7" />
-      <path d="M296 218 A10 10 0 0 1 306 228 A10 14 0 0 1 296 246 A10 14 0 0 1 286 228 A10 10 0 0 1 296 218 Z" fill="#15803D" />
-      <circle cx="296" cy="228" r="4" fill="white" />
-
-      {/* Sparkle */}
-      <path
-        d="M44 155 L47 148 L50 155 L57 158 L50 161 L47 168 L44 161 L37 158 Z"
-        fill="#FCD34D"
-        opacity="0.85"
-      />
-
-      {/* Dots */}
-      <circle cx="48" cy="90" r="5" fill="#4ADE80" opacity="0.45" />
-      <circle cx="336" cy="265" r="5" fill="#34D399" opacity="0.45" />
-      <circle cx="350" cy="248" r="3.5" fill="#A78BFA" opacity="0.45" />
+      <path d="M150 64 L152 58 L154 64 L160 66 L154 68 L152 74 L150 68 L144 66 Z" fill="#FCD34D" opacity="0.85" />
+      <circle cx="126" cy="92" r="4" fill="#4ADE80" />
     </svg>
   );
 }

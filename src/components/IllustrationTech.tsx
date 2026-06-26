@@ -1,76 +1,52 @@
+import { Person, Badge } from './illustrations/parts';
+
 export default function IllustrationTech({ className = '' }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 380 300"
+      viewBox="0 0 380 320"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Soft background ellipse */}
-      <ellipse cx="190" cy="155" rx="155" ry="125" fill="#F0FDF4" />
+      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
+      <circle cx="210" cy="148" r="80" fill="#DCFCE7" />
 
-      {/* Laptop base */}
-      <rect x="60" y="218" width="260" height="18" rx="9" fill="#15803D" />
-      <rect x="155" y="218" width="70" height="6" rx="3" fill="#166534" />
+      <ellipse cx="190" cy="252" rx="118" ry="13" fill="#BBF7D0" opacity="0.6" />
 
-      {/* Screen frame */}
-      <rect x="82" y="55" width="216" height="166" rx="14" fill="#15803D" />
-
-      {/* Screen glass */}
-      <rect x="94" y="67" width="192" height="142" rx="8" fill="#F0FDF4" />
-
-      {/* Code lines */}
-      <rect x="110" y="84"  width="65"  height="7" rx="3" fill="#4ADE80" />
-      <rect x="120" y="99"  width="110" height="7" rx="3" fill="#34D399" />
-      <rect x="120" y="114" width="78"  height="7" rx="3" fill="#4ADE80" />
-      <rect x="120" y="129" width="102" height="7" rx="3" fill="#34D399" />
-      <rect x="110" y="144" width="65"  height="7" rx="3" fill="#4ADE80" />
-      <rect x="120" y="159" width="88"  height="7" rx="3" fill="#4ADE80" />
-      <rect x="120" y="174" width="112" height="7" rx="3" fill="#34D399" />
-
-      {/* Neural-net circle – top-right of screen */}
-      <circle cx="260" cy="116" r="32" fill="white" opacity="0.9" />
-      <circle cx="260" cy="116" r="28" fill="#EDE9FE" />
-      <circle cx="251" cy="109" r="4"  fill="#7C3AED" />
-      <circle cx="269" cy="109" r="4"  fill="#7C3AED" />
-      <circle cx="243" cy="121" r="4"  fill="#7C3AED" />
-      <circle cx="260" cy="123" r="4"  fill="#7C3AED" />
-      <circle cx="277" cy="121" r="4"  fill="#7C3AED" />
-      <line x1="251" y1="109" x2="243" y2="121" stroke="#A78BFA" strokeWidth="1.5" />
-      <line x1="251" y1="109" x2="260" y2="123" stroke="#A78BFA" strokeWidth="1.5" />
-      <line x1="269" y1="109" x2="260" y2="123" stroke="#A78BFA" strokeWidth="1.5" />
-      <line x1="269" y1="109" x2="277" y2="121" stroke="#A78BFA" strokeWidth="1.5" />
-
-      {/* Wi-Fi signal – floating top-right */}
-      <g transform="translate(328 82)">
-        <circle cx="0" cy="0" r="4" fill="#16A34A" />
-        <path d="M-10 -12 Q0 -22 10 -12" stroke="#16A34A" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-        <path d="M-18 -20 Q0 -36 18 -20" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.6" />
+      {/* Laptop */}
+      <g>
+        <rect x="168" y="104" width="170" height="116" rx="12" fill="#15803D" />
+        <rect x="180" y="116" width="146" height="92" rx="6" fill="#F0FDF4" />
+        {/* screen content */}
+        <rect x="192" y="128" width="60" height="8" rx="4" fill="#22C55E" />
+        <rect x="192" y="144" width="110" height="7" rx="3.5" fill="#86EFAC" />
+        <rect x="192" y="158" width="86" height="7" rx="3.5" fill="#BBF7D0" />
+        <circle cx="296" cy="160" r="18" fill="#16A34A" />
+        <path d="M291 152 L305 160 L291 168 Z" fill="white" />
+        <rect x="192" y="180" width="120" height="7" rx="3.5" fill="#86EFAC" />
+        {/* laptop base */}
+        <rect x="150" y="220" width="206" height="12" rx="6" fill="#166534" />
       </g>
 
-      {/* Mini monitor icon – floating left */}
-      <g transform="translate(18 108)">
-        <rect x="0" y="0" width="38" height="27" rx="4" fill="#DCFCE7" stroke="#4ADE80" strokeWidth="1.5" />
-        <rect x="4" y="4" width="30" height="17" rx="2" fill="#F0FDF4" />
-        <rect x="14" y="27" width="10" height="7" fill="#86EFAC" />
-        <rect x="9"  y="34" width="20" height="4" rx="2" fill="#86EFAC" />
-        <rect x="8"  y="8"  width="18" height="3" rx="1.5" fill="#86EFAC" />
-        <rect x="8"  y="14" width="13" height="3" rx="1.5" fill="#BBF7D0" />
-      </g>
+      {/* A woman learning */}
+      <Person x={98} y={244} s={0.95} color="#16A34A" />
 
-      {/* Floating accent dots */}
-      <circle cx="38"  cy="62"  r="5" fill="#34D399" opacity="0.55" />
-      <circle cx="344" cy="198" r="5" fill="#4ADE80" opacity="0.50" />
-      <circle cx="343" cy="50"  r="4" fill="#4ADE80" opacity="0.50" />
-      <circle cx="40"  cy="230" r="4" fill="#34D399" opacity="0.45" />
+      {/* Wi-Fi badge */}
+      <Badge x={326} y={100} bg="#16A34A">
+        <circle cx="0" cy="6" r="3" fill="#16A34A" />
+        <path d="M-8 -2 Q0 -10 8 -2" stroke="#16A34A" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+        <path d="M-13 -8 Q0 -19 13 -8" stroke="#16A34A" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.6" />
+      </Badge>
 
-      {/* Sparkle */}
-      <path
-        d="M52 175 L55 168 L58 175 L65 178 L58 181 L55 188 L52 181 L45 178 Z"
-        fill="#FCD34D"
-        opacity="0.80"
-      />
+      {/* Idea / lightbulb badge */}
+      <Badge x={60} y={132} bg="#FBBF24">
+        <path d="M0 -11 A9 9 0 0 1 5 6 H-5 A9 9 0 0 1 0 -11 Z" fill="#FBBF24" />
+        <rect x="-4" y="6" width="8" height="5" rx="2" fill="#15803D" />
+      </Badge>
+
+      <path d="M150 64 L152 58 L154 64 L160 66 L154 68 L152 74 L150 68 L144 66 Z" fill="#FCD34D" opacity="0.85" />
+      <circle cx="124" cy="92" r="4" fill="#4ADE80" />
     </svg>
   );
 }

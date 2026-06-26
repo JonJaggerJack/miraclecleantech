@@ -1,68 +1,50 @@
+import { Person, Badge } from './illustrations/parts';
+
 export default function IllustrationBlog({ className = '' }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 360 300"
+      viewBox="0 0 380 320"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Soft background ellipse */}
-      <ellipse cx="180" cy="155" rx="155" ry="130" fill="#F0FDF4" />
+      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
+      <circle cx="210" cy="150" r="80" fill="#DCFCE7" />
 
-      {/* Notebook body */}
-      <rect x="60" y="35" width="195" height="225" rx="14" fill="white" />
-      <rect x="60" y="35" width="195" height="225" rx="14" stroke="#BBF7D0" strokeWidth="1.5" />
+      <ellipse cx="190" cy="252" rx="118" ry="13" fill="#BBF7D0" opacity="0.6" />
 
-      {/* Spine */}
-      <rect x="60" y="35" width="26" height="225" rx="13" fill="#DCFCE7" />
-
-      {/* Spine rings */}
-      <circle cx="73" cy="80" r="5" fill="white" />
-      <circle cx="73" cy="115" r="5" fill="white" />
-      <circle cx="73" cy="150" r="5" fill="white" />
-      <circle cx="73" cy="185" r="5" fill="white" />
-      <circle cx="73" cy="220" r="5" fill="white" />
-
-      {/* Text lines – alternating blue / green tones */}
-      <rect x="102" y="72"  width="130" height="7" rx="3.5" fill="#BBF7D0" />
-      <rect x="102" y="96"  width="110" height="7" rx="3.5" fill="#BBF7D0" />
-      <rect x="102" y="120" width="130" height="7" rx="3.5" fill="#D1FAE5" />
-      <rect x="102" y="144" width="95"  height="7" rx="3.5" fill="#BBF7D0" />
-      <rect x="102" y="168" width="125" height="7" rx="3.5" fill="#D1FAE5" />
-      <rect x="102" y="192" width="105" height="7" rx="3.5" fill="#BBF7D0" />
-
-      {/* Green "done" badge */}
-      <circle cx="252" cy="55" r="28" fill="#16A34A" />
-      <path
-        d="M241 55 l8 9 17-18"
-        stroke="white"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-
-      {/* Pen */}
-      <g transform="translate(293 185) rotate(-40)">
-        <rect x="-5" y="-50" width="10" height="60" rx="5" fill="#15803D" />
-        <polygon points="-5,10 5,10 0,26" fill="#166534" />
-        <rect x="-5" y="-62" width="10" height="14" rx="3" fill="#FBBF24" />
-        <rect x="-6" y="-50" width="12" height="5" fill="#86EFAC" />
+      {/* Article card with a photo + text lines */}
+      <g>
+        <rect x="158" y="92" width="176" height="150" rx="14" fill="white" stroke="#BBF7D0" strokeWidth="1.5" />
+        <rect x="172" y="106" width="148" height="56" rx="8" fill="#86EFAC" />
+        {/* little image glyph */}
+        <circle cx="196" cy="128" r="8" fill="#15803D" />
+        <path d="M178 152 L206 132 L226 150 L256 124 L314 152 Z" fill="#16A34A" opacity="0.55" />
+        <rect x="172" y="176" width="130" height="8" rx="4" fill="#DCFCE7" />
+        <rect x="172" y="194" width="148" height="8" rx="4" fill="#DCFCE7" />
+        <rect x="172" y="212" width="96" height="8" rx="4" fill="#BBF7D0" />
       </g>
 
-      {/* Floating accent dots */}
-      <circle cx="33"  cy="90"  r="6" fill="#34D399" opacity="0.55" />
-      <circle cx="38"  cy="200" r="4" fill="#4ADE80" opacity="0.50" />
-      <circle cx="325" cy="75"  r="5" fill="#4ADE80" opacity="0.50" />
-      <circle cx="318" cy="225" r="6" fill="#34D399" opacity="0.50" />
+      {/* A woman reading */}
+      <Person x={92} y={244} s={0.95} color="#16A34A" />
 
-      {/* Sparkle */}
-      <path
-        d="M335 50 L338 43 L341 50 L348 53 L341 56 L338 63 L335 56 L328 53 Z"
-        fill="#FCD34D"
-        opacity="0.85"
-      />
+      {/* Badges */}
+      <Badge x={326} y={104} bg="#FBBF24">
+        {/* pencil */}
+        <g transform="rotate(45)">
+          <rect x="-3.5" y="-12" width="7" height="20" rx="2" fill="#FBBF24" />
+          <polygon points="-3.5,8 3.5,8 0,14" fill="#15803D" />
+          <rect x="-3.5" y="-12" width="7" height="4" fill="#15803D" />
+        </g>
+      </Badge>
+      <Badge x={60} y={120} bg="#16A34A">
+        {/* speech bubble */}
+        <path d="M-11 -8 H11 A3 3 0 0 1 14 -5 V5 A3 3 0 0 1 11 8 H-3 L-9 13 V8 H-11 A3 3 0 0 1 -14 5 V-5 A3 3 0 0 1 -11 -8 Z" fill="#16A34A" />
+      </Badge>
+
+      <path d="M150 64 L152 58 L154 64 L160 66 L154 68 L152 74 L150 68 L144 66 Z" fill="#FCD34D" opacity="0.85" />
+      <circle cx="120" cy="92" r="4" fill="#4ADE80" />
     </svg>
   );
 }

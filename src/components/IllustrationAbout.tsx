@@ -1,3 +1,5 @@
+import { Person, Badge } from './illustrations/parts';
+
 export default function IllustrationAbout({ className = '' }: { className?: string }) {
   return (
     <svg
@@ -7,66 +9,36 @@ export default function IllustrationAbout({ className = '' }: { className?: stri
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Background ellipse */}
-      <ellipse cx="190" cy="165" rx="158" ry="138" fill="#F0FDF4" />
+      <ellipse cx="190" cy="165" rx="155" ry="135" fill="#F0FDF4" />
+      <circle cx="190" cy="150" r="80" fill="#DCFCE7" />
+      <path d="M100 150 A90 90 0 0 1 280 150" stroke="#86EFAC" strokeWidth="2" strokeDasharray="3 9" fill="none" />
 
-      {/* Ground / platform */}
-      <ellipse cx="190" cy="282" rx="130" ry="14" fill="#D1FAE5" />
-
-      {/* Person 1 – left (blue shirt) */}
-      <circle cx="115" cy="110" r="22" fill="#DCFCE7" />
-      <circle cx="115" cy="97" r="13" fill="#86EFAC" />
-      <path d="M96 132 Q115 120 134 132 L134 185 Q115 192 96 185 Z" fill="#15803D" />
-      <rect x="96" y="170" width="10" height="30" rx="5" fill="#BBF7D0" />
-      <rect x="120" y="170" width="10" height="30" rx="5" fill="#BBF7D0" />
-
-      {/* Person 2 – centre (green shirt) */}
-      <circle cx="190" cy="100" r="24" fill="#D1FAE5" />
-      <circle cx="190" cy="86" r="14" fill="#6EE7B7" />
-      <path d="M169 124 Q190 111 211 124 L214 182 Q190 190 166 182 Z" fill="#16A34A" />
-      <rect x="167" y="168" width="11" height="32" rx="5" fill="#BBF7D0" />
-      <rect x="192" y="168" width="11" height="32" rx="5" fill="#BBF7D0" />
-
-      {/* Person 3 – right (violet shirt) */}
-      <circle cx="265" cy="110" r="22" fill="#EDE9FE" />
-      <circle cx="265" cy="97" r="13" fill="#C4B5FD" />
-      <path d="M246 132 Q265 120 284 132 L284 185 Q265 192 246 185 Z" fill="#7C3AED" />
-      <rect x="246" y="170" width="10" height="30" rx="5" fill="#DDD6FE" />
-      <rect x="270" y="170" width="10" height="30" rx="5" fill="#DDD6FE" />
-
-      {/* Heart above centre person */}
+      {/* Large heart – care / identity */}
       <path
-        d="M190 68 C190 68 178 55 172 60 C166 65 170 74 190 85 C210 74 214 65 208 60 C202 55 190 68 190 68 Z"
-        fill="#F43F5E"
-        opacity="0.85"
+        d="M190 96 C181 80 156 82 156 104 C156 124 190 142 190 142 C190 142 224 124 224 104 C224 82 199 80 190 96 Z"
+        fill="#15803D"
       />
 
-      {/* Linked hands between person 1 & 2 */}
-      <path d="M134 155 Q162 147 166 155" stroke="#6EE7B7" strokeWidth="3" strokeLinecap="round" fill="none" />
-      {/* Linked hands between person 2 & 3 */}
-      <path d="M214 155 Q218 147 246 155" stroke="#C4B5FD" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <ellipse cx="190" cy="252" rx="118" ry="13" fill="#BBF7D0" opacity="0.6" />
 
-      {/* Floating badge – "ASBL" */}
-      <rect x="40" y="60" width="64" height="28" rx="14" fill="#15803D" />
-      <text x="72" y="79" textAnchor="middle" fontFamily="system-ui, sans-serif" fontSize="11" fontWeight="700" fill="white">MAW</text>
+      {/* Two women, together */}
+      <Person x={150} y={244} s={1.0} color="#16A34A" />
+      <Person x={230} y={244} s={1.0} color="#22C55E" />
 
-      {/* Floating badge – leaf */}
-      <circle cx="336" cy="80" r="20" fill="#D1FAE5" />
-      <path d="M336 70 Q345 74 344 83 Q343 92 334 93 Q326 88 327 79 Q328 70 336 70 Z" fill="#16A34A" />
-      <line x1="336" y1="93" x2="336" y2="100" stroke="#16A34A" strokeWidth="1.5" />
+      {/* Badges */}
+      <Badge x={64} y={140} bg="#16A34A">
+        <path d="M-1 11 C-11 6 -11 -7 1 -12 C11 -6 10 7 -1 11 Z" fill="#16A34A" />
+        <path d="M0 9 L1 -8" stroke="white" strokeWidth="1.6" strokeLinecap="round" />
+      </Badge>
+      <Badge x={316} y={132} bg="#FBBF24">
+        <path
+          d="M0 -12 L3.5 -3.7 L12 -3 L5.5 3 L7.5 11.5 L0 7 L-7.5 11.5 L-5.5 3 L-12 -3 L-3.5 -3.7 Z"
+          fill="#FBBF24"
+        />
+      </Badge>
 
-      {/* Sparkle top-right */}
-      <path
-        d="M350 130 L353 123 L356 130 L363 133 L356 136 L353 143 L350 136 L343 133 Z"
-        fill="#FCD34D"
-        opacity="0.85"
-      />
-
-      {/* Dots decoration */}
-      <circle cx="42" cy="200" r="5" fill="#4ADE80" opacity="0.45" />
-      <circle cx="55" cy="225" r="3.5" fill="#34D399" opacity="0.45" />
-      <circle cx="340" cy="220" r="5" fill="#34D399" opacity="0.45" />
-      <circle cx="328" cy="245" r="3.5" fill="#A78BFA" opacity="0.45" />
+      <path d="M150 66 L152 60 L154 66 L160 68 L154 70 L152 76 L150 70 L144 68 Z" fill="#FCD34D" opacity="0.85" />
+      <circle cx="236" cy="76" r="4" fill="#86EFAC" />
     </svg>
   );
 }
