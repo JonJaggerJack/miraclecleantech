@@ -6,6 +6,9 @@ export interface SiteSettings {
   phone: string;
   whatsapp: string;
   location: string;
+  linkedin: string;
+  facebook: string;
+  instagram: string;
 }
 
 export const siteSettings: SiteSettings = {
@@ -15,4 +18,7 @@ export const siteSettings: SiteSettings = {
   phone: '+243850714774',
   whatsapp: '+243993172985',
   location: 'Bukavu',
+  linkedin: 'https://www.linkedin.com/company/miracle-clean-tech/',
+  facebook: 'https://www.facebook.com/share/1KsqrBxrY9/?mibextid=wwXIfr',
+  instagram: 'https://www.instagram.com/maw_7.875450?igsh=cWs0Y216N2w3azNp&utm_source=qr',
 };

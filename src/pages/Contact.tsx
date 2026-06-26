@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle2, MessageCircle } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import IllustrationContact from '../components/IllustrationContact';
-import { useSanityData } from '../lib/useSanity';
-import { SITE_SETTINGS_QUERY } from '../lib/queries';
-import { siteSettings, type SiteSettings } from '../data/site';
+import { useSiteSettings } from '../lib/useSiteSettings';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 interface FormData {
@@ -37,14 +35,7 @@ function validate(data: FormData): Errors {
 }
 
 export default function Contact() {
-  const remote = useSanityData<Partial<SiteSettings> | null>(SITE_SETTINGS_QUERY, null);
-  const settings: SiteSettings = { ...siteSettings };
-  if (remote) {
-    (Object.keys(siteSettings) as (keyof SiteSettings)[]).forEach((k) => {
-      const v = remote[k];
-      if (typeof v === 'string' && v.trim()) settings[k] = v;
-    });
-  }
+  const settings = useSiteSettings();
   const contactInfo = [
     { icon: Mail, label: 'Email', value: settings.email, href: `mailto:${settings.email}`, color: 'bg-green-700' },
     { icon: Phone, label: 'Téléphone', value: settings.phone, href: `tel:${settings.phone.replace(/\s/g, '')}`, color: 'bg-green-600' },
