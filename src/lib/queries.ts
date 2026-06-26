@@ -28,5 +28,5 @@ export const ACTIONS_QUERY = `*[_type == "action"] | order(coalesce(order, 0) as
 }`;
 
 export const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
-  brandName, tagline, email, phone, location
+  brandName, tagline, email, phone, whatsapp, location
 }`;

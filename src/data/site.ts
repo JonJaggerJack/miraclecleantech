@@ -4,6 +4,7 @@ export interface SiteSettings {
   tagline: string;
   email: string;
   phone: string;
+  whatsapp: string;
   location: string;
 }
 
@@ -12,5 +13,6 @@ export const siteSettings: SiteSettings = {
   tagline: 'Pour le Droit et l\'Égalité des Femmes',
   email: 'miraclecleantech@gmail.com',
   phone: '+243850714774',
+  whatsapp: '+243993172985',
   location: 'Bukavu',
 };

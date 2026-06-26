@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageCircle } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import IllustrationContact from '../components/IllustrationContact';
 import { useSanityData } from '../lib/useSanity';
 import { SITE_SETTINGS_QUERY } from '../lib/queries';
-import { siteSettings } from '../data/site';
+import { siteSettings, type SiteSettings } from '../data/site';
 import { BlobDecor, DotGrid } from '../components/SvgDecor';
 
 interface FormData {
@@ -37,11 +37,19 @@ function validate(data: FormData): Errors {
 }
 
 export default function Contact() {
-  const settings = useSanityData(SITE_SETTINGS_QUERY, siteSettings);
+  const remote = useSanityData<Partial<SiteSettings> | null>(SITE_SETTINGS_QUERY, null);
+  const settings: SiteSettings = { ...siteSettings };
+  if (remote) {
+    (Object.keys(siteSettings) as (keyof SiteSettings)[]).forEach((k) => {
+      const v = remote[k];
+      if (typeof v === 'string' && v.trim()) settings[k] = v;
+    });
+  }
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: settings.email, color: 'bg-green-700' },
-    { icon: Phone, label: 'Téléphone', value: settings.phone, color: 'bg-green-600' },
-    { icon: MapPin, label: 'Localisation', value: settings.location, color: 'bg-violet-600' },
+    { icon: Mail, label: 'Email', value: settings.email, href: `mailto:${settings.email}`, color: 'bg-green-700' },
+    { icon: Phone, label: 'Téléphone', value: settings.phone, href: `tel:${settings.phone.replace(/\s/g, '')}`, color: 'bg-green-600' },
+    { icon: MessageCircle, label: 'WhatsApp', value: settings.whatsapp, href: `https://wa.me/${settings.whatsapp.replace(/\D/g, '')}`, color: 'bg-emerald-500' },
+    { icon: MapPin, label: 'Localisation', value: settings.location, href: undefined, color: 'bg-violet-600' },
   ];
 
   const [form, setForm] = useState<FormData>({ name: '', email: '', subject: '', message: '' });
@@ -128,20 +136,36 @@ export default function Contact() {
             </div>
 
             <div className="flex flex-col gap-4">
-              {contactInfo.map(({ icon: Icon, label, value, color }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-4 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm"
-                >
-                  <div className={`w-12 h-12 rounded-xl ${color} flex items-center justify-center flex-shrink-0 shadow-md`}>
-                    <Icon className="w-5 h-5 text-white" />
+              {contactInfo.map(({ icon: Icon, label, value, href, color }) => {
+                const content = (
+                  <>
+                    <div className={`w-12 h-12 rounded-xl ${color} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-400 font-medium">{label}</p>
+                      <p className="text-sm font-semibold text-gray-800">{value}</p>
+                    </div>
+                  </>
+                );
+                const base =
+                  'flex items-center gap-4 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm';
+                return href ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel="noreferrer"
+                    className={`${base} hover:shadow-md hover:border-green-200 transition-all`}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={label} className={base}>
+                    {content}
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-400 font-medium">{label}</p>
-                    <p className="text-sm font-semibold text-gray-800">{value}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 flex items-center justify-center h-52 mt-2">
