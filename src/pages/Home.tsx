@@ -8,13 +8,26 @@ import SectionWrapper from '../components/SectionWrapper';
 import ProductCard from '../components/ProductCard';
 import Button from '../components/Button';
 import { products } from '../data/products';
+import { homeContent, type HomeContent } from '../data/home';
 import { useSanityData } from '../lib/useSanity';
-import { ACTIONS_QUERY } from '../lib/queries';
+import { useMergedContent } from '../lib/useMergedContent';
+import { ACTIONS_QUERY, HOME_QUERY } from '../lib/queries';
 import heroImg from '../imgs/2.jpeg';
 import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 
+// Présentation (icône + couleur) des cartes mission, fusionnée par position
+// avec les textes éditables.
+const missionStyles = [
+  { icon: Users, color: 'bg-green-600' },
+  { icon: Zap, color: 'bg-emerald-600' },
+  { icon: Shield, color: 'bg-rose-500' },
+  { icon: Star, color: 'bg-amber-500' },
+  { icon: Heart, color: 'bg-violet-600' },
+  { icon: Globe, color: 'bg-teal-600' },
+];
+
 // ── Hero ──────────────────────────────────────────────────────────────────────
-function Hero() {
+function Hero({ c }: { c: HomeContent }) {
   return (
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-50">
       {/* Decorative background */}
@@ -31,10 +44,8 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6"
           >
-            Quand une femme avance,{' '}
-            <span className="text-green-700">
-              tout avance avec elle
-            </span>
+            {c.heroTitleStart}{' '}
+            <span className="text-green-700">{c.heroTitleHighlight}</span>
           </motion.h1>
 
           <motion.p
@@ -43,7 +54,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg"
           >
-            À Bukavu, Miracles Actions for Women se bat pour le droit et l'égalité des femmes. Ateliers d'autonomisation, sensibilisation, numérique responsable et accompagnement : des actions simples, sur le terrain, qui changent des vies.
+            {c.heroIntro}
           </motion.p>
 
           <motion.div
@@ -84,22 +95,13 @@ function Hero() {
   );
 }
 
-// ── Mission Cards ─────────────────────────────────────────────────────────────
-const missions = [
-  { icon: Users, title: "Autonomisation économique", desc: "Des formations et des activités génératrices de revenus pour rendre les femmes et les personnes vulnérables autonomes.", color: "bg-green-600" },
-  { icon: Zap, title: "Éducation & capacités", desc: "Faciliter l'accès à l'éducation et renforcer les capacités des jeunes filles.", color: "bg-emerald-600" },
-  { icon: Shield, title: "Droits & protection", desc: "Défendre les droits des femmes et lutter contre toutes les formes de violences.", color: "bg-rose-500" },
-  { icon: Star, title: "Leadership féminin", desc: "Encourager les femmes à prendre la parole et à participer aux décisions.", color: "bg-amber-500" },
-  { icon: Heart, title: "Accompagnement", desc: "Un soutien social, moral et psychologique pour les personnes vulnérables.", color: "bg-violet-600" },
-  { icon: Globe, title: "Environnement", desc: "Hygiène publique, lutte contre la déforestation, tri, recyclage et réutilisation des déchets.", color: "bg-teal-600" },
-];
-
-
 export default function Home() {
+  const c = useMergedContent<HomeContent>(HOME_QUERY, homeContent);
   const featured = useSanityData(ACTIONS_QUERY, products);
+
   return (
     <>
-      <Hero />
+      <Hero c={c} />
 
       {/* Mission Section */}
       <SectionWrapper className="bg-white relative overflow-hidden">
@@ -112,7 +114,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm font-semibold text-green-600 uppercase tracking-widest"
           >
-            Notre raison d'être
+            {c.missionKicker}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -121,7 +123,7 @@ export default function Home() {
             transition={{ delay: 0.1 }}
             className="mt-2 text-4xl font-extrabold text-gray-900"
           >
-            Ce pour quoi nous nous levons
+            {c.missionTitle}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -130,28 +132,32 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-gray-500 max-w-2xl mx-auto text-base"
           >
-            L'autonomisation de la femme est un droit, pas une faveur. C'est cette conviction qui guide chacune de nos actions.
+            {c.missionIntro}
           </motion.p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {missions.map((m, i) => (
-            <motion.div
-              key={m.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-lg hover:shadow-gray-100/70 transition-all duration-300"
-            >
-              <div className={`w-12 h-12 rounded-xl ${m.color} flex items-center justify-center mb-4 shadow-md`}>
-                <m.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-gray-900 mb-2">{m.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{m.desc}</p>
-            </motion.div>
-          ))}
+          {c.missions.map((m, i) => {
+            const s = missionStyles[i % missionStyles.length];
+            const Icon = s.icon;
+            return (
+              <motion.div
+                key={m.title + i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -4 }}
+                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-lg hover:shadow-gray-100/70 transition-all duration-300"
+              >
+                <div className={`w-12 h-12 rounded-xl ${s.color} flex items-center justify-center mb-4 shadow-md`}>
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-base font-bold text-gray-900 mb-2">{m.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{m.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </SectionWrapper>
 
@@ -160,23 +166,21 @@ export default function Home() {
         <RingDecor className="absolute -right-16 -top-10 w-72 h-72 text-white/5 pointer-events-none" />
         <figure className="max-w-3xl mx-auto text-center relative">
           <blockquote className="text-2xl lg:text-3xl font-semibold text-white leading-snug">
-            « Une femme autonome, c'est une femme qui a accès à l'éducation, aux opportunités et à la décision. Et quand elle avance, c'est toute une communauté qui avance avec elle. »
+            {c.quoteText}
           </blockquote>
           <figcaption className="mt-6 text-green-400 text-sm font-medium">
-            — Échangé lors de notre atelier à Bukavu
+            {c.quoteAttribution}
           </figcaption>
         </figure>
       </section>
 
-      {/* Featured Products */}
+      {/* Featured actions */}
       <SectionWrapper className="bg-gray-50/50 relative overflow-hidden">
         <BlobDecor className="absolute -left-24 -bottom-20 w-80 h-80 text-green-100/50 pointer-events-none" />
         <div className="text-center mb-14">
-          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">Nos actions</span>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">Ce que nous faisons, concrètement</h2>
-          <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-            Pas de grands discours : des ateliers, des rencontres et un accompagnement de proximité, là où les femmes en ont besoin.
-          </p>
+          <span className="text-sm font-semibold text-green-600 uppercase tracking-widest">{c.actionsKicker}</span>
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">{c.actionsTitle}</h2>
+          <p className="mt-4 text-gray-500 max-w-xl mx-auto">{c.actionsIntro}</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
@@ -204,12 +208,8 @@ export default function Home() {
           <BlobDecor className="absolute -top-16 -right-20 w-72 h-72 text-white/10 pointer-events-none" />
           <RingDecor className="absolute -bottom-12 -left-16 w-60 h-60 text-white/10 pointer-events-none" />
           <div className="relative">
-            <h2 className="text-4xl font-extrabold text-white mb-4">
-              Rejoignez le mouvement
-            </h2>
-            <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
-              Participer à un atelier, devenir bénévole, nouer un partenariat ou simplement en parler autour de vous : chaque geste compte pour faire avancer le droit des femmes.
-            </p>
+            <h2 className="text-4xl font-extrabold text-white mb-4">{c.ctaTitle}</h2>
+            <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">{c.ctaText}</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/actions"

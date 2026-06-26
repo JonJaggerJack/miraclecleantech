@@ -30,3 +30,25 @@ export const ACTIONS_QUERY = `*[_type == "action"] | order(coalesce(order, 0) as
 export const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
   brandName, tagline, email, phone, whatsapp, location, linkedin, facebook, instagram
 }`;
+
+export const HOME_QUERY = `*[_type == "homePage"][0]{
+  heroTitleStart, heroTitleHighlight, heroIntro,
+  missionKicker, missionTitle, missionIntro,
+  missions[]{ title, desc },
+  quoteText, quoteAttribution,
+  actionsKicker, actionsTitle, actionsIntro,
+  ctaTitle, ctaText
+}`;
+
+export const ABOUT_QUERY = `*[_type == "aboutPage"][0]{
+  heroIntro, whoTitle, whoParagraphs,
+  objectivesTitle, objectives,
+  visionTitle, visionText, visionBadgeTitle, visionBadgeText,
+  valuesKicker, valuesTitle,
+  values[]{ title, desc },
+  projectsKicker, projectsTitle, projectsIntro,
+  projects[]{ title, desc, tag },
+  orgParagraph,
+  founderName, founderRole, founderBio,
+  ctaTitle, ctaText
+}`;
