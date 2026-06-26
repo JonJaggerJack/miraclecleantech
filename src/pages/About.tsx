@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import SectionWrapper from '../components/SectionWrapper';
 import Button from '../components/Button';
 import founderImg from '../imgs/1.jpeg';
-import whoWeAreImg from '../imgs/3.jpeg';
 import { BlobDecor, DotGrid, RingDecor } from '../components/SvgDecor';
 import IllustrationAbout from '../components/IllustrationAbout';
 
@@ -119,7 +118,7 @@ export default function About() {
             className="rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src={whoWeAreImg}
+              src="/Wam-14.jpg"
               alt="Miracles Actions for Women"
               className="w-full h-[480px] object-cover object-top"
             />
