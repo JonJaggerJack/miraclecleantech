@@ -118,7 +118,7 @@ export default function About() {
             className="rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="/Wam-14.jpg"
+              src="/maw/Wam-14.jpg"
               alt="Miracles Actions for Women"
               className="w-full h-[480px] object-cover object-top"
             />
